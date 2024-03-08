@@ -1,0 +1,15 @@
+# Files
+.*
+*.iml
+*.log
+!.gitignore
+!.gitkeep
+!.npmrc
+!.dockerignore
+!.devcontainer
+
+# Directories
+lib/
+data/
+node_modules/
+!.github/
