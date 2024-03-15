@@ -57,7 +57,7 @@ async function sendData() {
     const response = await fetch("https://rdf-to-csvw.onrender.com/rdftocsvw", {
       method: "POST",
       mode: "cors",
-      //responseType: "blob",
+      responseType: "blob",
       // enctype: "multipart/form-data",
       // Set the FormData instance as the request body
       body: formData,
@@ -67,8 +67,8 @@ async function sendData() {
     // HttpCall in here
     // On SuccessResponse
     
-    const data = response.body;
-    var file = new Blob([csvData], {
+    const data = response.blob();
+    var file = new Blob([data], {
       type: 'text/csv' 
       });
     var fileURL = URL.createObjectURL(file);
@@ -76,7 +76,8 @@ async function sendData() {
     var anchorTag = document.createElement('a');
     anchorTag.href = fileURL;
     anchorTag.target = '_blank';
-    anchorTag.download = 'convertedRDF.csv';
+    
+    anchorTag.download = formData.get("filename");
     document.body.appendChild(anchorTag);
     anchorTag.click();
     document.body.removeChild(anchorTag);
