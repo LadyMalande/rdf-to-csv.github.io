@@ -26,6 +26,6 @@ This tab will have the RDF to CSVW convertor included once its implemented.
 <label id="previewLabel"></label>
 </div>
 
-<script type="text/javascript" src="{{ base.url }}/{{ 'assets/sendPost.js' | relative_url }}"></script>
+<script type="text/javascript" src="https://ladymalande.github.io/{{ base.url }}/{{ 'assets/sendPost.js' | relative_url }}"></script>
 
 
