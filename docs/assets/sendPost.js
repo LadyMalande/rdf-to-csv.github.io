@@ -67,7 +67,7 @@ async function sendData() {
     // HttpCall in here
     // On SuccessResponse
     
-    const data = response.blob();
+    const data = await response.blob();
     var file = new Blob([data], {
       type: 'text/csv' 
       });
