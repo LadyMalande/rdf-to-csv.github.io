@@ -54,10 +54,9 @@ async function sendData() {
   try {
     console.log("sending request..." + form.getAttributeNames());
     form.getAttributeNames();
-    const response = await fetch("https://rdf-to-csvw.onrender.com/rdftocsvw", {
+    const response = await fetch("https://rdf-to-csvw.onrender.com/getcsvstring", {
       method: "POST",
       mode: "cors",
-      responseType: "blob",
       // enctype: "multipart/form-data",
       // Set the FormData instance as the request body
       body: formData,
@@ -69,7 +68,7 @@ async function sendData() {
     
     const data = await response.blob();
     var file = new Blob([data], {
-      type: 'application/zip' 
+      type: 'application/csv' 
       });
     var fileURL = URL.createObjectURL(file);
     // create an anchor and click on it.
@@ -86,7 +85,7 @@ async function sendData() {
 
     previewLabel.innerHTML = "";
     previewLabel.innerHTML = await
-                response.json();
+                response.text;
 
   } catch (e) {
     console.error(e);
