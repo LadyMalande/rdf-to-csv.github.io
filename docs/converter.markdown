@@ -20,7 +20,7 @@ This tab will have the RDF to CSVW convertor included once its implemented.
     <label for="tab">tab</label><br>
     <label for="filename">Choose file name for resulting CSV: </label>
     <input type="text" id="filename" name="filename"> <br><br>
-    <input type="submit" value="Convert">
+    <input type="submit" value="Convert & Download">
 </form>
 <div id="responsePlace">
 <label id="previewLabel"></label>
