@@ -68,7 +68,7 @@ async function sendData() {
     
     const data = await response.blob();
     var file = new Blob([data], {
-      type: 'application/csv' 
+      type: 'application/zip' 
       });
     var fileURL = URL.createObjectURL(file);
     // create an anchor and click on it.
