@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Converter
-permalink: /converter/
+permalink: /
+redirect_to: 
+    - /converter
 ---
 
 This tab will have the RDF to CSVW convertor included once its implemented.
