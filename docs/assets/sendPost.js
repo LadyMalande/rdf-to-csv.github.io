@@ -100,8 +100,10 @@ form.addEventListener("submit", (event) => {
 
 $(function () {
   var dropZoneId = "drop-zone";
-  var buttonId = "clickHere";
+  //var buttonId = "clickHere";
+  var buttonId = "spanForFileInput";
   var mouseOverClass = "mouse-over";
+  var fileInputId = "file"; 
 
   var dropZone = $("#" + dropZoneId);
   var ooleft = dropZone.offset().left;
@@ -123,7 +125,7 @@ $(function () {
       }
 
   }, true);
-
+/*
   if (buttonId != "") {
       var clickZone = $("#" + buttonId);
 
@@ -142,9 +144,47 @@ $(function () {
           }
       });
   }
+  */
+
+  console.log("Inside general function");
 
   document.getElementById(dropZoneId).addEventListener("drop", function (e) {
       $("#" + dropZoneId).removeClass(mouseOverClass);
   }, true);
 
+  document.getElementById(dropZoneId).addEventListener("drop", function (e){
+    console.log("Drag listener called and before if path");
+    if($("#" + fileInputId).val().length != 0){
+      console.log("Drag listener called and in if path");
+      replaceInputWithLabel();
+    } 
+  }, true);
+
+  document.getElementById(buttonId).addEventListener("click", function (e){
+    console.log("Drag listener called and before if path");
+    if($("#" + fileInputId).val().length != 0){
+      console.log("Drag listener called and in if path");
+      replaceInputWithLabel();
+    } 
+  }, true);
 })
+
+async function replaceInputWithLabel(){
+  // CHANGE UI to show loaded file and remove input stuff for loading file
+  const divForLabel = document.createElement("div");
+  const labelFileName = document.createElement("label");
+  const xButton = document.createElement("button");
+
+  console.log("Replacing file Input with info");
+
+  divForLabel.appendChild(labelFileName, xButton);
+  labelFileName.innerText = $("#" + fileInputId).val();
+  xButton.innerText = "X";
+  xButton.addEventListener("click", returnInputFile);
+
+  document.getElementById("labelForFileInput").replaceWith(divForLabel);
+}
+
+async function returnInputFile() {
+
+}

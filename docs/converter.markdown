@@ -10,9 +10,9 @@ This tab will have the RDF to CSVW convertor included once its implemented.
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <div id="drop-zone">
         Drop file here...<br>
-        <label class="label">
+        <label class="label" id="labelForFileInput">
             <input type="file" name="file" id="file" required/>
-            <span>...or select a file</span>
+            <span id="spanForFileInput">...or select a file</span>
         </label>
         <!-- <div id="clickHere">
             or click here..
@@ -20,7 +20,7 @@ This tab will have the RDF to CSVW convertor included once its implemented.
         </div>
         -->
     </div>
-    <label for="filename">Choose file name for resulting .zip: </label>
+    <label for="filename">Choose a file name base for .csv files: </label>
     <input type="text" id="filename" name="filename"> <br><br>
     <input type="submit" value="Convert & Download">
 </form>
