@@ -7,6 +7,12 @@
 !.npmrc
 !.dockerignore
 !.devcontainer
+# Ignore generated stuff from jekyll serve
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
 
 # Directories
 lib/

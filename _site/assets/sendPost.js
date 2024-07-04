@@ -1,6 +1,8 @@
 
 const form = document.querySelector("#rdfandconfiguration");
 
+const toggleButton = document.querySelector("#toggleButton");
+
 const previewLabel = document.querySelector("#previewLabel");
 
 const divForResponse = document.querySelector("#responsePlace");
@@ -97,6 +99,18 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   sendData();
 });
+
+toggleButton.addEventListener('click', function() {
+  var content = document.getElementById('toggleContent');
+  if (content.style.display === 'none') {
+    content.style.display = 'block';
+    this.textContent = 'Hide Content';
+  } else {
+      content.style.display = 'none';
+      this.textContent = 'Show Content';
+  }
+});
+
 
 $(function () {
   var dropZoneId = "drop-zone";

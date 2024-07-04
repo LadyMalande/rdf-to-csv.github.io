@@ -37,8 +37,8 @@ theme: minima
 
 header_pages:
   - assets/index.markdown 
-  - contact.markdown
-  - about.markdown
+  - assets/contact.markdown
+  - assets/about.markdown
 
 plugins:
   - jekyll-feed

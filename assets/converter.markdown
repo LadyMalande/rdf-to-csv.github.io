@@ -25,8 +25,23 @@ You are set! Please be informed that the conversion might take some time. Smalle
         </div>
         -->
     </div>
-    <label for="filename">Choose a file name base for .csv files: </label>
-    <input type="text" id="filename" name="filename"> <br><br>
+    <label for="filename">RDF file URL:</label>
+    <input type="text" id="filename" name="filename"> 
+    <br>
+    <label>Choose how many CSV tables you wish to get:</label>
+    <label>
+        <input type="radio" name="choice" value="option1" checked="checked" >
+            One table
+        </label>
+        <label>
+        <input type="radio" name="choice" value="option2">
+            Multiple tables
+        </label><br>
+            <button id="toggleButton">More parameters...</button>
+        <div id="toggleContent">
+            <p>This is the content that can be shown or hidden.</p>
+        </div>
+    <br><br>
     <input type="submit" value="Convert & Download" id="submitButton">
 </form>
 <div id="responsePlace">
