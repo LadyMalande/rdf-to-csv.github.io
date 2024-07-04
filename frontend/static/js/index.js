@@ -1,6 +1,5 @@
 import About from "./views/About.js";
 import Contact from "./views/Contact.js";
-import Posts from "./views/Posts.js";
 import Converter from "./views/Converter.js";
 
 const navigateTo = url => {
@@ -10,8 +9,8 @@ const navigateTo = url => {
 
 const router = async () => {
     const routes = [
-        { path: "/", view: About },
-        { path: "/converter", view: Converter },
+        { path: "/about", view: About },
+        { path: "/", view: Converter },
         { path: "/contact", view: Contact },
     ];
 
