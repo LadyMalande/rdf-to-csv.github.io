@@ -39,16 +39,16 @@ permalink: pretty
 
 name: 
   en: RDFtoCSV Converter
-  cs: Polyglottes Jekyll
+  cs: Konvertor RDFtoCSV
 description: 
   en: This site is a presentation of the results of thesis with a theme RDF to CSVW Converter. Everything you need to know about the project can be found on this page.
-  cs: Plugin-freie vielsprachige Jekyll Webseiten
+  cs: Tato webová stránka prezentuje výsledky diplomové práce na téma automatický převod RDF do CSV. Vše, co potřebujete vědět o tomto projektu, naleznete na této stránce.
 footer:
   en: An open-source project by [mrzool](http://mrzool.cc)
   cs: Ein open-source Projekt von [mrzool](http://mrzool.cc)
 
 header_pages:
-- pages/en/converter.md 
+- pages/en/index.md 
 - pages/en/contact.md
 - pages/en/about.md
 
