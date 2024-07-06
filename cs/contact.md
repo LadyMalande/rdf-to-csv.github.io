@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Contacts & Resources
-permalink: /contact/
+permalink: cs/contact/
 language: cs
 ---
 ## Kontakt

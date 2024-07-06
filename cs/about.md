@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /about/
+permalink: /cs/about/
 language: cs
 ---
 # O RDFtoCSV Konvertoru 

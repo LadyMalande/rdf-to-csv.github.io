@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Converter
-permalink: /converter
+permalink: cs/converter
 language: cs
 ---
 Jak použít RDFtoCSV konvertor:
