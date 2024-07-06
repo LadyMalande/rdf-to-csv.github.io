@@ -4,10 +4,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Data from _config.yml get stored in the `site` global variable -->
     <meta name="description" content="{{ site.description[page.language] }}">
+    <meta http-equiv="Content-Language" content="{{site.active_lang}}">
     {%- seo -%}
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/main.css">
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/dropBox.css" />
     <link rel="shortcut icon" type="image/ico" href="{{site.baseurl}}/favicon.ico">
+    <link rel="alternate"
+      hreflang="{{site.default_lang}}"
+      href="{{ site.baseurl }}{{page.permalink}}" />
+    {% for lang in site.languages %}
+    {% if lang == site.default_lang %}
+      {% continue %}
+    {% endif %}
+    <link rel="alternate"
+      hreflang="{{lang}}"
+      href="{{ site.baseurl }}/{{lang}}{{page.permalink}}" />
+    {% endfor %}
     <title>{{ page.title }} | {{ site.name[page.language] }}</title>
 
     {%- feed_meta -%}
