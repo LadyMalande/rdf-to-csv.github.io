@@ -20,9 +20,11 @@
        
           {% for p in site.pages %}
             {% if p.language == page.language %} 
-              <a href="{{ p.url | prepend: site.baseurl }}">
-                {{ p.title }}
-              </a>
+              {% if page.redirect_to == nil %}
+                <a href="{{ p.url | prepend: site.baseurl }}">
+                  {{ p.title }}
+                </a>
+              {% endif %}
             {% endif %}
           {% endfor %}
         </nav>
