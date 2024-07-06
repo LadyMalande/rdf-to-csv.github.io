@@ -102,12 +102,12 @@ form.addEventListener("submit", (event) => {
 
 toggleButton.addEventListener('click', function() {
   var content = document.getElementById('toggleContent');
-  if (content.style.display === 'none') {
+  if (toggleButton.style.display === 'none') {
     content.style.display = 'block';
-    this.textContent = 'Hide Content';
+    this.textContent = 'Less parameters...';
   } else {
       content.style.display = 'none';
-      this.textContent = 'Show Content';
+      this.textContent = 'More parameters...';
   }
 });
 
@@ -202,3 +202,18 @@ async function replaceInputWithLabel(){
 async function returnInputFile() {
 
 }
+
+// Require at least one of the two required inputs
+document.addEventListener('DOMContentLoaded', function() {
+  const inputs = Array.from(
+    document.querySelectorAll('input[name=file], input[name=fileURL]')
+  );
+
+  const inputListener = e => {
+    inputs
+      .filter(i => i !== e.target)
+      .forEach(i => (i.required = !e.target.value.length));
+  };
+
+  inputs.forEach(i => i.addEventListener('input', inputListener));
+});

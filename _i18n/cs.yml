@@ -1,0 +1,16 @@
+global:
+    czech: Česky
+    english: Anglicky
+pages:
+    about: "O projektu"
+    contact: "Dokumentace"
+    converter: "Konvertor"
+    title: RDFtoCSV Konvertor
+page: 
+    title: RDFtoCSV Konvertor
+titles:
+    about: "About"
+    converter: "Konvertor"   
+About: "O projektu"
+Contacts & Resources: "Dokumentace"
+Converter: "Konvertor"

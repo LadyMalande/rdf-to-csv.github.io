@@ -3,10 +3,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>RDF to CSVW Converter | This site is a presentation of the results of thesis with a theme RDF to CSVW Converter. Everything you need to know about the project can be found on this page.</title>
+<title>pages.converter | RDF to CSVW Converter</title>
 <meta name="generator" content="Jekyll v3.9.5" />
-<meta property="og:title" content="RDF to CSVW Converter" />
-<meta property="og:locale" content="en_US" />
+<meta property="og:title" content="pages.converter" />
+<meta property="og:locale" content="en" />
 <meta name="description" content="This site is a presentation of the results of thesis with a theme RDF to CSVW Converter. Everything you need to know about the project can be found on this page." />
 <meta property="og:description" content="This site is a presentation of the results of thesis with a theme RDF to CSVW Converter. Everything you need to know about the project can be found on this page." />
 <link rel="canonical" href="http://localhost:4000/rdf-to-csv.github.io/converter" />
@@ -14,14 +14,15 @@
 <meta property="og:site_name" content="RDF to CSVW Converter" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="RDF to CSVW Converter" />
+<meta property="twitter:title" content="pages.converter" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"This site is a presentation of the results of thesis with a theme RDF to CSVW Converter. Everything you need to know about the project can be found on this page.","headline":"RDF to CSVW Converter","url":"http://localhost:4000/rdf-to-csv.github.io/converter"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"This site is a presentation of the results of thesis with a theme RDF to CSVW Converter. Everything you need to know about the project can be found on this page.","headline":"pages.converter","url":"http://localhost:4000/rdf-to-csv.github.io/converter"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/rdf-to-csv.github.io/assets/main.css" | relative_url }}">
+<link rel="stylesheet" href="/rdf-to-csv.github.io/assets/main.css">
     <link rel="stylesheet" type="text/css" href="/rdf-to-csv.github.io/assets/dropBox.css" />
-    <link rel="shortcut icon" type="image/ico" href="/rdf-to-csv.github.io/favicon.ico"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/rdf-to-csv.github.io/feed.xml" title="RDF to CSVW Converter" /></head>
-  <body><header class="site-header" role="banner">
+    <link rel="shortcut icon" type="image/ico" href="/rdf-to-csv.github.io/favicon.ico">
+    <title>Converter</title><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/rdf-to-csv.github.io/feed.xml" title="RDF to CSVW Converter" /></head>
+  <body><header class="site-header">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/rdf-to-csv.github.io/">RDF to CSVW Converter</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
@@ -38,14 +39,19 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="post">
+
+<article class="post">
 
   <header class="post-header">
-    <h1 class="post-title"></h1>
+    <h1 class="post-title">pages.converter</h1>
   </header>
 
   <div class="post-content">
-    <p>How to use the RDFtoCSV Converter:</p>
+
+  
+<p><a href="/rdf-to-csv.github.io/cs/converter">Czech</a></p>
+
+<p>How to use the RDFtoCSV Converter:</p>
 <ul>
   <li>1) Upload the RDF file from your local storage OR provide a URL.</li>
   <li>2) [OPTIONAL] Choose how many tables you want to convert the RDF data into.</li>
@@ -62,14 +68,9 @@ You are set! Please be informed that the conversion might take some time. Smalle
             <input type="file" name="file" id="file" required="" />
             <span id="spanForFileInput">...or select a file</span>
         </label>
-        <!-- <div id="clickHere">
-            or click here..
-            <input type="file" name="file" id="file" />
-        </div>
-        -->
     </div>
-    <label for="filename">RDF file URL:</label>
-    <input type="text" id="filename" name="filename" /> 
+    <label for="fileURL">RDF file URL:</label>
+    <input type="text" id="fileURL" name="fileURL" required="" /> 
     <br />
     <label>Choose how many CSV tables you wish to get:</label>
     <label>
@@ -82,7 +83,15 @@ You are set! Please be informed that the conversion might take some time. Smalle
         </label><br />
             <button id="toggleButton">More parameters...</button>
         <div id="toggleContent">
-            <p>This is the content that can be shown or hidden.</p>
+            <label>Choose a different parameter 1:</label>
+    <label>
+        <input type="radio" name="choice2" value="opt1" />
+            Option 1
+        </label>
+        <label>
+        <input type="radio" name="choice2" value="opt2" />
+            Option 2
+        </label><br />
         </div>
     <br /><br />
     <input type="submit" value="Convert &amp; Download" id="submitButton" />
@@ -94,10 +103,13 @@ You are set! Please be informed that the conversion might take some time. Smalle
 <script type="text/javascript" src="https://ladymalande.github.io///rdf-to-csv.github.io/assets/sendPost.js"></script>
 
 
+
   </div>
 
 </article>
 
+
+       
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/rdf-to-csv.github.io/"></data>

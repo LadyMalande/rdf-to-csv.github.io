@@ -1,9 +1,3 @@
----
-layout: page
-title: Contacts & Resources
-permalink: /contact/
----
-
 ## Contact
 Contact the creator of this project!
 

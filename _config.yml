@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: RDF to CSVW Converter
+title: {% t page.title %}
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   This site is a presentation of the results of thesis with a theme RDF to CSVW Converter. Everything you need to know about the project can be found on this page. 
@@ -36,14 +36,19 @@ baseurl: /rdf-to-csv.github.io      # place folder name if the site is served in
 theme: minima
 
 header_pages:
-  - assets/index.markdown 
-  - assets/contact.markdown
-  - assets/about.markdown
+- pages/en/converter.md 
+- pages/en/contact.md
+- pages/en/about.md
+
+languages: ["en", "cs"]
+
+exclude_from_localizations: ["assets"]
 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-redirect-from
+  - jekyll-multiple-languages-plugin
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

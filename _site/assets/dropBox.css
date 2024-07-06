@@ -1,100 +1,109 @@
 #drop-zone {
-    /*Sort of important*/
-    width: 200px;
-    /*Sort of important*/
-    height: 100px;
-    left:50%;
+  /*Sort of important*/
+  width: 200px;
+  /*Sort of important*/
+  height: 100px;
+  left: 50%;
 
-    bottom:20%;
-    margin-left:-150px;
-    border: 2px dashed rgba(0,0,0,.3);
-    border-radius: 20px;
-    font-family: Arial;
-    text-align: center;
-    position: relative;
-    line-height: 150px;
-    font-size: 15px;
-    color: rgba(0,0,0,.3);
-    
+  bottom: 20%;
+  margin-left: -100px;
+  border: 2px dashed rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  font-family: Arial;
+  text-align: center;
+  position: relative;
+  line-height: 150px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.3);
 }
 
-    #drop-zone input {
-        /*Important*/
-        position: absolute;
-        /*Important*/
-        cursor: pointer;
-        left: 0px;
-        top: 0px;
-        /*Important This is only comment out for demonstration purposes.
+#drop-zone input {
+  /*Important*/
+  position: absolute;
+  /*Important*/
+  cursor: pointer;
+  left: 0px;
+  top: 0px;
+  /*Important This is only comment out for demonstration purposes.
         opacity:0; */
-    }
+}
 
-    /*Important*/
-    #drop-zone.mouse-over {
-        border: 2px dashed rgba(0,0,0,.5);
-        color: rgba(0,0,0,.5);
-    }
-
+/*Important*/
+#drop-zone.mouse-over {
+  border: 2px dashed rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
+}
 
 /*If you dont want the button*/
 #clickHere {
-    position: absolute;
-    cursor: pointer;
-    left: 50%;
-    top: 50%;
-    margin-left: -50px;
-    margin-top: 20px;
-    line-height: 26px;
-    color: white;
-    font-size: 12px;
-    width: 100px;
-    height: 26px;
-    border-radius: 4px;
-    background-color: #3b85c3;
-    display: inline-block;
-
+  position: absolute;
+  cursor: pointer;
+  left: 50%;
+  top: 50%;
+  margin-left: -50px;
+  margin-top: 20px;
+  line-height: 26px;
+  color: white;
+  font-size: 12px;
+  width: 100px;
+  height: 26px;
+  border-radius: 4px;
+  background-color: #3b85c3;
+  display: inline-block;
 }
 
-    #clickHere:hover {
-        background-color: #4499DD;
+#clickHere:hover {
+  background-color: #4499dd;
+}
 
-    }
+#clickHere input[type="file"] {
+  position: absolute;
+}
 
-    #clickHere input[type="file"] {
-        position: absolute;
+label.label input[type="file"] {
+  position: absolute;
 
-      }
+  opacity: 0;
+}
+.label {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  margin-left: -50px;
+  margin-top: 20px;
+  line-height: 26px;
+  color: white;
+  font-size: 12px;
+  width: 100px;
+  height: 26px;
+  border-radius: 4px;
+  background-color: #3b85c3;
+}
+.label:hover {
+  background: #5cbd95;
+}
+.label:active {
+  background: #9fa1a0;
+}
+.label:invalid + span {
+  color: #000000;
+}
+.label:valid + span {
+  color: #ffffff;
+}
 
-      label.label input[type="file"] {
-        position: absolute;
+/* Initially hide the content */
+#toggleContent {
+  display: none;
+}
 
-        opacity: 0;
-      }
-      .label {
-        position: absolute;
-    cursor: pointer;
-    top: 50%;
-    margin-left: -50px;
-    margin-top: 20px;
-    line-height: 26px;
-    color: white;
-    font-size: 12px;
-    width: 100px;
-    height: 26px;
-    border-radius: 4px;
-    background-color: #3b85c3;
-
-        
-      }
-      .label:hover {
-        background: #5cbd95;
-      }
-      .label:active {
-        background: #9fa1a0;
-      }
-      .label:invalid + span {
-        color: #000000;
-      }
-      .label:valid + span {
-        color: #ffffff;
-      }
+/* Initially hide the content */
+#toggleButton {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  margin-left: 40%;
+}
+#toggleButton:hover {
+  background-color: green;
+}

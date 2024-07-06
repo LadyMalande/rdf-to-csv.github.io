@@ -1,9 +1,3 @@
----
-layout: page
-title: 
-permalink: /converter
----
-
 How to use the RDFtoCSV Converter:
 - 1) Upload the RDF file from your local storage OR provide a URL.
 - 2) [OPTIONAL] Choose how many tables you want to convert the RDF data into.
@@ -19,14 +13,9 @@ You are set! Please be informed that the conversion might take some time. Smalle
             <input type="file" name="file" id="file" required/>
             <span id="spanForFileInput">...or select a file</span>
         </label>
-        <!-- <div id="clickHere">
-            or click here..
-            <input type="file" name="file" id="file" />
-        </div>
-        -->
     </div>
-    <label for="filename">RDF file URL:</label>
-    <input type="text" id="filename" name="filename"> 
+    <label for="fileURL">RDF file URL:</label>
+    <input type="text" id="fileURL" name="fileURL" required> 
     <br>
     <label>Choose how many CSV tables you wish to get:</label>
     <label>
@@ -39,7 +28,15 @@ You are set! Please be informed that the conversion might take some time. Smalle
         </label><br>
             <button id="toggleButton">More parameters...</button>
         <div id="toggleContent">
-            <p>This is the content that can be shown or hidden.</p>
+            <label>Choose a different parameter 1:</label>
+    <label>
+        <input type="radio" name="choice2" value="opt1" >
+            Option 1
+        </label>
+        <label>
+        <input type="radio" name="choice2" value="opt2">
+            Option 2
+        </label><br>
         </div>
     <br><br>
     <input type="submit" value="Convert & Download" id="submitButton">
