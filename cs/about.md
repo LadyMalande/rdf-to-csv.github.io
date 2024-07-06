@@ -10,6 +10,4 @@ Tato webová stránka slouží jako živá prezentace výsledků diplomové prá
 
 [Vyzkoušejte konvertor!]({{site.baseurl}}/converter)
 
-{% t page.title %}
-
 [jekyll-organization]: https://github.com/jekyll
