@@ -1,3 +1,10 @@
+---
+layout: page
+title: Converter
+permalink: /converter
+language: en
+handle: /converter
+---
 How to use the RDFtoCSV Converter:
 - 1) Upload the RDF file from your local storage OR provide a URL.
 - 2) [OPTIONAL] Choose how many tables you want to convert the RDF data into.

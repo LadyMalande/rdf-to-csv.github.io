@@ -1,11 +1,17 @@
-## Contact
+---
+layout: page
+title: Contacts & Resources
+permalink: /contact/
+language: cs
+---
+## Kontakt
 Napište autorce projektu!
 
 Můžete mě kontaktovat buď na
                 <a href="https://github.com/LadyMalande">LadyMalande@GitHub</a> nebo na 
                 <a href="https://www.facebook.com/tereza.miklosova/about">Tereza_Miklóšová@Facebook</a>.
 
-## Resources
+## Repozitáře
 Tento projekt se skládá ze 3 repozitářů:
 - Klíčový [repozitář knihovny](https://github.com/LadyMalande/RDFtoCSV) obsahující implementaci projektu
 - [Repozitář aplikace příkazového řádku](https://github.com/LadyMalande/RDFtoCSVApplication) 

@@ -17,15 +17,26 @@
           </span>
         </label>
 
-        <div class="trigger">
-          {%- for path in page_paths -%}
-            {%- assign my_page = site.pages | where: "path", path | first -%}
-            {%- if my_page.title -%}
-            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-            {%- endif -%}
-          {%- endfor -%}
-        </div>
-      </nav>
+       
+          {% for p in site.pages %}
+            {% if p.language == page.language %} 
+              <a href="{{ p.url | prepend: site.baseurl }}">
+                {{ p.title }}
+              </a>
+            {% endif %}
+          {% endfor %}
+        </nav>
     {%- endif -%}
+    <nav class="language-switcher">
+      {% if page.name contains "index" %}
+        <a href="{{ site.baseurl }}/">EN</a>
+        <a href="{{ site.baseurl | append: "/cs" }}">CS</a>
+      {% else %}
+        <a href="{{ site.baseurl | append: page.handle }}">EN</a>
+        <a href="{{ site.baseurl | append: "/cs" | append: page.handle }}">CS</a>
+      {% endif %}
+    </nav>
+  </div>
+
   </div>
 </header>

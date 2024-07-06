@@ -1,3 +1,10 @@
+---
+layout: page
+title: Contacts & Resources
+permalink: /contact/
+language: en
+handle: /contact
+---
 ## Contact
 Contact the creator of this project!
 
