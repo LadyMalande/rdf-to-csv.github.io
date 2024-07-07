@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Converter
+title: Konvertor
 permalink: cs/converter
 language: cs
 ---

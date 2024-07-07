@@ -21,7 +21,7 @@
       hreflang="{{lang}}"
       href="{{ site.baseurl }}/{{lang}}{{page.permalink}}" />
     {% endfor %}
-    <title>{{ page.title }} | {{ site.name[site.lang] }}</title>
+    <title>{{ page.title }} | {{ site.name[page.language] }}</title>
 
     {%- feed_meta -%}
     {%- if jekyll.environment == 'production' and site.google_analytics -%}

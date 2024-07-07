@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Converter
+title: Konvertor
 permalink: /
 redirect_to: 
     - /converter

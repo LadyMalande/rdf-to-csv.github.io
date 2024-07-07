@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: O projektu
 permalink: /cs/about/
 language: cs
 ---

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Contacts & Resources
+title: Dokumentace
 permalink: cs/contact/
 language: cs
 ---
