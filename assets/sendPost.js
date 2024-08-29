@@ -56,7 +56,8 @@ async function sendData() {
   try {
     console.log("sending request..." + form.getAttributeNames());
     form.getAttributeNames();
-    const response = await fetch("https://rdf-to-csvw.onrender.com/getcsvstring", {
+    // const response = await fetch("https://rdf-to-csvw.onrender.com/getcsvstring", {
+    const response = await fetch("https://rdf-to-csvw.onrender.com/rdftocsvw", {
       method: "POST",
       mode: "cors",
       // enctype: "multipart/form-data",
