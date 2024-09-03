@@ -25,11 +25,11 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
     <br>
     <label>Kolik chcete vytvořit CSV tabulek:</label>
     <label>
-        <input type="radio" name="choice" value="option1" checked="checked" >
+        <input type="radio" name="choice" value="oneTable" checked="checked" >
             Jedna tabulka
         </label>
         <label>
-        <input type="radio" name="choice" value="option2">
+        <input type="radio" name="choice" value="moreTables">
             Více tabulek
         </label><br>
             <button id="toggleButton">Více parametrů...</button>
