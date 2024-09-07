@@ -59,9 +59,6 @@ async function sendData() {
     // const response = await fetch("https://rdf-to-csvw.onrender.com/getcsvstring", {
     const response = await fetch("https://rdf-to-csvw.onrender.com/rdftocsvw", {
       method: "POST",
-      headers: {
-        'Accept': 'text/turtle'
-      },
       mode: "cors",
       // enctype: "multipart/form-data",
       // Set the FormData instance as the request body
