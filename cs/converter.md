@@ -54,30 +54,30 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
 <script type="text/javascript" src="https://ladymalande.github.io/{{ base.url }}/{{ 'assets/sendPost.js' | relative_url }}"></script>
 
 <h1>Calculate SHA-256 Checksum</h1>
-    <input type="file" id="fileInput" />
-    <p>Checksum: <span id="checksumOutput"></span></p>
+<input type="file" id="fileInput" />
+<p>Checksum: <span id="checksumOutput"></span></p>
 
 <script>
-        // Function to convert ArrayBuffer to Hexadecimal String
-        function arrayBufferToHex(buffer) {
-            return [...new Uint8Array(buffer)]
-                .map(b => b.toString(16).padStart(2, '0'))
-                .join('');
-        }
+// Function to convert ArrayBuffer to Hexadecimal String
+function arrayBufferToHex(buffer) {
+    return [...new Uint8Array(buffer)]
+    .map(b => b.toString(16).padStart(2, '0'))
+    .join('');
+}
 
-        // Function to calculate SHA-256 checksum of the file
-        async function calculateChecksum(file) {
-            const arrayBuffer = await file.arrayBuffer();  // Read file as ArrayBuffer
-            const hashBuffer = await crypto.subtle.digest('SHA-256', arrayBuffer);  // Hash it
-            const hexHash = arrayBufferToHex(hashBuffer);  // Convert ArrayBuffer to hex string
-            return hexHash;
-        }
+// Function to calculate SHA-256 checksum of the file
+async function calculateChecksum(file) {
+    const arrayBuffer = await file.arrayBuffer();  // Read file as ArrayBuffer
+    const hashBuffer = await crypto.subtle.digest('SHA-256', arrayBuffer);  // Hash it
+    const hexHash = arrayBufferToHex(hashBuffer);  // Convert ArrayBuffer to hex string
+    return hexHash;
+}
 
-        document.getElementById('fileInput').addEventListener('change', async (event) => {
-            const file = event.target.files[0];
-            if (file) {
-                const checksum = await calculateChecksum(file);
-                document.getElementById('checksumOutput').innerText = checksum;  // Display checksum
-            }
-        });
+document.getElementById('fileInput').addEventListener('change', async (event) => {
+    const file = event.target.files[0];
+    if (file) {
+        const checksum = await calculateChecksum(file);
+        document.getElementById('checksumOutput').innerText = checksum;  // Display checksum
+    }
+});
 </script>
