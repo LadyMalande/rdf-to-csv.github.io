@@ -1,7 +1,21 @@
 #drop-zone {
-  /*Sort of important*/
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-start; /* Align items to the top */
+  align-items: center; /* Center items horizontally */
+  height: 200px; /* Set a height for the drop zone if needed */
+  border: 2px dashed #ccc; /* Optional: add border for visual cue */
+  padding: 20px; /* Optional: add padding for spacing */
+}
+
+#drop-zone #labelForFileInput {
+  margin-top: 20px; /* Adjust as needed */
+}
+/*
+#drop-zone {
+
   width: 200px;
-  /*Sort of important*/
+
   height: 100px;
   left: 50%;
 
@@ -27,7 +41,7 @@
   /*Important This is only comment out for demonstration purposes.
         opacity:0; */
 }
-
+*/
 /*Important*/
 #drop-zone.mouse-over {
   border: 2px dashed rgba(0, 0, 0, 0.5);
