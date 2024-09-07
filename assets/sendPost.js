@@ -60,7 +60,6 @@ async function sendData() {
     const response = await fetch("https://rdf-to-csvw.onrender.com/rdftocsvw", {
       method: "POST",
       headers: {
-        'Content-Type': 'multipart/form-data',
         'Accept': 'text/turtle'
       },
       mode: "cors",
