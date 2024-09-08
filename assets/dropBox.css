@@ -11,6 +11,28 @@
 #drop-zone #labelForFileInput {
   margin-top: 20px; /* Adjust as needed */
 }
+
+#labelForFileInput {
+  cursor: pointer; /* Show pointer to indicate clickable label */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#file {
+  display: none; /* Hide the default file input */
+}
+
+#spanForFileInput {
+  display: inline-block;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
 /*
 #drop-zone {
 
@@ -32,14 +54,14 @@
 }
 
 #drop-zone input {
-  /*Important*/
+
   position: absolute;
-  /*Important*/
+
   cursor: pointer;
   left: 0px;
   top: 0px;
   /*Important This is only comment out for demonstration purposes.
-        opacity:0; */
+        opacity:0; 
 }
 */
 /*Important*/
