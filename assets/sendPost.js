@@ -13,6 +13,11 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
   const form = event.target;
   const formData = new FormData(form);
 
+  // Clear any previous error message
+  const errorMessageElement = document.getElementById('errorMessage');
+  errorMessageElement.style.display = 'none'; // Hide any previous message
+  errorMessageElement.innerText = ''; // Clear previous content
+
   try {
       const response = await fetch("https://rdf-to-csvw.onrender.com/rdftocsvw", {
           method: "POST",
@@ -20,8 +25,9 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
       });
 
       if (!response.ok) {
-          throw new Error('Network response was not ok');
-      }
+        // If the response is not ok, throw an error
+        throw new Error(`Error: ${response.status} - ${response.statusText}`);
+    }
 
       const data = await response.blob();
       const file = new Blob([data], { type: 'application/zip' });
@@ -36,7 +42,10 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
       document.body.removeChild(anchorTag);
 
   } catch (e) {
-      console.error(e);
+            // If an error occurs, display the error message
+            errorMessageElement.style.display = 'block';
+            errorMessageElement.innerText = `There was a problem with your request: ${e.message}`;
+            console.error(e);
   }
 });
 /*
