@@ -3,6 +3,7 @@ layout: page
 title: Konvertor
 permalink: cs/converter
 language: cs
+sitemap: false
 ---
 Jak použít RDFtoCSV konvertor:
 - 1) Nahrajte RDF soubor z lokálního uložiště nebo zapiště jeho URL.

@@ -4,6 +4,7 @@ title: Converter
 permalink: /converter
 language: en
 handle: /converter
+sitemap: false
 ---
 How to use the RDFtoCSV Converter:
 - 1) Upload the RDF file from your local storage OR provide a URL.
