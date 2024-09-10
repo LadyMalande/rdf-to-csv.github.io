@@ -70,7 +70,14 @@ document.getElementById('file').addEventListener('change', function(event) {
 
 function clearFileInput() {
     document.getElementById('file').value = '';
-    document.getElementById('fileName').textContent = '';
+    // If no file is selected, revert to the original text
+    const pageLang = document.documentElement.lang;
+    if(pageLang == "cs"){
+      spanForFileInput.textContent = "...nebo vyberte soubor";
+    } else {
+      spanForFileInput.textContent = "...or select a file";
+    }
+    
 }
 
 fileInput.addEventListener('change', function() {
