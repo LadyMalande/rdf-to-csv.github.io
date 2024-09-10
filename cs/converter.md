@@ -54,7 +54,7 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
 <script type="text/javascript" src="https://ladymalande.github.io/{{ base.url }}/{{ 'assets/sendPost.js' | relative_url }}"></script>
 
 <div id="errorMessage" style="color: red; display: none;"></div>
-
+<!-- 
 <h1>Calculate SHA-256 Checksum</h1>
 <input type="file" id="fileInput" />
 <p>Checksum: <span id="checksumOutput"></span></p>
@@ -83,3 +83,4 @@ document.getElementById('fileInput').addEventListener('change', async (event) =>
     }
 });
 </script>
+-->

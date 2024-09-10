@@ -48,6 +48,20 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
             console.error(e);
   }
 });
+
+document.getElementById('file').addEventListener('change', function(event) {
+  const file = event.target.files[0];  // Get the first file selected
+  if (file) {
+      document.getElementById('fileName').textContent = file.name;  // Display the file name
+  } else {
+    const pageLang = document.documentElement.lang;
+    if(pageLang == "cs"){
+      document.getElementById('fileName').textContent = "Nebyl vybrán žádný soubor";
+    } else {
+      document.getElementById('fileName').textContent = "No file chosen";
+    }
+  }
+});
 /*
 async function sendData() {
   // Associate the FormData object with the form element

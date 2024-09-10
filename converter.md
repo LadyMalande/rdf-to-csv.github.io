@@ -19,6 +19,7 @@ You are set! Please be informed that the conversion might take some time. Smalle
         <label class="label" id="labelForFileInput">
             <input type="file" name="file" id="file" required/>
             <span id="spanForFileInput">...or select a file</span>
+            <p id="fileName"></p>
         </label>
     </div>
     <label for="fileURL">RDF file URL:</label>
