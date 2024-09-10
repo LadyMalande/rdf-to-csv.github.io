@@ -5,4 +5,5 @@ permalink: /
 redirect_to: 
     - /converter
 language: en
+layout: none
 ---
