@@ -6,6 +6,7 @@
   height: 200px; /* Set a height for the drop zone if needed */
   border: 2px dashed #ccc; /* Optional: add border for visual cue */
   padding: 20px; /* Optional: add padding for spacing */
+  gap: 10px;
 }
 
 #drop-zone #labelForFileInput {
@@ -57,6 +58,26 @@ a img {
 a i {
   font-size: 24px; /* Adjust the size of the icon */
   vertical-align: middle; /* Aligns the icon vertically with the text */
+}
+
+.clear-button {
+  background-color: #ff6f6f;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.clear-button i {
+  margin-right: 5px;
+}
+
+.clear-button:hover {
+  background-color: #ff3d3d;
 }
 
 /*
