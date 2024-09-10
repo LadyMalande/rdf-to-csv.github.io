@@ -23,9 +23,9 @@
 }
 
 #file {
-  position: absolute;
-  left: -9999px; /* Move input out of the visible area */
-  opacity: 0; /* Hide input visually */
+  opacity: 0; /* Make the input invisible */
+  position: absolute; /* Keep it in the document flow */
+  z-index: -1; /* Ensure it's not in the way */
 }
 
 #spanForFileInput {
