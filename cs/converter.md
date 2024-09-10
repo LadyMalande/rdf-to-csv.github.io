@@ -11,7 +11,7 @@ Jak použít RDFtoCSV konvertor:
 - 2) [VOLITELNÉ] Vyberte, kolik chcete vytvořit tabulek v CSV formátu.
 - 3) [VOLITELNÉ] Klikněte na "Více parametrů...", pokud chcete konverzi ještě dále pozměnit.
 - 4) Klikněte na tlačítko "Konvertovat a uložit výsledný .zip".
-Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou dobu trvat. Pro menší soubory jde o jednotky sekund, pro velké soubory se může jednat až o několik minut.
+Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou dobu trvat. Pro menší soubory jde přibližně o 20 sekund, pro velké soubory se může jednat až o několik minut.
 
 <form id="rdfandconfiguration" action="https://rdf-to-csvw.onrender.com/rdftocsvw" method="post" enctype="multipart/form-data">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
