@@ -22,7 +22,7 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
             <span id="spanForFileInput">...nebo vyberte soubor</span>
             <p id="fileName"></p>
         </label>
-        <button class="clear-button" onclick="clearFileInput()">
+        <button class="clear-button" id="clear-button">
             <i class="fa-regular fa-trash-can"></i>
         </button>
     </div>

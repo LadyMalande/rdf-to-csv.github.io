@@ -132,6 +132,9 @@ toggleButton.addEventListener('click', function() {
   }
 });
 
+// Add event listener to the clear button
+document.getElementById('clearButton').addEventListener('click', clearFileInput);
+
 
 $(function () {
   var dropZoneId = "drop-zone";
