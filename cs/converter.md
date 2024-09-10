@@ -3,6 +3,7 @@ layout: page
 title: Konvertor
 permalink: /cs/converter
 language: cs
+handle: /converter
 sitemap: false
 ---
 Jak použít RDFtoCSV konvertor:

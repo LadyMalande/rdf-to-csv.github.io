@@ -31,11 +31,17 @@
     {%- endif -%}
     <nav class="language-switcher">
       {% if page.name contains "index" %}
-        <a href="{{ site.baseurl }}/">EN</a>
-        <a href="{{ site.baseurl | append: "/cs" }}">CS</a>
+        <a href="{{ site.baseurl }}/">
+          <span class="fi fi-gb"></span>
+          <span class="fi fi-us"></span>EN</a>
+        <a href="{{ site.baseurl | append: "/cs" }}">
+          <span class="fi fi-cs"></span>CS</a>
       {% else %}
-        <a href="{{ site.baseurl | append: page.handle }}">EN</a>
-        <a href="{{ site.baseurl | append: "/cs" | append: page.handle }}">CS</a>
+        <a href="{{ site.baseurl | append: page.handle }}">
+          <span class="fi fi-gb"></span>
+          <span class="fi fi-us"></span>EN</a>
+        <a href="{{ site.baseurl | append: "/cs" | append: page.handle }}">
+          <span class="fi fi-cs"></span>CS</a>
       {% endif %}
     </nav>
   </div>

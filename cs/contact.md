@@ -3,6 +3,7 @@ layout: page
 title: Dokumentace
 permalink: /cs/contact/
 language: cs
+handle: /contact
 ---
 ## Kontakt
 Napište autorce projektu!

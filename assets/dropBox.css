@@ -47,6 +47,17 @@
   position:fixed;
 }
 
+a img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle; /* Aligns the icon vertically with the text */
+}
+
+a i {
+  font-size: 24px; /* Adjust the size of the icon */
+  vertical-align: middle; /* Aligns the icon vertically with the text */
+}
+
 /*
 #drop-zone {
 

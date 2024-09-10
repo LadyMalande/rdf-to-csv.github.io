@@ -3,6 +3,7 @@ layout: page
 title: O projektu
 permalink: /cs/about/
 language: cs
+handle: /about
 ---
 # O RDFtoCSV Konvertoru 
 
