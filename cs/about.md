@@ -7,7 +7,7 @@ handle: /about
 ---
 # O RDFtoCSV Konvertoru 
 
-Tato webová stránka slouží jako živá prezentace výsledků diplomové práce s názvem Automatický převod RDF dat do CSV. Měli byste zde najít vše, co potřebujete vědět o tomto projektu! <span class="fi fi-cs"></span>
+Tato webová stránka slouží jako živá prezentace výsledků diplomové práce s názvem Automatický převod RDF dat do CSV. Měli byste zde najít vše, co potřebujete vědět o tomto projektu!
 
 [Vyzkoušejte konvertor!]({{site.baseurl}}/converter)
 
