@@ -16,11 +16,9 @@
             </svg>
           </span>
         </label>
-
-       
           {% for p in site.pages %}
             {% if p.language == page.language %} 
-              {% if page.redirect_to == nil %}
+              {% if p.redirect_to == nil %}
                 <a href="{{ p.url | prepend: site.baseurl }}">
                   {{ p.title }}
                 </a>
