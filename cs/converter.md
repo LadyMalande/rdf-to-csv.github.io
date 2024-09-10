@@ -17,14 +17,16 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <div id="drop-zone">
         Přesuňte soubor sem...<br>
-        <label class="label" id="labelForFileInput" for="file">
-            <input type="file" name="file" id="file" required/>
-            <span id="spanForFileInput">...nebo vyberte soubor</span>
-            <p id="fileName"></p>
-        </label>
-        <button class="clear-button" id="clearButton">
-            <i class="fa-regular fa-trash-can"></i>
-        </button>
+        <div id="holderForFileInputAndBin">
+            <label class="label" id="labelForFileInput" for="file">
+                <input type="file" name="file" id="file" required/>
+                <span id="spanForFileInput">...nebo vyberte soubor</span>
+                <p id="fileName"></p>
+            </label>
+            <button class="clear-button" id="clearButton">
+                <i class="fa-regular fa-trash-can"></i>
+            </button>
+        </div>
     </div>
     <label for="fileURL">URL RDF souboru</label>
     <input type="text" id="fileURL" name="fileURL" required> 

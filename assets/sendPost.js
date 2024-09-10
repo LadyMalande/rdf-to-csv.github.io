@@ -132,6 +132,14 @@ toggleButton.addEventListener('click', function() {
   }
 });
 
+errorMessageElement = document.getElementById('errorMessage');
+submitButton = document.getElementById('submitButton');
+submitButton.addEventListener('click', function() {
+  errorMessageElement.innerText = ``;
+});
+
+
+
 // Add event listener to the clear button
 document.getElementById('clearButton').addEventListener('click', clearFileInput);
 
