@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Konvertor
-permalink: cs/converter
+permalink: /cs/converter
 language: cs
 sitemap: false
 ---

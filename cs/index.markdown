@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Konvertor
-permalink: /
+permalink: /cs/
 redirect_to: 
-    - /converter
+    - /cs/converter
 language: cs
 ---

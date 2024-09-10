@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Dokumentace
-permalink: cs/contact/
+permalink: /cs/contact/
 language: cs
 ---
 ## Kontakt
