@@ -22,6 +22,7 @@ You are set! Please be informed that the conversion might take some time. Smalle
             <span id="spanForFileInput">...or select a file</span>
             <p id="fileName"></p>
         </label>
+        <i class="fa-regular fa-user"></i>
     </div>
     <label for="fileURL">RDF file URL:</label>
     <input type="text" id="fileURL" name="fileURL" required> 
