@@ -65,7 +65,7 @@ document.getElementById('file').addEventListener('change', function(event) {
 
 function clearFileInput() {
     document.getElementById('file').value = '';
-    document.getElementById('fileName').value = '';
+    document.getElementById('fileName').textContent = '';
 }
 /*
 async function sendData() {
