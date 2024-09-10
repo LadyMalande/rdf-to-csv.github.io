@@ -207,3 +207,8 @@ label.label input[type="file"] {
 #toggleButton:hover {
   background-color: green;
 }
+
+#rdfandconfiguration {
+  display: flex;
+  justify-content: center; /* Horizontal center */
+}
