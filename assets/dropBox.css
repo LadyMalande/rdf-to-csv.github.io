@@ -1,4 +1,5 @@
 #drop-zone {
+  width: 100%; /* Expands to fill the parent's width */
   display: flex;
   flex-direction: column; /* Stack children vertically */
   justify-content: flex-start; /* Align items to the top */
@@ -202,7 +203,6 @@ label.label input[type="file"] {
   background: none;
   border: none;
   text-decoration: underline;
-  margin-left: 40%;
 }
 #toggleButton:hover {
   background-color: green;
