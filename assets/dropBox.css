@@ -70,6 +70,9 @@ a i {
   display: flex;
   align-items: center;
   font-size: 16px;
+  flex-direction: column;
+  justify-content: center;
+  position:relative;
 }
 
 .clear-button i {
@@ -78,6 +81,16 @@ a i {
 
 .clear-button:hover {
   background-color: #ff3d3d;
+}
+
+#holderForFileInputAndBin {
+  display: inline-block;
+  padding: 10px;
+  margin-top: 50px;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  position:relative;
 }
 
 /*
