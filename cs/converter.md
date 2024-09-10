@@ -22,7 +22,9 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
             <span id="spanForFileInput">...nebo vyberte soubor</span>
             <p id="fileName"></p>
         </label>
-        <i class="fa-regular fa-user"></i>
+        <button class="clear-button" onclick="clearFileInput()">
+            <i class="fa-regular fa-trash-can"></i>
+        </button>
     </div>
     <label for="fileURL">URL RDF souboru</label>
     <input type="text" id="fileURL" name="fileURL" required> 

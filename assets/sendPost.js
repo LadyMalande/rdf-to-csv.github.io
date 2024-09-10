@@ -62,6 +62,11 @@ document.getElementById('file').addEventListener('change', function(event) {
     }
   }
 });
+
+function clearFileInput() {
+    document.getElementById('fileInput').value = '';
+    document.getElementById('fileName').value = '';
+}
 /*
 async function sendData() {
   // Associate the FormData object with the form element
