@@ -7,6 +7,10 @@ const previewLabel = document.querySelector("#previewLabel");
 
 const divForResponse = document.querySelector("#responsePlace");
 
+const fileInput = document.getElementById('file');
+
+const spanForFileInput = document.getElementById('spanForFileInput');
+
 document.getElementById('rdfandconfiguration').addEventListener('submit', async function(event) {
   event.preventDefault();
 
@@ -48,7 +52,7 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
             console.error(e);
   }
 });
-
+/*
 document.getElementById('file').addEventListener('change', function(event) {
   const file = event.target.files[0];  // Get the first file selected
   if (file) {
@@ -62,11 +66,31 @@ document.getElementById('file').addEventListener('change', function(event) {
     }
   }
 });
+*/
 
 function clearFileInput() {
     document.getElementById('file').value = '';
     document.getElementById('fileName').textContent = '';
 }
+
+fileInput.addEventListener('change', function() {
+  // Check if a file has been selected
+  if (fileInput.files.length > 0) {
+      // Get the name of the file
+      const fileName = fileInput.files[0].name;
+      // Change the span text to the file name
+      spanForFileInput.textContent = fileName;
+  } else {
+      // If no file is selected, revert to the original text
+      const pageLang = document.documentElement.lang;
+      if(pageLang == "cs"){
+        spanForFileInput.textContent = "...nebo vyberte soubor";
+      } else {
+        spanForFileInput.textContent = "...or select a file";
+      }
+      
+  }
+});
 /*
 async function sendData() {
   // Associate the FormData object with the form element

@@ -17,12 +17,16 @@ You are set! Please be informed that the conversion might take some time. Smalle
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <div id="drop-zone">
         Drop file here...<br>
-        <label class="label" id="labelForFileInput">
-            <input type="file" name="file" id="file" required/>
-            <span id="spanForFileInput">...or select a file</span>
-            <p id="fileName"></p>
-        </label>
-        <i class="fa-regular fa-user"></i>
+                <div id="holderForFileInputAndBin">
+            <label class="label" id="labelForFileInput" for="file">
+                <input type="file" name="file" id="file" required/>
+                <span id="spanForFileInput">...or select a file</span>
+                <p id="fileName"></p>
+            </label>
+            <button class="clear-button" id="clearButton">
+                <i class="fa-regular fa-trash-can"></i>
+            </button>
+        </div>
     </div>
     <label for="fileURL">RDF file URL:</label>
     <input type="text" id="fileURL" name="fileURL" required> 
