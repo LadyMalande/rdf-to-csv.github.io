@@ -23,7 +23,9 @@
 }
 
 #file {
-  display: none; /* Hide the default file input */
+  position: absolute;
+  left: -9999px; /* Move input out of the visible area */
+  opacity: 0; /* Hide input visually */
 }
 
 #spanForFileInput {
