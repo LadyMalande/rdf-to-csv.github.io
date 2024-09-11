@@ -330,3 +330,14 @@ document.getElementById('submitButton').addEventListener('click', function(event
       }
   }, 1000);  // Decrease the countdown every second (1000ms)
 });
+
+window.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.getElementById('toggleButton');
+  const pageLang = document.documentElement.lang;  // Get the page language
+
+  if (pageLang === "cs") {
+      toggleButton.setAttribute('data-tooltip', 'Zatím nedostupné - vyzkoušejte tuto možnost v příští verzi RDFtoCSV!');
+  } else {
+      toggleButton.setAttribute('data-tooltip', 'Not yet available - see this feature in next versions of RDFtoCSV!');
+  }
+});

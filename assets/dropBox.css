@@ -237,6 +237,11 @@ label.label input[type="file"] {
   transition: opacity 0.3s ease;
 }
 
+/* Placeholder for custom tooltip text, initially empty */
+#toggleButton[data-tooltip]:hover::after {
+  content: attr(data-tooltip); /* Use custom tooltip text from data attribute */
+}
+
 /* Hover effect for button */
 #toggleButton:hover {
   background-color: #357ABD;
