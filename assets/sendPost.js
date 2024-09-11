@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.getElementById('submitButton').addEventListener('click', function(event) {
-  event.preventDefault();  // Prevent form submission for demo purposes
+  //event.preventDefault();  // Prevent form submission for demo purposes
 
   let countdown = document.getElementById('countdown');
   let patienceText = document.getElementById('patienceText');
