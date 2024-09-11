@@ -4,7 +4,8 @@ layout: default
 <article class="post">
 
   <header class="post-header">
-    {% if not page.handle contains "/converter" %}
+
+    {% if page.handle != "/converter" %}
     <h1 class="post-title">{{ page.title | escape }}</h1>
     {% endif %}
 
