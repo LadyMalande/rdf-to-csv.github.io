@@ -11,6 +11,8 @@ const fileInput = document.getElementById('file');
 
 const spanForFileInput = document.getElementById('spanForFileInput');
 
+
+
 document.getElementById('rdfandconfiguration').addEventListener('submit', async function(event) {
   event.preventDefault();
 
@@ -67,6 +69,73 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
             console.error(e);
   }
 });
+
+
+
+function fetchWithTimeout(url, options, timeout = 5000) {
+    return new Promise((resolve, reject) => {
+        // Set up the timeout
+        const timer = setTimeout(() => {
+            reject(new Error("Request timed out"));
+        }, timeout);
+
+        // Perform the fetch
+        fetch(url, options)
+            .then(response => {
+                clearTimeout(timer); // Clear the timeout if response is received
+                resolve(response);   // Resolve with the response
+            })
+            .catch(err => {
+                clearTimeout(timer); // Clear the timeout on error
+                reject(err);         // Reject with the error
+            });
+    });
+}
+
+/*
+async function postDataWithRetry(url, formData, retryCount = 3, timeout = 5000) {
+  const errorMessageElement = document.getElementById('errorMessage');
+  const options = {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+  };
+
+  for (let i = 0; i < retryCount; i++) {
+      try {
+          const response = await fetchWithTimeout(url, options, timeout);
+          if (!response.ok) {
+              throw new Error("Request failed with status: " + response.status);
+          }
+          const result = await response.json();
+          return result; // Successfully received response
+      } catch (error) {
+          console.error(`Attempt ${i + 1} failed: ${error.message}`);
+          if (i === retryCount - 1) {
+              throw new Error("All attempts failed");
+          }
+      }
+  }
+}
+
+
+document.getElementById('rdfandconfiguration').addEventListener('submit', async function(event) {
+  event.preventDefault();
+
+  const form = event.target;
+  const formData = new FormData(form);
+
+  // Clear any previous error message
+  const errorMessageElement = document.getElementById('errorMessage');
+  errorMessageElement.style.display = 'none'; // Hide any previous message
+  errorMessageElement.innerText = ''; // Clear previous content
+
+  postDataWithRetry(url, formData, 3, 5000)
+    .then(result => console.log("Success:", result))
+    .catch(error => console.error("Error:", error.message));  
+}
 /*
 document.getElementById('file').addEventListener('change', function(event) {
   const file = event.target.files[0];  // Get the first file selected
@@ -113,72 +182,8 @@ fileInput.addEventListener('change', function() {
       
   }
 });
-/*
-async function sendData() {
-  // Associate the FormData object with the form element
-  const formData = new FormData(form);
-
-  try {
-    console.log("sending request..." + form.getAttributeNames());
-    form.getAttributeNames();
-    // const response = await fetch("https://rdf-to-csvw.onrender.com/getcsvstring", {
-    const response = await fetch("https://rdf-to-csvw.onrender.com/rdftocsvw", {
-      method: "POST",
-      mode: "cors",
-      // enctype: "multipart/form-data",
-      // Set the FormData instance as the request body
-      body: formData,
-    });
-    //console.log(await response.json());
-
-    // HttpCall in here
-    // On SuccessResponse
-    
-    const data = await response.blob();
-    var file = new Blob([data], {
-      type: 'application/zip' 
-      });
-    var fileURL = URL.createObjectURL(file);
-    // create an anchor and click on it.
-    var anchorTag = document.createElement('a');
-    anchorTag.href = fileURL;
-    anchorTag.target = '_blank';
-    
-    anchorTag.download = formData.get("filename");
-    document.body.appendChild(anchorTag);
-    anchorTag.click();
-    document.body.removeChild(anchorTag);
-    
 
 
-    previewLabel.innerHTML = "";
-    previewLabel.innerHTML = await
-                response.text;
-
-  } catch (e) {
-    console.error(e);
-  }
-}
-
-// Take over form submission
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  sendData();
-});
-*/
-
-/*
-toggleButton.addEventListener('click', function() {
-  var content = document.getElementById('toggleContent');
-  if (toggleButton.style.display === 'none') {
-    content.style.display = 'block';
-    this.textContent = 'Less parameters...';
-  } else {
-      content.style.display = 'none';
-      this.textContent = 'More parameters...';
-  }
-});
-*/
 
 errorMessageElement = document.getElementById('errorMessage');
 submitButton = document.getElementById('submitButton');
@@ -187,9 +192,17 @@ submitButton.addEventListener('click', function() {
 });
 
 
+toggleButton.addEventListener('click', function(event) {
+  event.preventDefault(); // Prevents form submission
+  console.log('Button clicked without form submission');
+});
 
 // Add event listener to the clear button
-document.getElementById('clearButton').addEventListener('click', clearFileInput);
+document.getElementById('clearButton').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevents form submission
+  clearFileInput();
+  console.log('Button clicked without form submission');
+});
 
 
 $(function () {
