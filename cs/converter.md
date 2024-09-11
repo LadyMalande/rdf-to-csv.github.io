@@ -28,18 +28,23 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
             </button>
         </div>
     </div>
-    <label for="fileURL">URL RDF souboru</label>
-    <input type="text" id="fileURL" name="fileURL" required> 
+    <div>
+        <label for="fileURL">URL RDF souboru</label>
+        <input type="text" id="fileURL" name="fileURL" required> 
+    </div>
     <br>
-    <label>Kolik chcete vytvořit CSV tabulek:</label>
-    <label>
-        <input type="radio" name="choice" value="basicQuery" checked="checked" >
-            Jedna tabulka
-        </label>
+    <div>
+        <label>Kolik chcete vytvořit CSV tabulek:</label>
         <label>
-        <input type="radio" name="choice" value="splitQuery">
-            Více tabulek
-        </label><br>
+            <input type="radio" name="choice" value="basicQuery" checked="checked" >
+                Jedna tabulka
+            </label>
+            <label>
+            <input type="radio" name="choice" value="splitQuery">
+                Více tabulek
+            </label>
+            <br>
+    </div>
             <button id="toggleButton">Více parametrů...</button>
         <div id="toggleContent">
             <label>Vyberte parametr číslo 1:</label>
