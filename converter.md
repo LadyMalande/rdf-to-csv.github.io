@@ -11,7 +11,7 @@ How to use the RDFtoCSV Converter:
 - 2) Choose how many tables you want to convert the RDF data into.
 - 3) [CURRENTLY UNAVAILABLE][OPTIONAL] Click on "More parameters..." button if you want to customize the conversion more.
 - 4) Click "Convert & Download" button.
-You are set! Please be informed that the conversion might take some time. Smaller files are returned in approximately 20 seconds, larger ones can take up to minutes.
+You are set! Please be informed that the conversion might take some time. Smaller files are returned in approximately 20 seconds, larger ones can take up to a few minutes.
 
 <form id="rdfandconfiguration" action="https://rdf-to-csvw.onrender.com/rdftocsvw" method="post">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
