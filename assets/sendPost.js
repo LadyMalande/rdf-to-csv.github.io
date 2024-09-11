@@ -167,6 +167,7 @@ form.addEventListener("submit", (event) => {
 });
 */
 
+/*
 toggleButton.addEventListener('click', function() {
   var content = document.getElementById('toggleContent');
   if (toggleButton.style.display === 'none') {
@@ -177,6 +178,7 @@ toggleButton.addEventListener('click', function() {
       this.textContent = 'More parameters...';
   }
 });
+*/
 
 errorMessageElement = document.getElementById('errorMessage');
 submitButton = document.getElementById('submitButton');

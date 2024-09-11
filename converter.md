@@ -28,18 +28,23 @@ You are set! Please be informed that the conversion might take some time. Smalle
             </button>
         </div>
     </div>
-    <label for="fileURL">RDF file URL <sup class="comment-marker" data-index="1">[1]</sup></label>
-    <input type="text" id="fileURL" name="fileURL" required> 
+    <div>
+        <label for="fileURL">RDF file URL <sup class="comment-marker" data-index="1">[1]</sup></label>
+        <input type="text" id="fileURL" name="fileURL" required> 
+    </div>    
     <br>
-    <label>Choose how many CSV tables you wish to get:</label>
-    <label>
-        <input type="radio" name="choice" value="option1" checked="checked" >
-            One table
-        </label>
-        <label>
-        <input type="radio" name="choice" value="option2">
-            Multiple tables
-        </label><br>
+    <div>
+        <label>Choose how many CSV tables you wish to get:</label>
+            <label>
+            <input type="radio" name="choice" value="option1" checked="checked" >
+                One table
+            </label>
+            <label>
+            <input type="radio" name="choice" value="option2">
+                Multiple tables
+            </label>
+    </div>    
+        <br>
             <button id="toggleButton">More parameters...</button>
         <div id="toggleContent">
             <label>Choose a different parameter 1:</label>
