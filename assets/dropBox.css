@@ -32,8 +32,8 @@
 #spanForFileInput {
   background-color: #4a90e2;
   color: white;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 5px 10px;
+  font-size: 15px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -209,8 +209,8 @@ label.label input[type="file"] {
   background-color: #4a90e2;
   border: 1px solid #ccc;
   color: white;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 5px 10px;
+  font-size: 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
