@@ -69,7 +69,7 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
 <div id="errorMessage" style="color: red; display: none;"></div>
 
 <div id="comments">
-    <h3>Comments</h3>
+    <h3>Připomínky</h3>
     <div class="comment" id="comment-1">
         <strong>[1]</strong> Pokud nahrajete RDF soubor i vyplníte URL, bude konverze provedena na datech z URL.
     </div>

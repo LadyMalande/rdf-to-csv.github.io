@@ -28,7 +28,7 @@ You are set! Please be informed that the conversion might take some time. Smalle
             </button>
         </div>
     </div>
-    <label for="fileURL">RDF file URL:</label>
+    <label for="fileURL">RDF file URL <sup class="comment-marker" data-index="1">[1]</sup></label>
     <input type="text" id="fileURL" name="fileURL" required> 
     <br>
     <label>Choose how many CSV tables you wish to get:</label>
@@ -57,6 +57,15 @@ You are set! Please be informed that the conversion might take some time. Smalle
 </form>
 <div id="responsePlace">
 <label id="previewLabel"></label>
+</div>
+
+<div id="errorMessage" style="color: red; display: none;"></div>
+
+<div id="comments">
+    <h3>Comments</h3>
+    <div class="comment" id="comment-1">
+        <strong>[1]</strong> If you load a file and fill in URL, the conversion will use the URL as the original RDF file.
+    </div>
 </div>
 
 <script type="text/javascript" src="https://ladymalande.github.io/{{ base.url }}/{{ 'assets/sendPost.js' | relative_url }}"></script>
