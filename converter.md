@@ -29,7 +29,7 @@ You are set! Please be informed that the conversion might take some time. Smalle
         </div>
     </div>
     <div class="top-and-bottom-margin">
-        <label for="fileURL">RDF file URL <sup class="comment-marker" data-index="1">[1]</sup></label>
+        <label for="fileURL">RDF file URL <a href="#comment-1"><sup class="comment-marker" data-index="1">[1]</sup></a></label>
         <input type="text" id="fileURL" name="fileURL" required> 
     </div>    
     <br>
