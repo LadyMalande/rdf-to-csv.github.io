@@ -301,3 +301,8 @@ label.label input[type="file"] {
   margin-top: 10px;
   color: #29528f;
 }
+
+.top-and-bottom-margin {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

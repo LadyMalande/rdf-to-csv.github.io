@@ -28,12 +28,12 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
             </button>
         </div>
     </div>
-    <div>
+    <div class="top-and-bottom-margin">
         <label for="fileURL">URL RDF souboru <sup class="comment-marker" data-index="1">[1]</sup></label>
         <input type="text" id="fileURL" name="fileURL" required> 
     </div>
     <br>
-    <div>
+    <div class="top-and-bottom-margin">
         <label>Kolik chcete vytvořit CSV tabulek:</label>
         <label>
             <input type="radio" name="choice" value="basicQuery" checked="checked" >
@@ -45,7 +45,7 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
         </label>
             <br>
     </div>
-    <button id="toggleButton">Více parametrů...</button>
+    <button id="toggleButton"  class="top-and-bottom-margin">Více parametrů...</button>
     <div id="toggleContent">
         <label>Vyberte parametr číslo 1:</label>
         <label>
@@ -59,7 +59,7 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
             <br>
     </div>
     <br><br>
-    <input type="submit" value="Konvertovat a uložit výsledný .zip" id="submitButton">
+    <input type="submit" value="Konvertovat a uložit výsledný .zip" id="submitButton"  class="top-and-bottom-margin">
 </form>
 <div id="countdown" style="display: none;">30</div>
 <div id="responsePlace">

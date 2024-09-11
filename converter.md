@@ -28,12 +28,12 @@ You are set! Please be informed that the conversion might take some time. Smalle
             </button>
         </div>
     </div>
-    <div>
+    <div class="top-and-bottom-margin">
         <label for="fileURL">RDF file URL <sup class="comment-marker" data-index="1">[1]</sup></label>
         <input type="text" id="fileURL" name="fileURL" required> 
     </div>    
     <br>
-    <div>
+    <div class="top-and-bottom-margin">
         <label>Choose how many CSV tables you wish to get:</label>
             <label>
             <input type="radio" name="choice" value="basicQuery" checked="checked" >
@@ -45,7 +45,7 @@ You are set! Please be informed that the conversion might take some time. Smalle
             </label>
     </div>    
         <br>
-            <button id="toggleButton">More parameters...</button>
+            <button id="toggleButton" class="top-and-bottom-margin">More parameters...</button>
         <div id="toggleContent">
             <label>Choose a different parameter 1:</label>
     <label>
@@ -58,7 +58,7 @@ You are set! Please be informed that the conversion might take some time. Smalle
         </label><br>
         </div>
     <br><br>
-    <input type="submit" value="Convert & Download" id="submitButton">
+    <input type="submit" value="Convert & Download" id="submitButton" class="top-and-bottom-margin">
 </form>
 <div id="countdown" style="display: none;">30</div>
 <div id="responsePlace">
