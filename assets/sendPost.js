@@ -45,10 +45,25 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
       anchorTag.click();
       document.body.removeChild(anchorTag);
 
+      errorMessageElement.style.display = 'block';
+      const pageLang = document.documentElement.lang;
+      if(pageLang == "cs"){
+        errorMessageElement.innerText = `Konvertovaný soubor úspěšně dorazil.`;
+      } else {
+        errorMessageElement.innerText = `The converted file has been successfully delivered.`;
+      }
+
+
+
   } catch (e) {
             // If an error occurs, display the error message
             errorMessageElement.style.display = 'block';
-            errorMessageElement.innerText = `There was a problem with your request: ${e.message}`;
+            if(pageLang == "cs"){
+              errorMessageElement.innerText = `Nastal problém s vaším požadavkem: ${e.message}`;
+            } else {
+              errorMessageElement.innerText = `There was a problem with your request: ${e.message}`;
+            }
+            
             console.error(e);
   }
 });
