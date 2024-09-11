@@ -9,7 +9,7 @@ sitemap: false
 How to use the RDFtoCSV Converter:
 - 1) Upload the RDF file from your local storage OR provide a URL.
 - 2) Choose how many tables you want to convert the RDF data into.
-- 3) [CURRENTLY UNAVAILABLE][OPTIONAL] Click on "More parameters..." button if you want to customize the conversion more.
+- 3) [CURRENTLY UNAVAILABLE] Click on "More parameters..." button if you want to customize the conversion more.
 - 4) Click "Convert & Download" button.
 You are set! Please be informed that the conversion might take some time. Smaller files are returned in approximately 20 seconds, larger ones can take up to a few minutes.
 
