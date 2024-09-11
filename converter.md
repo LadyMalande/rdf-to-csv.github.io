@@ -60,6 +60,7 @@ You are set! Please be informed that the conversion might take some time. Smalle
     <br><br>
     <input type="submit" value="Convert & Download" id="submitButton">
 </form>
+<div id="countdown" style="display: none;">30</div>
 <div id="responsePlace">
 <label id="previewLabel"></label>
 </div>

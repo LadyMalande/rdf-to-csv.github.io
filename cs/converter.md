@@ -61,6 +61,7 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
     <br><br>
     <input type="submit" value="Konvertovat a uložit výsledný .zip" id="submitButton">
 </form>
+<div id="countdown" style="display: none;">30</div>
 <div id="responsePlace">
 <label id="previewLabel"></label>
 </div>

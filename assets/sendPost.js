@@ -310,3 +310,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
   inputs.forEach(i => i.addEventListener('input', inputListener));
 });
+
+document.getElementById('submitButton').addEventListener('click', function(event) {
+  event.preventDefault();  // Prevent form submission for demo purposes
+
+  let countdown = document.getElementById('countdown');
+  let timeLeft = 30;
+
+  countdown.style.display = 'block';  // Show the countdown
+  countdown.textContent = timeLeft;   // Set initial time
+
+  let countdownInterval = setInterval(function() {
+      timeLeft--;
+      countdown.textContent = timeLeft;  // Update the countdown
+
+      if (timeLeft <= 0) {
+          clearInterval(countdownInterval);  // Stop the countdown at 0
+          countdown.style.display = 'none';  // Hide the countdown
+      }
+  }, 1000);  // Decrease the countdown every second (1000ms)
+});

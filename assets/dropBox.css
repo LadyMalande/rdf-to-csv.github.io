@@ -294,3 +294,10 @@ label.label input[type="file"] {
   transition: all 0.3s ease;
   letter-spacing: 1px;
 }
+
+#countdown {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #29528f;
+}
