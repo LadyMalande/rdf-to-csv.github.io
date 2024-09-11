@@ -29,7 +29,7 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
         </div>
     </div>
     <div>
-        <label for="fileURL">URL RDF souboru</label>
+        <label for="fileURL">URL RDF souboru <sup class="comment-marker" data-index="1">[1]</sup></label>
         <input type="text" id="fileURL" name="fileURL" required> 
     </div>
     <br>
@@ -67,6 +67,13 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
 <script type="text/javascript" src="https://ladymalande.github.io/{{ base.url }}/{{ 'assets/sendPost.js' | relative_url }}"></script>
 
 <div id="errorMessage" style="color: red; display: none;"></div>
+
+<div id="comments">
+    <h3>Comments</h3>
+    <div class="comment" id="comment-1">
+        <strong>[1]</strong> Pokud nahrajete RDF soubor i vyplníte URL, bude konverze provedena na datech z URL.
+    </div>
+</div>
 <!-- 
 <h1>Calculate SHA-256 Checksum</h1>
 <input type="file" id="fileInput" />

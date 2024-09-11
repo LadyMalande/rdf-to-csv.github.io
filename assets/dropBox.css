@@ -213,3 +213,22 @@ label.label input[type="file"] {
   align-items: center; /* Vertical center */
   flex-direction: column; /* Stack children vertically */
 }
+
+.comment-marker {
+  font-size: 0.8em;
+  vertical-align: super;
+  color: blue;
+  cursor: pointer;
+}
+
+/* Style for the comments list */
+#comments {
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.comment {
+  margin-bottom: 10px;
+}
