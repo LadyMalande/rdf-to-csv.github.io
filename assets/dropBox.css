@@ -313,6 +313,13 @@ label.label input[type="file"] {
   color: #29528f;
 }
 
+#patienceText {
+  font-size: 16px;
+  font-weight: italic;
+  margin-top: 10px;
+  color: #29528f;
+}
+
 .top-and-bottom-margin {
   margin-top: 10px;
   margin-bottom: 10px;

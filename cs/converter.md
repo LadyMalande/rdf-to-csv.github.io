@@ -29,7 +29,7 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
         </div>
     </div>
     <div class="top-and-bottom-margin">
-        <label for="fileURL">URL RDF souboru <sup class="comment-marker" data-index="1">[1]</sup></label>
+        <label for="fileURL">URL RDF souboru <a href="#comment-1"><sup class="comment-marker" data-index="1">[1]</sup></a></label>
         <input type="text" id="fileURL" name="fileURL" required> 
     </div>
     <br>
@@ -61,7 +61,10 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
     <br><br>
     <input type="submit" value="Konvertovat a uložit výsledný .zip" id="submitButton"  class="top-and-bottom-margin">
 </form>
-<div id="countdown" style="display: none;">30</div>
+<div>
+    <div id="countdown" style="display: none;">30</div>
+    <div id="patienceText" style="display: none;">Webová služba běží na verzi zdarma - počkejte 30 sekund a pokud se Vám nestáhl výsledný .zip archiv, klikněte znovu na tlačítko pro konverzi.</div>
+</div>
 <div id="responsePlace">
 <label id="previewLabel"></label>
 </div>
