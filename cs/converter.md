@@ -38,25 +38,26 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
         <label>
             <input type="radio" name="choice" value="basicQuery" checked="checked" >
                 Jedna tabulka
-            </label>
-            <label>
-            <input type="radio" name="choice" value="splitQuery">
-                Více tabulek
-            </label>
-            <br>
-    </div>
-            <button id="toggleButton">Více parametrů...</button>
-        <div id="toggleContent">
-            <label>Vyberte parametr číslo 1:</label>
-    <label>
-        <input type="radio" name="choice2" value="opt1" >
-            Možnost 1
         </label>
         <label>
-        <input type="radio" name="choice2" value="opt2">
-            Možnost 2
-        </label><br>
-        </div>
+            <input type="radio" name="choice" value="splitQuery">
+                Více tabulek
+        </label>
+            <br>
+    </div>
+    <button id="toggleButton">Více parametrů...</button>
+    <div id="toggleContent">
+        <label>Vyberte parametr číslo 1:</label>
+        <label>
+            <input type="radio" name="choice2" value="opt1" >
+                Možnost 1
+        </label>
+        <label>
+            <input type="radio" name="choice2" value="opt2">
+                Možnost 2
+        </label>
+            <br>
+    </div>
     <br><br>
     <input type="submit" value="Konvertovat a uložit výsledný .zip" id="submitButton">
 </form>
