@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: RDFtoCSV Converter
-email: your-email@example.com
+email: rdftocsvw@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This site is a presentation of the results of thesis with a theme RDF to CSVW Converter. Everything you need to know about the project can be found on this page. 
 
@@ -44,8 +44,8 @@ description:
   en: This site is a presentation of the results of thesis with a theme RDF to CSVW Converter. Everything you need to know about the project can be found on this page.
   cs: Tato webová stránka prezentuje výsledky diplomové práce na téma automatický převod RDF do CSV. Vše, co potřebujete vědět o tomto projektu, naleznete na této stránce.
 footer:
-  en: An open-source project by [mrzool](http://mrzool.cc)
-  cs: Ein open-source Projekt von [mrzool](http://mrzool.cc)
+  en: Master thesis project by [ladymalande](https://ladymalande.github.com)
+  cs: Diplomová práce od [ladymalande](https://ladymalande.github.com)
 
 header_pages:
 - pages/en/index.md 
