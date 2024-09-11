@@ -198,16 +198,48 @@ label.label input[type="file"] {
   display: none;
 }
 
-/* Initially hide the content */
+
 #toggleButton {
-  background: none;
+  position: relative; 
+  background-color: #4a90e2;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
   border: none;
-  text-decoration: underline;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+/* Tooltip (bubble) styling */
+#toggleButton:hover::after {
+  content: "Not yet available - see this feature in next versions of RDFtoCSV!"; /* The tooltip text */
+  position: absolute;
+  top: -40px; /* Position above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  white-space: nowrap;
+  z-index: 100;
+  opacity: 1;
+  pointer-events: none;
+}
+
+/* Hide the tooltip by default */
+#toggleButton::after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover effect for button */
 #toggleButton:hover {
-  background-color: green;
+  background-color: #357ABD;
 }
 
 #rdfandconfiguration {
