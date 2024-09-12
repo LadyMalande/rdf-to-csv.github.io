@@ -20,7 +20,7 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
         <div id="holderForFileInputAndBin">
             <label class="label" id="labelForFileInput" for="file">
                 <input type="file" name="file" id="file" required/>
-                <span id="spanForFileInput">...nebo vyberte soubor</span>
+                <span id="spanForFileInput">...nebo vyberte soubor...</span>
                 <p id="fileName"></p>
             </label>
             <button class="clear-button" id="clearButton">
@@ -29,7 +29,7 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
         </div>
     </div>
     <div class="top-and-bottom-margin">
-        <label for="fileURL">URL RDF souboru <a href="#comment-1"><sup class="comment-marker" data-index="1">[1]</sup></a></label>
+        <label for="fileURL">...nebo zapište URL RDF souboru <a href="#comment-1"><sup class="comment-marker" data-index="1">[1]</sup></a></label>
         <input type="text" id="fileURL" name="fileURL" required> 
     </div>
     <br>

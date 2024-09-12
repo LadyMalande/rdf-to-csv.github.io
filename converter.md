@@ -20,7 +20,7 @@ You are set! Please be informed that the conversion might take some time. Smalle
                 <div id="holderForFileInputAndBin">
             <label class="label" id="labelForFileInput" for="file">
                 <input type="file" name="file" id="file" required/>
-                <span id="spanForFileInput">...or select a file</span>
+                <span id="spanForFileInput">...or select a file...</span>
                 <p id="fileName"></p>
             </label>
             <button class="clear-button" id="clearButton">
@@ -29,7 +29,7 @@ You are set! Please be informed that the conversion might take some time. Smalle
         </div>
     </div>
     <div class="top-and-bottom-margin">
-        <label for="fileURL">RDF file URL <a href="#comment-1"><sup class="comment-marker" data-index="1">[1]</sup></a></label>
+        <label for="fileURL">...or fill in the RDF file URL <a href="#comment-1"><sup class="comment-marker" data-index="1">[1]</sup></a></label>
         <input type="text" id="fileURL" name="fileURL" required> 
     </div>    
     <br>

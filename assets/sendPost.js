@@ -11,6 +11,8 @@ const fileInput = document.getElementById('file');
 
 const spanForFileInput = document.getElementById('spanForFileInput');
 
+const dropZone = document.getElementById('drop-zone');
+
 
 
 document.getElementById('rdfandconfiguration').addEventListener('submit', async function(event) {
@@ -255,11 +257,13 @@ $(function () {
 
   console.log("Inside general function");
 
-  document.getElementById(dropZoneId).addEventListener("drop", function (e) {
-      $("#" + dropZoneId).removeClass(mouseOverClass);
-  }, true);
+  dropZone.addEventListener('dragleave', () => dropZone.classList.remove('mouse-over'));
 
-  document.getElementById(dropZoneId).addEventListener("drop", function (e){
+  dropZone.addEventListener("drop", function (e){
+    e.preventDefault();
+    dropZone.classList.remove('dragover');
+    const files = e.dataTransfer.files;
+    fileInput.files = files;
     console.log("Drag listener called and before if path");
     if($("#" + fileInputId).val().length != 0){
       console.log("Drag listener called and in if path");

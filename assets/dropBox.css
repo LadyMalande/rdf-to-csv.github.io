@@ -10,6 +10,11 @@
   gap: 10px;
 }
 
+#drop-zone.mouse-over {
+  border-color: #333;
+  color: #333;
+}
+
 #drop-zone #labelForFileInput {
   margin-top: 20px; /* Adjust as needed */
 }
