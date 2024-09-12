@@ -24,7 +24,7 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
   const formData = new FormData(form);
 
   // Clear any previous error message
-  errorMessageElement.color = red;
+  errorMessageElement.style.color = 'red';
   errorMessageElement.style.display = 'none'; // Hide any previous message
   errorMessageElement.innerText = ''; // Clear previous content
 
@@ -54,10 +54,10 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
       errorMessageElement.style.display = 'block';
       const pageLang = document.documentElement.lang;
       if(pageLang == "cs"){
-        errorMessageElement.color = green;
+        errorMessageElement.style.color = 'green';
         errorMessageElement.innerText = `Konvertovaný soubor úspěšně dorazil.`;
       } else {
-        errorMessageElement.color = green;
+        errorMessageElement.style.color = 'green';
         errorMessageElement.innerText = `The converted file has been successfully delivered.`;
       }
 
