@@ -98,66 +98,6 @@ function fetchWithTimeout(url, options, timeout = 5000) {
     });
 }
 
-/*
-async function postDataWithRetry(url, formData, retryCount = 3, timeout = 5000) {
-  const errorMessageElement = document.getElementById('errorMessage');
-  const options = {
-      method: "POST",
-      headers: {
-          "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-  };
-
-  for (let i = 0; i < retryCount; i++) {
-      try {
-          const response = await fetchWithTimeout(url, options, timeout);
-          if (!response.ok) {
-              throw new Error("Request failed with status: " + response.status);
-          }
-          const result = await response.json();
-          return result; // Successfully received response
-      } catch (error) {
-          console.error(`Attempt ${i + 1} failed: ${error.message}`);
-          if (i === retryCount - 1) {
-              throw new Error("All attempts failed");
-          }
-      }
-  }
-}
-
-
-document.getElementById('rdfandconfiguration').addEventListener('submit', async function(event) {
-  event.preventDefault();
-
-  const form = event.target;
-  const formData = new FormData(form);
-
-  // Clear any previous error message
-  const errorMessageElement = document.getElementById('errorMessage');
-  errorMessageElement.style.display = 'none'; // Hide any previous message
-  errorMessageElement.innerText = ''; // Clear previous content
-
-  postDataWithRetry(url, formData, 3, 5000)
-    .then(result => console.log("Success:", result))
-    .catch(error => console.error("Error:", error.message));  
-}
-/*
-document.getElementById('file').addEventListener('change', function(event) {
-  const file = event.target.files[0];  // Get the first file selected
-  if (file) {
-      document.getElementById('fileName').textContent = file.name;  // Display the file name
-  } else {
-    const pageLang = document.documentElement.lang;
-    if(pageLang == "cs"){
-      document.getElementById('fileName').textContent = "Nebyl vybrán žádný soubor";
-    } else {
-      document.getElementById('fileName').textContent = "No file chosen";
-    }
-  }
-});
-*/
-
 function clearFileInput() {
     document.getElementById('file').value = '';
     // If no file is selected, revert to the original text
@@ -249,7 +189,7 @@ document.getElementById(dropZoneId).addEventListener("dragleave", function (e) {
 
       // Display file name to the user
       if (files.length > 0) {
-          document.getElementById("fileName").textContent = files[0].name;
+          //document.getElementById("fileName").textContent = files[0].name;
           console.log("File dropped: " + files[0].name);
       }
       } else {
