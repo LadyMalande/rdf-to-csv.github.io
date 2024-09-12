@@ -66,6 +66,7 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
   } catch (e) {
             // If an error occurs, display the error message
             errorMessageElement.style.display = 'block';
+            const pageLang = document.documentElement.lang;
             if(pageLang == "cs"){
               errorMessageElement.innerText = `Nastal problém s vaším požadavkem: ${e.message}`;
             } else {
