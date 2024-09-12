@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: RDFtoCSV Converter
+title: RDFtoCSVW Converter
 email: rdftocsvw@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This site is a presentation of the results of thesis with a theme RDF to CSVW Converter. Everything you need to know about the project can be found on this page. 
@@ -38,8 +38,8 @@ theme: minima
 permalink: pretty
 
 name: 
-  en: RDFtoCSV Converter
-  cs: Konvertor RDFtoCSV
+  en: RDFtoCSVW Converter
+  cs: Konvertor RDFtoCSVW
 description: 
   en: This site is a presentation of the results of thesis with a theme RDF to CSVW Converter. Everything you need to know about the project can be found on this page.
   cs: Tato webová stránka prezentuje výsledky diplomové práce na téma automatický převod RDF do CSV. Vše, co potřebujete vědět o tomto projektu, naleznete na této stránce.
