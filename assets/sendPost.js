@@ -215,11 +215,6 @@ $(function () {
   var fileInputId = "file"; 
 
   var dropZone = $("#" + dropZoneId);
-  var ooleft = dropZone.offset().left;
-  var ooright = dropZone.outerWidth() + ooleft;
-  var ootop = dropZone.offset().top;
-  var oobottom = dropZone.outerHeight() + ootop;
-  var inputFile = dropZone.find("input");
   
   // Prevent default behaviors for dragover and drop
   document.getElementById(dropZoneId).addEventListener("dragover", function (e) {
@@ -243,10 +238,10 @@ document.getElementById(dropZoneId).addEventListener("dragleave", function (e) {
       const files = e.dataTransfer.files;
       
       // Assign dropped file to the file input element
-      inputFile[0].files = files;  // Access the DOM element using [0] to set files
+      fileInput.files = files;  // Access the DOM element using [0] to set files
       // Manually trigger the 'change' event
       const event = new Event('change', { bubbles: true });
-      inputFile[0].dispatchEvent(event);  // Trigger the event on the DOM element
+      fileInput.dispatchEvent(event);  // Trigger the event on the DOM element
 
       // Display file name to the user
       if (files.length > 0) {
