@@ -242,17 +242,23 @@ $(function () {
     e.stopPropagation();
     dropZone.classList.remove('mouse-over');});
 
-  dropZone.addEventListener("drop", function (e){
-    e.preventDefault();
-    e.stopPropagation();
-    dropZone.classList.remove('dragover');
-    const files = e.dataTransfer.files;
-    fileInput.files = files;
-    console.log("Drag listener called and before if path");
-    if($("#" + fileInputId).val().length != 0){
-      console.log("Drag listener called and in if path");
-      replaceInputWithLabel();
-    } 
+  document.getElementById(dropZoneId).addEventListener("drop", function (e) {
+      e.preventDefault(); // Prevent default to stop file from opening
+      e.stopPropagation(); // Stop propagation
+      dropZone.removeClass(mouseOverClass);
+
+      // Get the dropped files
+      const files = e.dataTransfer.files;
+      
+      // Assign dropped file to the file input element
+      inputFile.files = files;
+
+      // Display file name to the user
+      if (files.length > 0) {
+          document.getElementById("fileName").textContent = files[0].name;
+      }
+
+      console.log("File dropped: " + files[0].name);
   }, true);
 
   document.getElementById(buttonId).addEventListener("click", function (e){
@@ -262,7 +268,7 @@ $(function () {
       replaceInputWithLabel();
     } 
   }, true);
-})
+});
 
 async function replaceInputWithLabel(){
   // CHANGE UI to show loaded file and remove input stuff for loading file
