@@ -69,6 +69,15 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
 
 
   } catch (e) {
+    if (response.status == null) {
+      terrorMessageElement.style.display = 'block';
+      const pageLang = document.documentElement.lang;
+      if(pageLang == "cs"){
+        errorMessageElement.innerText = `Nastal problém s vaším požadavkem, CORS: ${e.message}`;
+      } else {
+        errorMessageElement.innerText = `There was a problem with your request, CORS: ${e.message}`;
+      }
+    } 
             // If an error occurs, display the error message
             errorMessageElement.style.display = 'block';
             const pageLang = document.documentElement.lang;

@@ -41,7 +41,7 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
         </label>
         <label>
             <input type="radio" name="choice" value="splitQuery">
-                Více tabulek
+                Více tabulek <a href="#comment-2"><sup class="comment-marker" data-index="2">[2]</sup></a>
         </label>
             <br>
     </div>
@@ -77,6 +77,9 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
     <h3>Poznámky</h3>
     <div class="comment" id="comment-1">
         <strong>[1]</strong> Pokud nahrajete RDF soubor i vyplníte URL, bude konverze provedena na datech z URL.
+    </div>
+    <div class="comment" id="comment-2">
+        <strong>[2]</strong> Konvertor vytvoří více tabulek pouze v případě, že jsou data pro takové rozdělení vhodná. Pokud data vhodná k rozdělení nejsou, vytvoří jednu tabulku.
     </div>
 </div>
 

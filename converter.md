@@ -41,7 +41,7 @@ You are set! Please be informed that the conversion might take some time. Smalle
             </label>
             <label>
             <input type="radio" name="choice" value="splitQuery">
-                Multiple tables
+                Multiple tables <a href="#comment-2"><sup class="comment-marker" data-index="2">[2]</sup></a>
             </label>
     </div>    
         <br>
@@ -74,6 +74,9 @@ You are set! Please be informed that the conversion might take some time. Smalle
     <h3>Comments</h3>
     <div class="comment" id="comment-1">
         <strong>[1]</strong> If you load a file and fill in URL, the conversion will use the URL as the original RDF file.
+    </div>
+    <div class="comment" id="comment-2">
+        <strong>[2]</strong> The converter creates multiple tables only if the data are suitable for dividing into multiple tables. If the data are not suitable for splitting into multiple tables, the converter creates only one table.
     </div>
 </div>
 
