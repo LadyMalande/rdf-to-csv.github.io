@@ -34,7 +34,9 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
           body: formData // Let the browser set the content-type
       });
 
-      if (response.status === 409) {
+      if (response.status == null) {
+        throw new Error(`Error: CORS`);
+      } else if (response.status === 409) {
         // Handle file locking error
         alert('The file is currently in use. Please try again later.');
       } else if(!response.ok){
