@@ -34,10 +34,13 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
           body: formData // Let the browser set the content-type
       });
 
-      if (!response.ok) {
+      if (response.status === 409) {
+        // Handle file locking error
+        alert('The file is currently in use. Please try again later.');
+      } else if(!response.ok){
         // If the response is not ok, throw an error
         throw new Error(`Error: ${response.status} - ${response.statusText}`);
-    }
+      }
 
       const data = await response.blob();
       const file = new Blob([data], { type: 'application/zip' });
