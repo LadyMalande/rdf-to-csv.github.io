@@ -237,7 +237,10 @@ $(function () {
 
   console.log("Inside general function");
 
-  dropZone.addEventListener('dragleave', () => dropZone.classList.remove('mouse-over'));
+  dropZone.addEventListener('dragleave', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dropZone.classList.remove('mouse-over');});
 
   dropZone.addEventListener("drop", function (e){
     e.preventDefault();
