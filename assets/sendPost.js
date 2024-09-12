@@ -183,9 +183,12 @@ document.getElementById(dropZoneId).addEventListener("dragleave", function (e) {
         console.log("Files dropped:", files);
       // Assign dropped file to the file input element
       fileInput.files = files;  // Access the DOM element using [0] to set files
-      // Manually trigger the 'change' event
+
+      // Manually trigger the 'change' and 'input' event
       const event = new Event('change', { bubbles: true });
-      fileInput.dispatchEvent(event);  // Trigger the event on the DOM element
+      fileInput.dispatchEvent(event);  // Trigger the event on the element
+      const eventForDeterminingRequired = new Event('input', { bubbles: true });
+      fileInput.dispatchEvent(eventForDeterminingRequired);  // Trigger the event on the element
 
       // Display file name to the user
       if (files.length > 0) {
