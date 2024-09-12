@@ -13,6 +13,8 @@ const spanForFileInput = document.getElementById('spanForFileInput');
 
 const dropZone = document.getElementById('drop-zone');
 
+const errorMessageElement = document.getElementById('errorMessage');
+
 
 
 document.getElementById('rdfandconfiguration').addEventListener('submit', async function(event) {
@@ -22,7 +24,7 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
   const formData = new FormData(form);
 
   // Clear any previous error message
-  const errorMessageElement = document.getElementById('errorMessage');
+  errorMessageElement.color = red;
   errorMessageElement.style.display = 'none'; // Hide any previous message
   errorMessageElement.innerText = ''; // Clear previous content
 
@@ -52,8 +54,10 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
       errorMessageElement.style.display = 'block';
       const pageLang = document.documentElement.lang;
       if(pageLang == "cs"){
+        errorMessageElement.color = green;
         errorMessageElement.innerText = `Konvertovaný soubor úspěšně dorazil.`;
       } else {
+        errorMessageElement.color = green;
         errorMessageElement.innerText = `The converted file has been successfully delivered.`;
       }
 
@@ -186,8 +190,6 @@ fileInput.addEventListener('change', function() {
 });
 
 
-
-errorMessageElement = document.getElementById('errorMessage');
 submitButton = document.getElementById('submitButton');
 submitButton.addEventListener('click', function() {
   errorMessageElement.innerText = ``;
