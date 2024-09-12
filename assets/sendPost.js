@@ -234,26 +234,6 @@ $(function () {
       }
 
   }, true);
-/*
-  if (buttonId != "") {
-      var clickZone = $("#" + buttonId);
-
-      var oleft = clickZone.offset().left;
-      var oright = clickZone.outerWidth() + oleft;
-      var otop = clickZone.offset().top;
-      var obottom = clickZone.outerHeight() + otop;
-
-      $("#" + buttonId).mousemove(function (e) {
-          var x = e.pageX;
-          var y = e.pageY;
-          if (!(x < oleft || x > oright || y < otop || y > obottom)) {
-              inputFile.offset({ top: y - 15, left: x - 160 });
-          } else {
-              inputFile.offset({ top: -400, left: -400 });
-          }
-      });
-  }
-  */
 
   console.log("Inside general function");
 
@@ -261,6 +241,7 @@ $(function () {
 
   dropZone.addEventListener("drop", function (e){
     e.preventDefault();
+    e.stopPropagation();
     dropZone.classList.remove('dragover');
     const files = e.dataTransfer.files;
     fileInput.files = files;
