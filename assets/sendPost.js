@@ -225,18 +225,29 @@ document.addEventListener('DOMContentLoaded', function() {
   inputs.forEach(i => i.addEventListener('input', inputListener));
 });
 
+let countdownInterval = null;
+let isCountingDown = false;
+
 document.getElementById('submitButton').addEventListener('click', function(event) {
   //event.preventDefault();  // Prevent form submission for demo purposes
 
   let countdown = document.getElementById('countdown');
   let patienceText = document.getElementById('patienceText');
-  let timeLeft = 30;
 
+  if (isCountingDown) {
+    // If countdown is already running, clear the existing interval and reset the countdown
+    clearInterval(countdownInterval);
+    countdown.style.display = 'none';  // Hide the countdown
+    patienceText.style.display = 'none';
+    isCountingDown = false;
+  }
+
+  let timeLeft = 30;
   countdown.style.display = 'block';  // Show the countdown
   patienceText.style.display = 'block';
   countdown.textContent = timeLeft;   // Set initial time
 
-  let countdownInterval = setInterval(function() {
+  countdownInterval = setInterval(function() {
       timeLeft--;
       countdown.textContent = timeLeft;  // Update the countdown
 
@@ -246,6 +257,7 @@ document.getElementById('submitButton').addEventListener('click', function(event
           patienceText.style.display = 'none';
       }
   }, 1000);  // Decrease the countdown every second (1000ms)
+  isCountingDown = true;
 });
 
 window.addEventListener('DOMContentLoaded', () => {
