@@ -238,6 +238,7 @@ document.getElementById(dropZoneId).addEventListener("dragleave", function (e) {
       const files = e.dataTransfer.files;
       
       if (files.length > 0) {
+        console.log("Files dropped:", files);
       // Assign dropped file to the file input element
       fileInput.files = files;  // Access the DOM element using [0] to set files
       // Manually trigger the 'change' event
@@ -247,9 +248,8 @@ document.getElementById(dropZoneId).addEventListener("dragleave", function (e) {
       // Display file name to the user
       if (files.length > 0) {
           document.getElementById("fileName").textContent = files[0].name;
+          console.log("File dropped: " + files[0].name);
       }
-
-        console.log("File dropped: " + files[0].name);
       } else {
         console.error("No files were dropped.");
   }
