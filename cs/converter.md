@@ -69,7 +69,7 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
 <label id="previewLabel"></label>
 </div>
 
-<script type="text/javascript" src="https://ladymalande.github.io/{{ base.url }}/{{ 'assets/sendPost.js' | relative_url }}"></script>
+
 
 <div id="errorMessage" style="color: red; display: none;"></div>
 
@@ -79,6 +79,8 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
         <strong>[1]</strong> Pokud nahrajete RDF soubor i vyplníte URL, bude konverze provedena na datech z URL.
     </div>
 </div>
+
+<script type="text/javascript" src="https://ladymalande.github.io/{{ base.url }}/{{ 'assets/sendPost.js' | relative_url }}"></script>
 <!-- 
 <h1>Calculate SHA-256 Checksum</h1>
 <input type="file" id="fileInput" />
