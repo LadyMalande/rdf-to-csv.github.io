@@ -220,27 +220,19 @@ $(function () {
   var ootop = dropZone.offset().top;
   var oobottom = dropZone.outerHeight() + ootop;
   var inputFile = dropZone.find("input");
+  
+  // Prevent default behaviors for dragover and drop
   document.getElementById(dropZoneId).addEventListener("dragover", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      dropZone.addClass(mouseOverClass);
-      var x = e.pageX;
-      var y = e.pageY;
+    e.preventDefault(); // Prevent default to stop file from opening
+    e.stopPropagation(); // Stop propagation
+    dropZone.addClass(mouseOverClass);
+}, true);
 
-      if (!(x < ooleft || x > ooright || y < ootop || y > oobottom)) {
-          inputFile.offset({ top: y - 15, left: x - 100 });
-      } else {
-          inputFile.offset({ top: -400, left: -400 });
-      }
-
-  }, true);
-
-  console.log("Inside general function");
-
-  dropZone.addEventListener('dragleave', (e) => {
+document.getElementById(dropZoneId).addEventListener("dragleave", function (e) {
     e.preventDefault();
     e.stopPropagation();
-    dropZone.classList.remove('mouse-over');});
+    dropZone.removeClass(mouseOverClass);
+}, true);
 
   document.getElementById(dropZoneId).addEventListener("drop", function (e) {
       e.preventDefault(); // Prevent default to stop file from opening
