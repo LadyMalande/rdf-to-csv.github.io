@@ -245,6 +245,9 @@ document.getElementById(dropZoneId).addEventListener("dragleave", function (e) {
       // Assign dropped file to the file input element
       inputFile.files = files;
 
+      const event = new Event('change', { bubbles: true });
+      inputFile.dispatchEvent(event);
+      
       // Display file name to the user
       if (files.length > 0) {
           document.getElementById("fileName").textContent = files[0].name;
@@ -257,30 +260,10 @@ document.getElementById(dropZoneId).addEventListener("dragleave", function (e) {
     console.log("Drag listener called and before if path");
     if($("#" + fileInputId).val().length != 0){
       console.log("Drag listener called and in if path");
-      replaceInputWithLabel();
     } 
   }, true);
 });
 
-async function replaceInputWithLabel(){
-  // CHANGE UI to show loaded file and remove input stuff for loading file
-  const divForLabel = document.createElement("div");
-  const labelFileName = document.createElement("label");
-  const xButton = document.createElement("button");
-
-  console.log("Replacing file Input with info");
-
-  divForLabel.appendChild(labelFileName, xButton);
-  labelFileName.innerText = $("#" + fileInputId).val();
-  xButton.innerText = "X";
-  xButton.addEventListener("click", returnInputFile);
-
-  document.getElementById("labelForFileInput").replaceWith(divForLabel);
-}
-
-async function returnInputFile() {
-
-}
 
 // Require at least one of the two required inputs
 document.addEventListener('DOMContentLoaded', function() {
