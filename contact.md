@@ -15,7 +15,7 @@ You can contact me on
 ## Resources
 This project consists of 3 repositories:
 - The core [library's repository](https://github.com/LadyMalande/RDFtoCSV) containing the implementation of the converter
-- The [command line app's repository](https://github.com/LadyMalande/RDFtoCSVApplication) that is runnable in a command line
+- The [Web service repository](https://github.com/LadyMalande/RDFtoCSVWAPI)  that is running on the backend
 - This [website client's repository](https://github.com/LadyMalande/rdf-to-csv.github.io) where you can try out the converter live
 
 
