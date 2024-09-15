@@ -16,6 +16,7 @@
             </svg>
           </span>
         </label>
+        <div class="trigger">
           {% for p in site.pages %}
             {% if p.language == page.language %} 
               {% if p.redirect_to == nil %}
@@ -25,7 +26,8 @@
               {% endif %}
             {% endif %}
           {% endfor %}
-        </nav>
+        </div>
+      </nav>
     {%- endif -%}
     <nav class="language-switcher">
       {% if page.name contains "index" %}
