@@ -329,3 +329,12 @@ label.label input[type="file"] {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+@media screen and (max-width: 600px) { 
+  div.top-and-bottom-margin {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+  } }
