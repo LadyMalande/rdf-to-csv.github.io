@@ -337,4 +337,6 @@ label.label input[type="file"] {
     display: flex; 
     flex-direction: column; 
     align-items: center;
-  } }
+  } 
+
+}
