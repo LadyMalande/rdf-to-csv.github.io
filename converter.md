@@ -21,7 +21,6 @@ You are set! Please be informed that the conversion might take some time. Smalle
             <label class="label" id="labelForFileInput" for="file">
                 <input type="file" name="file" id="file" required/>
                 <span id="spanForFileInput">...or select a file...</span>
-                <p id="fileName"></p>
             </label>
             <button class="clear-button" id="clearButton">
                 <i class="fa-regular fa-trash-can"></i>
