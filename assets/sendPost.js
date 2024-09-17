@@ -8,7 +8,7 @@ const previewLabel = document.querySelector("#previewLabel");
 const divForResponse = document.querySelector("#responsePlace");
 
 const fileInput = document.getElementById('file');
-const fileURL = document.getElementById('fileURL');
+const fileURLElement = document.getElementById('fileURL');
 
 const spanForFileInput = document.getElementById('spanForFileInput');
 
@@ -48,43 +48,18 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
 
       const data = await response.blob();
       const file = new Blob([data], { type: 'application/zip' });
-      // Create a FileReader to read the Blob
-      const reader = new FileReader();
-      // Onload callback to process the ZIP file
-reader.onload = function(event) {
-  // Load the contents into JSZip
-  JSZip.loadAsync(event.target.result)
-    .then(function(zip) {
-      // Count the number of files in the ZIP
-      const numberOfFiles = Object.keys(zip.files).length;
-      const splitQueryRadio = document.getElementById('splitQuery');
-      console.log("Number of files in ZIP:", numberOfFiles);
-      if(numberOfFiles == 2 && splitQueryRadio.checked){
-        const originalContent = errorMessage.textContent;
-        if(pageLang == "cs"){
-          errorMessage.textContent = originalContent + "\nPro vytvoření více tabulek nebyla poskytnutá RDF data vhodná. Byla vytvořena pouze 1 CSV tabulka.";
-        } else {
-          errorMessage.textContent = originalContent + "The provided RDF data was not suitable for conversion into multiple CSV tables. Only 1 CSV table has been created.";
-        }
-      }
 
-    })
-    .catch(function(error) {
-      console.error("Error loading ZIP file:", error);
-    });
-};
-      reader.readAsArrayBuffer(file);
       const fileURL = URL.createObjectURL(file);
 
       const anchorTag = document.createElement('a');
       anchorTag.href = fileURL;
       anchorTag.target = '_blank';
-      if(fileURL.textContent != ""){
-        anchorTag.download = fileURL.textContent + '.zip';
+      if(fileURLElement.textContent != ""){
+        anchorTag.download = fileURLElement.textContent + '.zip';
       } else{
         const fileName = fileInput.files[0].name;
         console.log("formData.get(\"file\").getName() " + fileName);
-        anchorTag.download = (fileName) ? fileName + ".zip" :  + 'result.zip';
+        anchorTag.download = (fileName != null) ? fileName + ".zip" :  + 'result.zip';
       }
       anchorTag.download = 'result.zip'; // Change this if necessary
       document.body.appendChild(anchorTag);
