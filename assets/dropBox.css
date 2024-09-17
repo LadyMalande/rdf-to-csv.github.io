@@ -20,6 +20,7 @@
 }
 
 #labelForFileInput {
+  opacity: 0;/* Make the input invisible */
   cursor: pointer; /* Show pointer to indicate clickable label */
   display: flex;
   flex-direction: column;

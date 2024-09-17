@@ -21,7 +21,6 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
             <label class="label" id="labelForFileInput" for="file">
                 <input type="file" name="file" id="file" required/>
                 <span id="spanForFileInput">...nebo vyberte soubor...</span>
-                <p id="fileName"></p>
             </label>
             <button class="clear-button" id="clearButton">
                 <i class="fa-regular fa-trash-can"></i>
