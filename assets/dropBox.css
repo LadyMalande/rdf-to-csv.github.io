@@ -343,11 +343,17 @@ label.label input[type="file"] {
 }
 
 #loadingWheel {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
 }
 
 #greenArrow {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
+}
+
+#statusIndicator {
+  display: flex;
+  align-items: center; /* Vertical center */
+  flex-direction: row; /* Stack children vertically */
 }

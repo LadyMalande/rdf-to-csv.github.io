@@ -14,7 +14,7 @@ How to use the RDFtoCSV Converter:
 You are set! Please be informed that the conversion might take some time. Smaller files are returned in approximately 20 seconds, larger ones can take up to a few minutes.
 <div id="statusIndicator">
   <img id="loadingWheel" src="loading.gif" alt="Loading" style="display: none;">
-  <img id="greenArrow" src="green-arrow.png" alt="OK" style="display: none;">
+  <img id="greenArrow" src="check.jpg" alt="OK" style="display: none;">
   <span id="healthCheckStatus">The Web Service is loading...</span>
 </div>
 <form id="rdfandconfiguration" action="https://rdf-to-csvw.onrender.com/rdftocsvw" method="post">

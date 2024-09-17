@@ -14,7 +14,7 @@ Jak použít RDFtoCSV konvertor:
 Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou dobu trvat. Pro menší soubory jde přibližně o 20 sekund, pro velké soubory se může jednat až o několik minut.
 <div id="statusIndicator">
   <img id="loadingWheel" src="loading.gif" alt="Loading" style="display: none;">
-  <img id="greenArrow" src="green-arrow.png" alt="OK" style="display: none;">
+  <img id="greenArrow" src="check.jpg" alt="OK" style="display: none;">
   <span id="healthCheckStatus">Webová služba se načítá...</span>
 </div>
 <form id="rdfandconfiguration" action="https://rdf-to-csvw.onrender.com/rdftocsvw" method="post" enctype="multipart/form-data">
