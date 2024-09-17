@@ -55,11 +55,13 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
       anchorTag.href = fileURL;
       anchorTag.target = '_blank';
       if(fileURLElement.textContent != ""){
+        console.log("fileURLElement.textContent " + fileURLElement.textContent);
         anchorTag.download = fileURLElement.textContent + '.zip';
       } else{
         const fileName = fileInput.files[0].name;
-        console.log("formData.get(\"file\").getName() " + fileName);
-        anchorTag.download = (fileName != null) ? fileName + ".zip" :  + 'result.zip';
+        console.log("fileURLElement.textContent " + fileURLElement.textContent);
+        console.log("fileName " + fileName);
+        anchorTag.download = fileName + ".zip";
       }
       anchorTag.download = 'result.zip'; // Change this if necessary
       document.body.appendChild(anchorTag);
@@ -279,13 +281,26 @@ document.getElementById('submitButton').addEventListener('click', function(event
   isCountingDown = true;
 });
 
-errorMessageElement.addEventListener('change', () => {
-  if (isCountingDown) {
-    clearInterval(countdownInterval);
-    countdown.style.display = 'none';
-    patienceText.style.display = 'none';
-    isCountingDown = false;
-  }
+// Create a MutationObserver to watch for changes in the DOM
+const observer = new MutationObserver((mutationsList) => {
+  mutationsList.forEach(mutation => {
+    if (mutation.type === 'childList' || mutation.type === 'characterData') {
+      // The text content of errorMessageElement has changed
+      if (isCountingDown) {
+        clearInterval(countdownInterval);
+        countdown.style.display = 'none';
+        patienceText.style.display = 'none';
+        isCountingDown = false;
+      }
+    }
+  });
+});
+
+// Configure the observer to listen for changes in text content
+observer.observe(errorMessageElement, {
+  childList: true,  // Watch for changes in child elements (e.g., textContent changes)
+  characterData: true, // Watch for changes to the text nodes
+  subtree: true  // Include changes inside the element
 });
 
 
