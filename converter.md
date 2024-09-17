@@ -12,11 +12,7 @@ How to use the RDFtoCSV Converter:
 - 3) [CURRENTLY UNAVAILABLE] Click on "More parameters..." button if you want to customize the conversion more.
 - 4) Click "Convert & Download" button.
 You are set! Please be informed that the conversion might take some time. Smaller files are returned in approximately 20 seconds, larger ones can take up to a few minutes.
-<div id="statusIndicator">
-  <img id="loadingWheel" src="loading.gif" alt="Loading" style="display: none;">
-  <img id="greenArrow" src="check.jpg" alt="OK" style="display: none;">
-  <span id="healthCheckStatus">The Web Service is loading...</span>
-</div>
+
 <form id="rdfandconfiguration" action="https://rdf-to-csvw.onrender.com/rdftocsvw" method="post">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <div id="drop-zone">
@@ -61,6 +57,11 @@ You are set! Please be informed that the conversion might take some time. Smalle
         </label><br>
         </div>
     <br><br>
+    <div id="statusIndicator">
+        <img id="loadingWheel" src="loading.gif" alt="Loading" style="display: none;">
+        <img id="greenArrow" src="check.jpg" alt="OK" style="display: none;">
+        <span id="healthCheckStatus">The Web Service is loading...</span>
+    </div>
     <input type="submit" value="Convert & Download" id="submitButton" class="top-and-bottom-margin">
 </form>
 <div>

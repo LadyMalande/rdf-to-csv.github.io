@@ -12,11 +12,7 @@ Jak použít RDFtoCSV konvertor:
 - 3) [ZATÍM NEDOSTUPNÉ] Klikněte na "Více parametrů...", pokud chcete konverzi ještě dále pozměnit.
 - 4) Klikněte na tlačítko "Konvertovat a uložit výsledný .zip".
 Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou dobu trvat. Pro menší soubory jde přibližně o 20 sekund, pro velké soubory se může jednat až o několik minut.
-<div id="statusIndicator">
-  <img id="loadingWheel" src="loading.gif" alt="Loading" style="display: none;">
-  <img id="greenArrow" src="check.jpg" alt="OK" style="display: none;">
-  <span id="healthCheckStatus">Webová služba se načítá...</span>
-</div>
+
 <form id="rdfandconfiguration" action="https://rdf-to-csvw.onrender.com/rdftocsvw" method="post" enctype="multipart/form-data">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <div id="drop-zone">
@@ -62,6 +58,11 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
             <br>
     </div>
     <br><br>
+    <div id="statusIndicator">
+        <img id="loadingWheel" src="loading.gif" alt="Loading" style="display: none;">
+        <img id="greenArrow" src="check.jpg" alt="OK" style="display: none;">
+        <span id="healthCheckStatus">Webová služba se načítá...</span>
+    </div>
     <input type="submit" value="Konvertovat a uložit výsledný .zip" id="submitButton"  class="top-and-bottom-margin">
 </form>
 <div>

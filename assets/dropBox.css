@@ -355,5 +355,6 @@ label.label input[type="file"] {
 #statusIndicator {
   display: flex;
   align-items: center; /* Vertical center */
+  justify-content: center;
   flex-direction: row; /* Stack children vertically */
 }
