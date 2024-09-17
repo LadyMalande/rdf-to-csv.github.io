@@ -59,9 +59,9 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
       if(formData.get("fileURL") != ""){
         anchorTag.download = formData.get(fileURL) + '.zip';
       } else{
-        formData.get("file").getName();
-        console.log("formData.get(\"file\").getName() " + formData.get("file").getName());
-        anchorTag.download = (formData.get("file").getName()) ? formData.get("file").getName() + ".zip" :  + 'result.zip';
+        const fileName = fileInput.files[0].name;
+        console.log("formData.get(\"file\").getName() " + fileName);
+        anchorTag.download = (fileName) ? fileName + ".zip" :  + 'result.zip';
       }
       anchorTag.download = 'result.zip'; // Change this if necessary
       document.body.appendChild(anchorTag);
