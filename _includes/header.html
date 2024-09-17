@@ -20,7 +20,7 @@
           {% for p in site.pages %}
             {% if p.language == page.language %} 
               {% if p.redirect_to == nil %}
-                <a href="{{ p.url | prepend: site.baseurl }}">
+                <a href="{{ p.url | prepend: site.baseurl }}" class="margin-to-right">
                   {{ p.title }}
                 </a>
               {% endif %}

@@ -6,3 +6,5 @@
   .site-nav input:checked ~ .trigger { display: flex; flex-direction: column; align-items: center; padding: 5px; z-index: 1000;}
   .site-nav .page-link { display: block; padding: 5px 10px; margin: 0; }
   .site-nav .page-link:not(:last-child) { margin-bottom: 5px; } }
+
+  
