@@ -15,6 +15,7 @@ const spanForFileInput = document.getElementById('spanForFileInput');
 const dropZone = document.getElementById('drop-zone');
 
 const errorMessageElement = document.getElementById('errorMessage');
+const healthCheckStatusElement = document.getElementById('healthCheckStatus');
 
 
 
@@ -313,4 +314,46 @@ window.addEventListener('DOMContentLoaded', () => {
   } else {
       toggleButton.setAttribute('data-tooltip', 'Not yet available - see this feature in next versions of RDFtoCSV!');
   }
+
+  // Check the service health every 5 seconds
+  setInterval(checkServiceHealth, 5000);
+
+  // Start with the spinning wheel until the first check
+  showLoadingWheel();
 });
+
+function checkServiceHealth() {
+  fetch('https://rdf-to-csvw.onrender.com/')
+    .then(response => {
+      if (response.ok) {
+        // If the response is OK, show the green arrow and hide the spinning wheel
+        document.getElementById('greenArrow').style.display = 'block';
+        document.getElementById('loadingWheel').style.display = 'none';
+        const pageLang = document.documentElement.lang;
+        if(pageLang == "cs"){
+          healthCheckStatusElement.textContent = "Webová služba je připravená!";
+        } else {
+          healthCheckStatusElement.textContent = "The Web Service is ready!";
+        }
+      } else {
+        // If the response is not OK, show the spinning wheel again
+        showLoadingWheel();
+      }
+    })
+    .catch(error => {
+      // If there is an error or the server does not respond, show the spinning wheel
+      showLoadingWheel();
+    });
+}
+
+function showLoadingWheel() {
+  document.getElementById('greenArrow').style.display = 'none';
+  document.getElementById('loadingWheel').style.display = 'block';
+  const pageLang = document.documentElement.lang;
+  if(pageLang == "cs"){
+    healthCheckStatusElement.textContent = "Webová služba se načítá...";
+  } else {
+    healthCheckStatusElement.textContent = "The Web Service is loading...";
+  }
+}
+
