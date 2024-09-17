@@ -29,6 +29,8 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
   errorMessageElement.innerText = ''; // Clear previous content
 
   try {
+      console.log("formData.get(\"file\").getName() " + formData.get("file").getName());
+
       const response = await fetch("https://rdf-to-csvw.onrender.com/rdftocsvw", {
           method: "POST",
           body: formData // Let the browser set the content-type
@@ -51,6 +53,13 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
       const anchorTag = document.createElement('a');
       anchorTag.href = fileURL;
       anchorTag.target = '_blank';
+      if(formData.get("fileURL") != ""){
+        anchorTag.download = formData.get(fileURL) + '.zip';
+      } else{
+        formData.get("file").getName();
+        console.log("formData.get(\"file\").getName() " + formData.get("file").getName());
+        anchorTag.download = (formData.get("file").getName()) ? formData.get("file").getName() + ".zip" :  + 'result.zip';
+      }
       anchorTag.download = 'result.zip'; // Change this if necessary
       document.body.appendChild(anchorTag);
       anchorTag.click();
@@ -265,6 +274,23 @@ document.getElementById('submitButton').addEventListener('click', function(event
   }, 1000);  // Decrease the countdown every second (1000ms)
   isCountingDown = true;
 });
+
+// Monitor changes in the #errorMessage element
+const errorMessage = document.getElementById('errorMessage');
+const observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    // When the content changes, stop the countdown
+    if (isCountingDown) {
+      clearInterval(countdownInterval);
+      countdown.style.display = 'none';
+      patienceText.style.display = 'none';
+      isCountingDown = false;
+    }
+  });
+});
+
+// Set observer to watch for changes to the text content of #errorMessage
+observer.observe(errorMessage, { childList: true, subtree: true });
 
 window.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.getElementById('toggleButton');
