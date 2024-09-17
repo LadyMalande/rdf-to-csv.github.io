@@ -358,3 +358,7 @@ label.label input[type="file"] {
   justify-content: center;
   flex-direction: row; /* Stack children vertically */
 }
+
+.margin-to-right {
+  margin-right: 10px;
+}
