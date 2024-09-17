@@ -303,22 +303,15 @@ document.getElementById('submitButton').addEventListener('click', function(event
   isCountingDown = true;
 });
 
-// Monitor changes in the #errorMessage element
-const errorMessage = document.getElementById('errorMessage');
-const observer = new MutationObserver(function(mutations) {
-  mutations.forEach(function(mutation) {
-    // When the content changes, stop the countdown
-    if (isCountingDown) {
-      clearInterval(countdownInterval);
-      countdown.style.display = 'none';
-      patienceText.style.display = 'none';
-      isCountingDown = false;
-    }
-  });
+errorMessageElement.addEventListener('change', () => {
+  if (isCountingDown) {
+    clearInterval(countdownInterval);
+    countdown.style.display = 'none';
+    patienceText.style.display = 'none';
+    isCountingDown = false;
+  }
 });
 
-// Set observer to watch for changes to the text content of #errorMessage
-observer.observe(errorMessage, { childList: true, subtree: true });
 
 window.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.getElementById('toggleButton');
