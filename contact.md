@@ -32,3 +32,5 @@ If an English version is ever published, it will have a separate link as the wor
 ## Credits
 
 This application's icon has been created using [IconKitchen](https://icon.kitchen/).
+The Web Service availability loading three dots GIF was designed by [BlenderTimer](https://pixabay.com/users/blendertimer-9538909/) hosted on [pixbay](https://pixabay.com/).
+The Web Service availability green check JPG picture was Designed by [Freepik](www.freepik.com/).

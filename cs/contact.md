@@ -32,3 +32,5 @@ Pokud bude někdy publikována i anglická verze, bude na samostatném odkazu, p
 ## Reference
 
 Ikona této webové aplikace vznikla pomocí [IconKitchen](https://icon.kitchen/).
+Animace naznačující načítání webové služby byla vytvořena uživatelem [BlenderTimer](https://pixabay.com/users/blendertimer-9538909/) na stránce [pixbay](https://pixabay.com/).
+Zelená fajfka naznačující připravenost webové služby byla navržena stránkou [Freepik](www.freepik.com/).
