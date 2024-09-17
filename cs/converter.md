@@ -35,11 +35,11 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
     <div class="top-and-bottom-margin">
         <label>Kolik chcete vytvořit CSV tabulek:</label>
         <label>
-            <input type="radio" name="choice" value="basicQuery" checked="checked" >
+            <input type="radio" name="choice" id="basicQuery"  value="basicQuery" checked="checked" >
                 Jedna tabulka
         </label>
         <label>
-            <input type="radio" name="choice" value="splitQuery">
+            <input type="radio" name="choice" id="splitQuery" value="splitQuery">
                 Více tabulek <a href="#comment-2"><sup class="comment-marker" data-index="2">[2]</sup></a>
         </label>
             <br>

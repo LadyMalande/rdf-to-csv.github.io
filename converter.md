@@ -35,11 +35,11 @@ You are set! Please be informed that the conversion might take some time. Smalle
     <div class="top-and-bottom-margin">
         <label>Choose how many CSV tables you wish to get:</label>
             <label>
-            <input type="radio" name="choice" value="basicQuery" checked="checked" >
+            <input type="radio" name="choice" id="basicQuery" value="basicQuery" checked="checked" >
                 One table
             </label>
             <label>
-            <input type="radio" name="choice" value="splitQuery">
+            <input type="radio" name="choice" id="splitQuery" value="splitQuery">
                 Multiple tables <a href="#comment-2"><sup class="comment-marker" data-index="2">[2]</sup></a>
             </label>
     </div>    
