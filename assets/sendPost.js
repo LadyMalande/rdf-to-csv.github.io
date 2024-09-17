@@ -8,6 +8,7 @@ const previewLabel = document.querySelector("#previewLabel");
 const divForResponse = document.querySelector("#responsePlace");
 
 const fileInput = document.getElementById('file');
+const fileURL = document.getElementById('fileURL');
 
 const spanForFileInput = document.getElementById('spanForFileInput');
 
@@ -29,7 +30,6 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
   errorMessageElement.innerText = ''; // Clear previous content
 
   try {
-      console.log("formData.get(\"file\").getName() " + formData.get("file").getName());
 
       const response = await fetch("https://rdf-to-csvw.onrender.com/rdftocsvw", {
           method: "POST",
@@ -56,8 +56,8 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
       const anchorTag = document.createElement('a');
       anchorTag.href = fileURL;
       anchorTag.target = '_blank';
-      if(formData.get("fileURL") != ""){
-        anchorTag.download = formData.get(fileURL) + '.zip';
+      if(fileURL.textContent != ""){
+        anchorTag.download = fileURL.textContent + '.zip';
       } else{
         const fileName = fileInput.files[0].name;
         console.log("formData.get(\"file\").getName() " + fileName);
