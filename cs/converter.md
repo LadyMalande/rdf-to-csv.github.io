@@ -15,21 +15,23 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
 
 <form id="rdfandconfiguration" action="https://rdf-to-csvw.onrender.com/rdftocsvw" method="post" enctype="multipart/form-data">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <div id="drop-zone">
-        Přesuňte soubor sem...<br>
-        <div id="holderForFileInputAndBin">
-            <label class="label" id="labelForFileInput" for="file">
-                <input type="file" name="file" id="file" required/>
-                <span id="spanForFileInput">...nebo vyberte soubor...</span>
-            </label>
-            <button class="clear-button" id="clearButton">
-                <i class="fa-regular fa-trash-can"></i>
-            </button>
+    <div id="choose-file-or-url">
+        <div id="drop-zone">
+            Přesuňte soubor sem...<br>
+            <div id="holderForFileInputAndBin">
+                <label class="label" id="labelForFileInput" for="file">
+                    <input type="file" name="file" id="file" required/>
+                    <span id="spanForFileInput">...nebo vyberte soubor...</span>
+                </label>
+                <button class="clear-button" id="clearButton">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+            </div>
         </div>
-    </div>
-    <div class="top-and-bottom-margin">
-        <label for="fileURL">...nebo zapište URL RDF souboru <a href="#comment-1"><sup class="comment-marker" data-index="1">[1]</sup></a></label>
-        <input type="text" id="fileURL" name="fileURL" required> 
+        <div class="top-and-bottom-margin" id="rdf-url-div">
+            <label for="fileURL">...nebo zapište URL RDF souboru <a href="#comment-1"><sup class="comment-marker" data-index="1">[1]</sup></a></label>
+            <input type="text" id="fileURL" name="fileURL" required> 
+        </div>
     </div>
     <br>
     <div class="top-and-bottom-margin">

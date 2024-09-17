@@ -1,5 +1,5 @@
 #drop-zone {
-  width: 100%; /* Expands to fill the parent's width */
+  width: 50%; /* Expands to fill the parent's width */
   display: flex;
   flex-direction: column; /* Stack children vertically */
   justify-content: flex-start; /* Align items to the top */
@@ -361,4 +361,22 @@ label.label input[type="file"] {
 
 .margin-to-right {
   margin-right: 10px;
+}
+
+#choose-file-or-url {
+  display: flex;
+  flex-direction: row;
+}
+
+#clearButton i {
+  justify-content: center;
+}
+
+#rdf-url-div {
+  width: 50%; 
+  height: 200px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
