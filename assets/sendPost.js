@@ -264,7 +264,7 @@ document.getElementById('submitButton').addEventListener('click', function(event
     isCountingDown = false;
   }
 
-  let timeLeft = 30;
+  let timeLeft = 60;
   countdown.style.display = 'block';  // Show the countdown
   patienceText.style.display = 'block';
   countdown.textContent = timeLeft;   // Set initial time
