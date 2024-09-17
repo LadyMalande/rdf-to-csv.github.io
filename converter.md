@@ -66,7 +66,7 @@ You are set! Please be informed that the conversion might take some time. Smalle
 </form>
 <div>
     <div id="countdown" style="display: none;">30</div>
-    <div id="patienceText" style="display: none;">The web service runs on free plan - please wait 30 seconds for the result. If you are not getting any file transfer until then, click on the convert button again.</div>
+    <div id="patienceText" style="display: none;">The web service runs on free plan - please wait 60 seconds for the result. If you are not getting any file transfer until then, click on the convert button again.</div>
 </div>
 <div id="responsePlace">
 <label id="previewLabel"></label>

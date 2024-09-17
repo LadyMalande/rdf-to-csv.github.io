@@ -59,15 +59,15 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
     </div>
     <br><br>
     <div id="statusIndicator">
-        <img id="loadingWheel" src="loading.gif" alt="Loading" style="display: none;">
-        <img id="greenArrow" src="check.jpg" alt="OK" style="display: none;">
+        <img id="loadingWheel" src="../loading.gif" alt="Loading" style="display: none;">
+        <img id="greenArrow" src="../check.jpg" alt="OK" style="display: none;">
         <span id="healthCheckStatus">Webová služba se načítá...</span>
     </div>
     <input type="submit" value="Konvertovat a uložit výsledný .zip" id="submitButton"  class="top-and-bottom-margin">
 </form>
 <div>
     <div id="countdown" style="display: none;">30</div>
-    <div id="patienceText" style="display: none;">Webová služba běží na verzi zdarma - počkejte 30 sekund a pokud se Vám nestáhl výsledný .zip archiv, klikněte znovu na tlačítko "Konvertovat".</div>
+    <div id="patienceText" style="display: none;">Webová služba běží na verzi zdarma - počkejte 60 sekund a pokud se Vám nestáhl výsledný .zip archiv, klikněte znovu na tlačítko "Konvertovat".</div>
 </div>
 <div id="responsePlace">
 <label id="previewLabel"></label>
