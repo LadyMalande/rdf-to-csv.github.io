@@ -20,13 +20,13 @@
 }
 
 #labelForFileInput {
-  opacity: 0;/* Make the input invisible */
   cursor: pointer; /* Show pointer to indicate clickable label */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position:absolute;
+  background-color: white;
 }
 
 #file {
