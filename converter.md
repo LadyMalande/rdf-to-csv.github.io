@@ -15,22 +15,25 @@ You are set! Please be informed that the conversion might take some time. Smalle
 
 <form id="rdfandconfiguration" action="https://rdf-to-csvw.onrender.com/rdftocsvw" method="post">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <div id="drop-zone">
-        Drop file here...<br>
-                <div id="holderForFileInputAndBin">
-            <label class="label" id="labelForFileInput" for="file">
-                <input type="file" name="file" id="file" accept=".nq, .nt, .jsonl, .jsonld, .n3, .ndjson, .ndjsonld, .owl, .rdf, .rdfs, .rj, .trig, .trigs, .trix, .ttl, .ttls" required/>
-                <span id="spanForFileInput">...or select a file...</span>
-            </label>
-            <button class="clear-button" id="clearButton">
-                <i class="fa-regular fa-trash-can"></i>
-            </button>
+    <div id="choose-file-or-url">
+        <div id="drop-zone">
+            Drop file here...<br>
+            <div id="holderForFileInputAndBin">
+                <label class="label" id="labelForFileInput" for="file">
+                    <input type="file" name="file" id="file" accept=".nq, .nt, .jsonl, .jsonld, .n3, .ndjson, .ndjsonld, .owl, .rdf, .rdfs, .rj, .trig, .trigs, .trix, .ttl, .ttls" required/>
+                    <span id="spanForFileInput">...or select a file...</span>
+                </label>
+                <button class="clear-button" id="clearButton">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
+            </div>
         </div>
-    </div>
-    <div class="top-and-bottom-margin">
-        <label for="fileURL">...or fill in the RDF file URL <a href="#comment-1"><sup class="comment-marker" data-index="1">[1]</sup></a></label>
-        <input type="text" id="fileURL" name="fileURL" required> 
-    </div>    
+        <div class="vertical-line"></div>
+        <div class="top-and-bottom-margin" id="rdf-url-div">
+            <label for="fileURL">...or fill in the RDF file URL: <a href="#comment-1"><sup class="comment-marker" data-index="1">[1]</sup></a></label>
+            <input type="text" id="fileURL" name="fileURL" required> 
+        </div>
+    </div>   
     <br>
     <div class="top-and-bottom-margin">
         <label>Choose how many CSV tables you wish to get:</label>

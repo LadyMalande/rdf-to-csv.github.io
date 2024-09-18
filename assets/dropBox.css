@@ -388,7 +388,7 @@ label.label input[type="file"] {
   width: 2px;
   height: 240px;
   justify-content: center;
-  background-color: black;
+  background-color: #ccc;
   margin: 0 20px;  /* Adjust the spacing between elements */
 }
 
