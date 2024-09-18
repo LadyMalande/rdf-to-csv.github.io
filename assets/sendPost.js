@@ -161,7 +161,8 @@ fileInput.addEventListener('change', function() {
       // Get the name of the file
       const fileName = fileInput.files[0].name;
       // Change the span text to the file name
-      spanForFileInput.textContent = fileName;
+      const truncatedFileName = truncateString(fileName, 17);
+      spanForFileInput.textContent = (truncateString.length == fileName) ? fileName : truncatedFileName + "...";
   } else {
       // If no file is selected, revert to the original text
       const pageLang = document.documentElement.lang;
@@ -282,6 +283,13 @@ document.addEventListener('DOMContentLoaded', function() {
     fileURLElement.required = true;
   }
 });
+
+function truncateString(str, maxLength) {
+  if (str.length > maxLength) {
+      return str.slice(0, maxLength) + '...'; // Optional: Add ellipsis to indicate truncation
+  }
+  return str;
+}
 
 
 let countdownInterval = null;
