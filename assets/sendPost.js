@@ -25,12 +25,23 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
   const form = event.target;
   const formData = new FormData(form);
 
+  /*
+  if(!checkAtLeastOneFileOptionIsUsed()){
+    const pageLang = document.documentElement.lang;
+    if(pageLang == "cs"){
+      alert('Vyberte alespoň jeden soubor.');
+    } else {
+      alert('Provide at least one of the file options: Upload a file or provide URL of the file.');
+    }
+  }
+*/
   // Clear any previous error message
   errorMessageElement.style.color = 'red';
   errorMessageElement.style.display = 'none'; // Hide any previous message
   errorMessageElement.innerText = ''; // Clear previous content
 
   try {
+
 
       const response = await fetch("https://rdf-to-csvw.onrender.com/rdftocsvw", {
           method: "POST",
@@ -99,7 +110,17 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
 
 
 
-
+function checkAtLeastOneFileOptionIsUsed(){
+    let inputField = fileURLElement.value.trim();
+    if(inputField != ""){
+      return true;
+    }
+    if(fileInput.files.length > 0){
+      return true;
+    }
+    return false;
+    
+}
 
 
 function fetchWithTimeout(url, options, timeout = 5000) {
@@ -247,6 +268,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
   inputs.forEach(i => i.addEventListener('input', inputListener));
 });
+
+// Require at least one of the two required inputs
+document.addEventListener('DOMContentLoaded', function() {
+  if(fileURLElement.value.trim != ""){
+    fileInput.required = false;
+  } else{
+    fileInput.required = true;
+  }
+  if(fileInput.files.length > 0){
+    fileURLElement.required = false;
+  } else{
+    fileURLElement.required = true;
+  }
+});
+
 
 let countdownInterval = null;
 let isCountingDown = false;
