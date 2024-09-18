@@ -344,6 +344,7 @@ function checkServiceHealth() {
       // If there is an error or the server does not respond, show the spinning wheel
       showLoadingWheel();
     });
+    triggerBriefingUpdate();
 }
 
 function showLoadingWheel() {
@@ -355,5 +356,18 @@ function showLoadingWheel() {
   } else {
     healthCheckStatusElement.textContent = "The Web Service is loading...";
   }
+}
+
+const eventSource = new EventSource('https://rdf-to-csvw.onrender.com/briefing');
+
+eventSource.onmessage = function(event) {
+    console.log("Briefing message received: " + event.data);
+};
+
+function triggerBriefingUpdate() {
+  fetch('https://rdf-to-csvw.onrender.com/triggerBriefing')
+    .then(response => response.text())
+    .then(data => console.log(data))  // Logs "Briefing update sent!"
+    .catch(error => console.error('Error triggering briefing:', error));
 }
 
