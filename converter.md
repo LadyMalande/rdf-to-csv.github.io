@@ -19,7 +19,7 @@ You are set! Please be informed that the conversion might take some time. Smalle
         Drop file here...<br>
                 <div id="holderForFileInputAndBin">
             <label class="label" id="labelForFileInput" for="file">
-                <input type="file" name="file" id="file" required/>
+                <input type="file" name="file" id="file" accept=".nq, .nt, .jsonl, .jsonld, .n3, .ndjson, .ndjsonld, .owl, .rdf, .rdfs, .rj, .trig, .trigs, .trix, .ttl, .ttls" required/>
                 <span id="spanForFileInput">...or select a file...</span>
             </label>
             <button class="clear-button" id="clearButton">

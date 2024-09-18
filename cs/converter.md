@@ -20,7 +20,7 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
             Přesuňte soubor sem...<br>
             <div id="holderForFileInputAndBin">
                 <label class="label" id="labelForFileInput" for="file">
-                    <input type="file" name="file" id="file" required/>
+                    <input type="file" name="file" id="file" accept=".nq, .nt, .jsonl, .jsonld, .n3, .ndjson, .ndjsonld, .owl, .rdf, .rdfs, .rj, .trig, .trigs, .trix, .ttl, .ttls" required/>
                     <span id="spanForFileInput">...nebo vyberte soubor...</span>
                 </label>
                 <button class="clear-button" id="clearButton">
