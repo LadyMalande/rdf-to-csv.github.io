@@ -28,6 +28,7 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
                 </button>
             </div>
         </div>
+        <div class="vertical-line"></div>
         <div class="top-and-bottom-margin" id="rdf-url-div">
             <label for="fileURL">...nebo zapište URL RDF souboru <a href="#comment-1"><sup class="comment-marker" data-index="1">[1]</sup></a></label>
             <input type="text" id="fileURL" name="fileURL" required> 
