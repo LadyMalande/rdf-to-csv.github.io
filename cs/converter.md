@@ -9,7 +9,7 @@ sitemap: false
 Jak použít RDFtoCSV konvertor:
 - 1) Nahrajte RDF soubor z lokálního uložiště nebo zapiště jeho URL.
 - 2) Vyberte, kolik chcete vytvořit tabulek v CSV formátu.
-- 3) [ZATÍM NEDOSTUPNÉ] Klikněte na "Více parametrů...", pokud chcete konverzi ještě dále pozměnit.
+- 3) Klikněte na "Více parametrů...", pokud chcete konverzi ještě dále pozměnit.
 - 4) Klikněte na tlačítko "Konvertovat a uložit výsledný .zip".
 Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou dobu trvat. Pro menší soubory jde přibližně o 20 sekund, pro velké soubory se může jednat až o několik minut.
 
