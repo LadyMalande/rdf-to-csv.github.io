@@ -1,5 +1,5 @@
 #drop-zone {
-  width: 40%; /* Expands to fill the parent's width */
+  width: 50%; /* Expands to fill the parent's width */
   display: flex;
   flex-direction: column; /* Stack children vertically */
   justify-content: flex-start; /* Align items to the top */
@@ -89,11 +89,11 @@ a i {
   position:absolute;
   margin-left: 90px;
   margin-top: 15px;
+  margin-right: 3px;
+  width: 36px;
+  height: 36px;
 }
 
-.clear-button i {
-  margin-right: 5px;
-}
 
 .clear-button:hover {
   background-color: #ff3d3d;
@@ -369,11 +369,12 @@ label.label input[type="file"] {
 }
 
 #clearButton i {
+  display: flex;
   justify-content: center;
 }
 
 #rdf-url-div {
-  width: 40%; 
+  width: 50%; 
   height: 200px;
   justify-content: center;
   display: flex;
@@ -384,6 +385,7 @@ label.label input[type="file"] {
 .vertical-line {
   width: 2px;
   height: 200px;
+  justify-content: center;
   background-color: black;
   margin: 0 20px;  /* Adjust the spacing between elements */
 }
