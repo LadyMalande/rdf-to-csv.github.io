@@ -55,7 +55,8 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
       const anchorTag = document.createElement('a');
       anchorTag.href = fileURL;
       anchorTag.target = '_blank';
-      if(fileURLElement.textContent != ""){
+      let inputField = fileURLElement.value.trim();
+      if(inputField != ""){
         console.log("fileURLElement.textContent " + fileURLElement.textContent);
         anchorTag.download = fileURLElement.textContent + '.zip';
       } else{
