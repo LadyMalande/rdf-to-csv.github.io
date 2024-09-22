@@ -90,7 +90,7 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
     </div>
 </div>
 
-<script type="text/javascript" src="https://ladymalande.github.io/{{ base.url }}/{{ 'assets/sendPost.js' | relative_url }}"></script>
+<script type="text/javascript" src="{% if jekyll.environment == 'production' %}{{site.production.url}}{{site.production.baseurl}}{% else %}{{site.development.url}}{{site.development.baseurl}}{% endif %}/{{ 'assets/sendPost.js' | relative_url }}"></script>
 <!-- 
 <h1>Calculate SHA-256 Checksum</h1>
 <input type="file" id="fileInput" />

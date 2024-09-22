@@ -87,4 +87,4 @@ You are set! Please be informed that the conversion might take some time. Smalle
     </div>
 </div>
 
-<script type="text/javascript" src="/assets/sendPost.js"></script>
+<script type="text/javascript" src="{% if jekyll.environment == 'production' %}{{site.production.url}}{{site.production.baseurl}}{% else %}{{site.development.url}}{{site.development.baseurl}}{% endif %}/{{ 'assets/sendPost.js' | relative_url }}"></script>
