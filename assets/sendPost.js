@@ -380,6 +380,7 @@ function checkServiceHealth() {
         } else {
           healthCheckStatusElement.textContent = "The Web Service is ready!";
         }
+        activateButton();
       } else {
         // If the response is not OK, show the spinning wheel again
         showLoadingWheel();
@@ -401,7 +402,22 @@ function showLoadingWheel() {
   } else {
     healthCheckStatusElement.textContent = "The Web Service is loading...";
   }
+  deactivateButton();
 }
+
+  // Function to activate the button
+  function activateButton() {
+    submitButton.classList.remove('submitButtonDisactivated');
+    submitButton.classList.add('submitButton');
+    submitButton.disabled = false; // Enable the button
+  }
+
+  // Function to deactivate the button
+  function deactivateButton() {
+    submitButton.classList.remove('submitButton');
+    submitButton.classList.add('submitButtonDisactivated');
+    submitButton.disabled = true; // Enable the button
+  }
 
 const eventSource = new EventSource('https://rdf-to-csvw.onrender.com/briefing');
 

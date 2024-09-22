@@ -20,7 +20,8 @@
           {% for p in site.pages %}
             {% if p.language == page.language %} 
               {% if p.redirect_to == nil %}
-                <a href="{{ p.url | prepend: site.baseurl }}" class="margin-to-right">
+                <!--<a href="{{ p.url | prepend: site.baseurl }}" class="margin-to-right"> -->
+                  <a href="{% if jekyll.environment == 'production' %}{{ p.url | prepend: site.production.baseurl }}{% else %}{{ p.url | prepend: site.development.baseurl }}{% endif %}/some-page" class="margin-to-right"></a>
                   {{ p.title }}
                 </a>
               {% endif %}

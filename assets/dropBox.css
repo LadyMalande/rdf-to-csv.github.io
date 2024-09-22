@@ -297,7 +297,7 @@ label.label input[type="file"] {
   transform: translateY(0);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-#submitButton {
+.submitButton {
   background: linear-gradient(135deg, #4a90e2, #357ABD);
   border: none;
   color: white;
@@ -310,6 +310,22 @@ label.label input[type="file"] {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   letter-spacing: 1px;
+}
+
+.submitButtonDisactivated {
+  background: linear-gradient(135deg, #b0b0b0, #8e8e8e); /* Grey gradient */
+  border: none;
+  color: #d0d0d0; /* Light grey text */
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: not-allowed; /* Disabled cursor */
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  opacity: 0.6; /* Dim the button to look inactive */
 }
 
 #countdown {

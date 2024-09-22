@@ -87,4 +87,4 @@ You are set! Please be informed that the conversion might take some time. Smalle
     </div>
 </div>
 
-<script type="text/javascript" src="https://ladymalande.github.io/{{ base.url }}/{{ 'assets/sendPost.js' | relative_url }}"></script>
+<script type="text/javascript" src="/assets/sendPost.js"></script>

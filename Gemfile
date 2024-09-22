@@ -15,10 +15,11 @@ gem "minima", "~> 2.5"
 gem "webrick"
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
-gem "github-pages", "~> 231", group: :jekyll_plugins
+gem "github-pages", "231", group: :jekyll_plugins
 # For redirectint to the main page from different one than index.html/index.md
 gem 'jekyll-redirect-from'
-
+gem 'concurrent-ruby', '1.2.3'
+gem 'i18n', '1.14.6'
 
 
 # If you have any plugins, put them here!

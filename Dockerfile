@@ -21,5 +21,8 @@ RUN bundle exec jekyll build
 # Expose port 4000 for serving the site
 EXPOSE 4000
 
+# for production
+# JEKYLL_ENV=production jekyll build --config _config.yml,_config_prod.yml
+
 # Serve the Jekyll site
-CMD ["jekyll", "serve", "--host", "0.0.0.0"]
+CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0"]
