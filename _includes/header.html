@@ -21,7 +21,7 @@
             {% if p.language == page.language %} 
               {% if p.redirect_to == nil %}
                 <!--<a href="{{ p.url | prepend: site.baseurl }}" class="margin-to-right"> -->
-                  <a href="{% if jekyll.environment == 'production' %}{{ p.url | prepend: site.production.baseurl }}{% else %}{{ p.url | prepend: site.development.baseurl }}{% endif %}/some-page" class="margin-to-right"></a>
+                  <a href="{% if jekyll.environment == 'production' %}{{ p.url | prepend: site.production.baseurl }}{% else %}{{ p.url | prepend: site.development.baseurl }}{% endif %}" class="margin-to-right"></a>
                   {{ p.title }}
                 </a>
               {% endif %}
@@ -32,22 +32,22 @@
     {%- endif -%}
     <nav class="language-switcher">
       {% if page.name contains "index" %}
-        <a href="{{ site.baseurl }}/">
+        <a href="{% if jekyll.environment == 'production' %}{{ site.production.baseurl }}{% else %}{{ site.development.baseurl }}{% endif %}/">
           <span class="fi fi-gb to-background"></span>
           <span class="fi fi-us to-background"></span>
           EN
         </a>
-        <a href="{{ site.baseurl | append: "/cs" }}">
+        <a href="{% if jekyll.environment == 'production' %}{{ site.production.baseurl | append: "/cs" }}{% else %}{{ site.development.baseurl | append: "/cs" }}{% endif %}">
           <span class="fi fi-cz to-background"></span>
           CS
         </a>
       {% else %}
-        <a href="{{ site.baseurl | append: page.handle }}">
+        <a href="{% if jekyll.environment == 'production' %}{{ site.production.baseurl | append: page.handle }}{% else %}{{ site.development.baseurl | append: page.handle }}{% endif %}">
           <span class="fi fi-gb to-background"></span>
           <span class="fi fi-us to-background"></span>
           EN
         </a>
-        <a href="{{ site.baseurl | append: "/cs" | append: page.handle }}">
+        <a href="{% if jekyll.environment == 'production' %}{{ site.production.baseurl | append: "/cs" | append: page.handle }}{% else %}{{ site.development.baseurl | append: "/cs" | append: page.handle }}{% endif %}">
           <span class="fi fi-cz to-background"></span>
           CS
         </a>
