@@ -73,7 +73,7 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
     <div id="patienceText" style="display: none;">Webová služba běží na verzi zdarma - počkejte 60 sekund a pokud se Vám nestáhl výsledný .zip archiv, klikněte znovu na tlačítko "Konvertovat".</div>
 </div>
 <div id="responsePlace">
-<label id="previewLabel"></label>
+<label id="previewLabel">{{ jekyll.environment }}</label>
 </div>
 
 
