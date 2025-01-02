@@ -48,18 +48,32 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
             <br>
     </div>
     <button id="toggleButton"  class="top-and-bottom-margin">Více parametrů...</button>
-    <div id="toggleContent">
-        <label>Vyberte parametr číslo 1:</label>
-        <label>
-            <input type="radio" name="choice2" value="opt1" >
-                Možnost 1
-        </label>
-        <label>
-            <input type="radio" name="choice2" value="opt2">
-                Možnost 2
-        </label>
+        <div id="toggleContent">
+            <label>Vyberte metodu konverze:</label>
+            <label>
+                <input type="radio" name="choice" value="RDF4J" >
+                    RDF4J
+            </label>
+            <label>
+                <input type="radio" name="choice" value="BIGFILESTREAMING">
+                    Big File Streaming
+            </label>
+            <label>
+                <input type="radio" name="choice" value="STREAMING">
+                    Streaming
+            </label>
             <br>
-    </div>
+            <label>Jak se chovat k seznamům hodnot v buňkách:</label>
+            <label>
+                <input type="radio" name="firstNormalForm" value="true" >
+                    Hodnoty v buňkách jsou atomické
+            </label>
+            <label>
+                <input type="radio" name="firstNormalForm" value="false">
+                    Buňky mohou obsahovat seznamy hodnot
+            </label>
+            <br>
+        </div>
     <br><br>
     <div id="statusIndicator">
         <img id="loadingWheel" src="../loading.gif" alt="Loading" style="display: none;">

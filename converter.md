@@ -38,26 +38,41 @@ You are set! Please be informed that the conversion might take some time. Smalle
     <div class="top-and-bottom-margin">
         <label>Choose how many CSV tables you wish to get:</label>
             <label>
-            <input type="radio" name="choice" id="basicQuery" value="basicQuery" checked="checked" >
+            <input type="radio" name="tables" id="basicQuery" value="basicQuery" checked="checked" >
                 One table
             </label>
             <label>
-            <input type="radio" name="choice" id="splitQuery" value="splitQuery">
+            <input type="radio" name="tables" id="splitQuery" value="splitQuery">
                 Multiple tables <a href="#comment-2"><sup class="comment-marker" data-index="2">[2]</sup></a>
             </label>
     </div>    
         <br>
             <button id="toggleButton" class="top-and-bottom-margin">More parameters...</button>
         <div id="toggleContent">
-            <label>Choose a different parameter 1:</label>
-    <label>
-        <input type="radio" name="choice2" value="opt1" >
-            Option 1
-        </label>
-        <label>
-        <input type="radio" name="choice2" value="opt2">
-            Option 2
-        </label><br>
+            <label>Choose a conversion method:</label>
+            <label>
+                <input type="radio" name="choice" value="RDF4J" >
+                    RDF4J
+            </label>
+            <label>
+                <input type="radio" name="choice" value="BIGFILESTREAMING">
+                    Big File Streaming
+            </label>
+            <label>
+                <input type="radio" name="choice" value="STREAMING">
+                    Streaming
+            </label>
+            <br>
+            <label>How to treat lists of values in cells:</label>
+            <label>
+                <input type="radio" name="firstNormalForm" value="true" >
+                    Each cell contains only 1 value
+            </label>
+            <label>
+                <input type="radio" name="firstNormalForm" value="false">
+                    Cells can contain lists of values
+            </label>
+            <br>
         </div>
     <br><br>
     <div id="statusIndicator">
@@ -69,7 +84,7 @@ You are set! Please be informed that the conversion might take some time. Smalle
 </form>
 <div>
     <div id="countdown" style="display: none;">30</div>
-    <div id="patienceText" style="display: none;">The web service runs on free plan - please wait 60 seconds for the result. If you are not getting any file transfer until then, click on the convert button again.</div>
+    <div id="patienceText" style="display: none;">The web service runs on free plan - please wait 60 seconds for the result. If you are not getting any file transfer until then, click on the convert button again. The response times may wary depending on the size of your RDF file. </div>
 </div>
 <div id="responsePlace">
 <label id="previewLabel"></label>
