@@ -1,8 +1,6 @@
 
 const form = document.querySelector("#rdfandconfiguration");
 
-//const toggleButton = document.querySelector("#toggleButton");
-
 const previewLabel = document.querySelector("#previewLabel");
 
 const divForResponse = document.querySelector("#responsePlace");
@@ -182,13 +180,6 @@ submitButton = document.getElementById('submitButton');
 submitButton.addEventListener('click', function() {
   errorMessageElement.innerText = ``;
 });
-
-/*
-toggleButton.addEventListener('click', function(event) {
-  event.preventDefault(); // Prevents form submission
-  console.log('Button clicked without form submission');
-});
-*/
 
 // Add event listener to the clear button
 document.getElementById('clearButton').addEventListener('click', function(event) {
