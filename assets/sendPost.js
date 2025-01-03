@@ -412,7 +412,7 @@ function showLoadingWheel() {
     submitButton.disabled = true; // Enable the button
   }
 
-toggleCheckbox.addEventListener('toggle', function(event) {
+toggleCheckbox.addEventListener('check', function(event) {
 
       console.log("toggleCheckbox clicked");
       if(toggleDiv.style.display == 'none'){
@@ -423,7 +423,7 @@ toggleCheckbox.addEventListener('toggle', function(event) {
   
 });
 
-toggleDiv.addEventListener('click', function(event) {
+toggleLabel.addEventListener('click', function(event) {
 
   console.log("toggleCheckbox clicked");
   if(toggleDiv.style.display == 'none'){
