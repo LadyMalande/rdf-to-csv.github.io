@@ -15,6 +15,7 @@ const dropZone = document.getElementById('drop-zone');
 const errorMessageElement = document.getElementById('errorMessage');
 const healthCheckStatusElement = document.getElementById('healthCheckStatus');
 const toggleCheckbox = document.getElementById('my-toggle');
+const toggleLabel = document.getElementById('my-toggle-label');
 const toggleDiv = document.getElementById('toggleContent');
 
 
