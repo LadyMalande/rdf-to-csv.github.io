@@ -414,7 +414,13 @@ function showLoadingWheel() {
 
 function toggleMoreParameters() {
     toggleCheckbox.click(function(){
-    toggleDiv.toggle();
+      console.log("toggleCheckbox clicked");
+      if(toggleDiv.style.display == 'none'){
+          toggleDiv.style.display = 'block';
+      } else {
+        toggleDiv.style.display == 'none'
+      }
+    
     });
     
 }
