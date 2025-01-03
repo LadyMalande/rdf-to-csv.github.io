@@ -1,7 +1,7 @@
 
 const form = document.querySelector("#rdfandconfiguration");
 
-const toggleButton = document.querySelector("#toggleButton");
+//const toggleButton = document.querySelector("#toggleButton");
 
 const previewLabel = document.querySelector("#previewLabel");
 
@@ -183,11 +183,12 @@ submitButton.addEventListener('click', function() {
   errorMessageElement.innerText = ``;
 });
 
-
+/*
 toggleButton.addEventListener('click', function(event) {
   event.preventDefault(); // Prevents form submission
   console.log('Button clicked without form submission');
 });
+*/
 
 // Add event listener to the clear button
 document.getElementById('clearButton').addEventListener('click', function(event) {
@@ -353,13 +354,13 @@ observer.observe(errorMessageElement, {
 
 
 window.addEventListener('DOMContentLoaded', () => {
-  const toggleButton = document.getElementById('toggleButton');
+  const toggleLabel = document.getElementById('my-toggle-label');
   const pageLang = document.documentElement.lang;  // Get the page language
 
   if (pageLang === "cs") {
-      toggleButton.setAttribute('data-tooltip', 'Zatím nedostupné - vyzkoušejte tuto možnost v příští verzi RDFtoCSV!');
+    toggleLabel.setAttribute('data-tooltip', 'Zatím nedostupné - vyzkoušejte tuto možnost v příští verzi RDFtoCSV!');
   } else {
-      toggleButton.setAttribute('data-tooltip', 'Not yet available - see this feature in next versions of RDFtoCSV!');
+    toggleLabel.setAttribute('data-tooltip', 'Not yet available - see this feature in next versions of RDFtoCSV!');
   }
 
   // Check the service health every 5 seconds

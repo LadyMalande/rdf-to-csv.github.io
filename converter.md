@@ -48,7 +48,7 @@ You are set! Please be informed that the conversion might take some time. Smalle
     </div>    
         <br>
         <input type="checkbox" id="my-toggle" class="btn-check" value="toggleContent">
-        <label class="top-and-bottom-margin" for="my-toggle">More parameters...</label>
+        <label id="my-toggle-label" class="top-and-bottom-margin" for="my-toggle">More parameters...</label>
         <div id="toggleContent">
             <label>Choose a conversion method:</label>
             <label>
