@@ -15,6 +15,7 @@ You are set! Please be informed that the conversion might take some time. Smalle
 
 <form id="rdfandconfiguration" action="https://rdf-to-csvw.onrender.com/rdftocsvw" method="post">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <div id="choose-file-or-url">
         <div id="drop-zone">
             Drop file here...<br>
