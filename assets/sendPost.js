@@ -16,6 +16,8 @@ const dropZone = document.getElementById('drop-zone');
 
 const errorMessageElement = document.getElementById('errorMessage');
 const healthCheckStatusElement = document.getElementById('healthCheckStatus');
+const toggleCheckbox = document.getElementById('my-toggle');
+const toggleDiv = document.getElementById('toggleContent');
 
 
 
@@ -432,3 +434,9 @@ function triggerBriefingUpdate() {
     .catch(error => console.error('Error triggering briefing:', error));
 }
 
+function toggleMoreParameters() {
+    toggleCheckbox.click(function(){
+    toggleDiv.toggle();
+    });
+    
+}
