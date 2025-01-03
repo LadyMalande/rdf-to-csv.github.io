@@ -412,13 +412,24 @@ function showLoadingWheel() {
     submitButton.disabled = true; // Enable the button
   }
 
-toggleCheckbox.addEventListener('click', function(event) {
+toggleCheckbox.addEventListener('toggle', function(event) {
 
       console.log("toggleCheckbox clicked");
       if(toggleDiv.style.display == 'none'){
           toggleDiv.style.display = 'block';
       } else {
-        toggleDiv.style.display == 'none'
+        toggleDiv.style.display == 'none';
       }
   
+});
+
+toggleDiv.addEventListener('click', function(event) {
+
+  console.log("toggleCheckbox clicked");
+  if(toggleDiv.style.display == 'none'){
+      toggleDiv.style.display = 'block';
+  } else {
+    toggleDiv.style.display == 'none';
+  }
+
 });
