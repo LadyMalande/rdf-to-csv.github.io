@@ -384,7 +384,6 @@ function checkServiceHealth() {
       // If there is an error or the server does not respond, show the spinning wheel
       showLoadingWheel();
     });
-    triggerBriefingUpdate();
 }
 
 function showLoadingWheel() {
