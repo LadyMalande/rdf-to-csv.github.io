@@ -413,19 +413,6 @@ function showLoadingWheel() {
     submitButton.disabled = true; // Enable the button
   }
 
-const eventSource = new EventSource('https://rdf-to-csvw.onrender.com/briefing');
-
-eventSource.onmessage = function(event) {
-    console.log("Briefing message received: " + event.data);
-};
-
-function triggerBriefingUpdate() {
-  fetch('https://rdf-to-csvw.onrender.com/triggerBriefing')
-    .then(response => response.text())
-    .then(data => console.log(data))  // Logs "Briefing update sent!"
-    .catch(error => console.error('Error triggering briefing:', error));
-}
-
 function toggleMoreParameters() {
     toggleCheckbox.click(function(){
     toggleDiv.toggle();
