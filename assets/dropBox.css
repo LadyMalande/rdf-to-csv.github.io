@@ -204,11 +204,11 @@ label.label input[type="file"] {
   color: #ffffff;
 }
 
-/* Initially hide the content 
+/* Initially hide the content */
 #toggleContent {
   display: none;
 }
-*/
+
 
 #toggleButton {
   position: relative; 

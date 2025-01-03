@@ -14,9 +14,6 @@ const dropZone = document.getElementById('drop-zone');
 
 const errorMessageElement = document.getElementById('errorMessage');
 const healthCheckStatusElement = document.getElementById('healthCheckStatus');
-const toggleCheckbox = document.getElementById('my-toggle');
-const toggleLabel = document.getElementById('my-toggle-label');
-const toggleDiv = document.getElementById('toggleContent');
 
 
 
@@ -413,24 +410,11 @@ function showLoadingWheel() {
     submitButton.disabled = true; // Enable the button
   }
 
-toggleCheckbox.addEventListener('check', function(event) {
-
-      console.log("toggleCheckbox clicked");
-      if(toggleDiv.style.display == 'none'){
-          toggleDiv.style.display = 'block';
-      } else {
-        toggleDiv.style.display == 'none';
-      }
-  
-});
-
-toggleLabel.addEventListener('click', function(event) {
-
-  console.log("toggleCheckbox clicked");
-  if(toggleDiv.style.display == 'none'){
-      toggleDiv.style.display = 'block';
+function toggleContent() {
+  var x = document.getElementById("toggleContent");
+  if (x.style.display === "none") {
+    x.style.display = "block";
   } else {
-    toggleDiv.style.display == 'none';
+    x.style.display = "none";
   }
-
-});
+}
