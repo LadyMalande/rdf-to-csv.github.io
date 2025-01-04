@@ -47,7 +47,7 @@ You are set! Please be informed that the conversion might take some time. Smalle
             </label>
     </div>    
         <br>
-            <button id="my-toggle-label" onclick="toggleContent()">More parameters...</button>
+            <button id="toggleButton" onclick="toggleContent()">More parameters...</button>
         <div id="toggleContent">
             <label>Choose a conversion method:</label>
             <label>
