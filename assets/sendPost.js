@@ -15,6 +15,8 @@ const dropZone = document.getElementById('drop-zone');
 const errorMessageElement = document.getElementById('errorMessage');
 const healthCheckStatusElement = document.getElementById('healthCheckStatus');
 
+const toggleButton = document.getElementById('my-toggle-label');
+
 
 
 document.getElementById('rdfandconfiguration').addEventListener('submit', async function(event) {
@@ -418,3 +420,8 @@ function toggleContent() {
     x.style.display = "none";
   }
 }
+
+toggleButton.addEventListener("click", function(event) {
+  event.preventDefault(); // Prevent the form from submitting
+  console.log("Button clicked without submitting the form!");
+});
