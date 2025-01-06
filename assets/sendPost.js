@@ -349,9 +349,9 @@ window.addEventListener('DOMContentLoaded', () => {
   const pageLang = document.documentElement.lang;  // Get the page language
 
   if (pageLang === "cs") {
-    toggleLabel.setAttribute('data-tooltip', 'Zatím nedostupné - vyzkoušejte tuto možnost v příští verzi RDFtoCSV!');
+    toggleLabel.setAttribute('data-tooltip', 'Klikněte pro vybrání dalších parametrů');
   } else {
-    toggleLabel.setAttribute('data-tooltip', 'Not yet available - see this feature in next versions of RDFtoCSV!');
+    toggleLabel.setAttribute('data-tooltip', 'Click to choose from other parameters');
   }
 
   // Check the service health every 5 seconds
