@@ -25,7 +25,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position:absolute;
+  position: absolute;
   background-color: white;
 }
 
@@ -50,7 +50,7 @@
   white-space: nowrap;
   align-items: center;
   justify-content: center;
-  position:absolute;
+  position: absolute;
 }
 
 #fileName {
@@ -60,7 +60,7 @@
   white-space: nowrap;
   align-items: center;
   justify-content: center;
-  position:absolute;
+  position: absolute;
 }
 
 a img {
@@ -86,14 +86,13 @@ a i {
   font-size: 16px;
   flex-direction: column;
   justify-content: center;
-  position:absolute;
+  position: absolute;
   margin-left: 90px;
   margin-top: 15px;
   margin-right: 3px;
   width: 36px;
   height: 36px;
 }
-
 
 .clear-button:hover {
   background-color: #ff3d3d;
@@ -106,7 +105,7 @@ a i {
   white-space: nowrap;
   flex-direction: row;
   justify-content: center;
-  position:relative;
+  position: relative;
 }
 
 /*
@@ -209,9 +208,8 @@ label.label input[type="file"] {
   display: none;
 }
 
-
 #toggleButton {
-  position: relative; 
+  position: relative;
   background-color: #4a90e2;
   border: 1px solid #ccc;
   color: white;
@@ -256,7 +254,7 @@ label.label input[type="file"] {
 
 /* Hover effect for button */
 #toggleButton:hover {
-  background-color: #357ABD;
+  background-color: #357abd;
 }
 
 #rdfandconfiguration {
@@ -287,18 +285,18 @@ label.label input[type="file"] {
 /* Elegant eye-catching button */
 
 .submitButton:hover {
-  background: linear-gradient(135deg, #357ABD, #4a90e2);
+  background: linear-gradient(135deg, #357abd, #4a90e2);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
 }
 
 .submitButton:active {
-  background: #357ABD;
+  background: #357abd;
   transform: translateY(0);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .submitButton {
-  background: linear-gradient(135deg, #4a90e2, #357ABD);
+  background: linear-gradient(135deg, #4a90e2, #357abd);
   border: none;
   color: white;
   padding: 12px 24px;
@@ -348,15 +346,14 @@ label.label input[type="file"] {
   padding: 20px;
 }
 
-@media screen and (max-width: 600px) { 
+@media screen and (max-width: 600px) {
   div.top-and-bottom-margin {
     margin-top: 10px;
     margin-bottom: 10px;
-    display: flex; 
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
     align-items: center;
-  } 
-
+  }
 }
 
 #loadingWheel {
@@ -381,7 +378,7 @@ label.label input[type="file"] {
 }
 
 #choose-file-or-url {
-  width: 100%; 
+  width: 100%;
   display: flex;
   flex-direction: row;
 }
@@ -392,7 +389,7 @@ label.label input[type="file"] {
 }
 
 #rdf-url-div {
-  width: 50%; 
+  width: 50%;
   height: 200px;
   justify-content: center;
   display: flex;
@@ -405,20 +402,22 @@ label.label input[type="file"] {
   height: 240px;
   justify-content: center;
   background-color: #ccc;
-  margin: 0 20px;  /* Adjust the spacing between elements */
+  margin: 0 20px; /* Adjust the spacing between elements */
 }
 
-@media screen and (max-width: 600px) { 
-  .vertical-line {display: none;} 
+@media screen and (max-width: 600px) {
+  .vertical-line {
+    display: none;
+  }
   #rdf-url-div {
-    width: 100%; 
+    width: 100%;
     justify-content: center;
     display: flex;
     align-items: center;
     flex-direction: column;
   }
   #choose-file-or-url {
-    width: 100%; 
+    width: 100%;
     display: flex;
     flex-direction: column;
   }
@@ -433,13 +432,55 @@ label.label input[type="file"] {
     padding: 20px; /* Optional: add padding for spacing */
     gap: 10px;
   }
- }
+}
 
- @media screen and (max-width: 600px) { .site-nav { position: absolute; top: 9px; right: 15px; background-color: #fdfdfd; border: 1px solid #e8e8e8; border-radius: 5px; text-align: right; }
-  .site-nav label[for="nav-trigger"] { display: block; float: right; width: 36px; height: 36px; z-index: 2; cursor: pointer; }
-  .site-nav .menu-icon { display: block; float: right; width: 36px; height: 26px; line-height: 0; padding-top: 10px; text-align: center; }
-  .site-nav .menu-icon > svg { fill: #424242; }
-  .site-nav input ~ .trigger { clear: both; display: none; }
-  .site-nav input:checked ~ .trigger { display: flex; flex-direction: column; align-items: center; padding: 5px; z-index: 1000;}
-  .site-nav .page-link { display: block; padding: 5px 10px; margin: 0; }
-  .site-nav .page-link:not(:last-child) { margin-bottom: 5px; } }
+@media screen and (max-width: 600px) {
+  .site-nav {
+    position: absolute;
+    top: 9px;
+    right: 15px;
+    background-color: #fdfdfd;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    text-align: right;
+  }
+  .site-nav label[for="nav-trigger"] {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 36px;
+    z-index: 2;
+    cursor: pointer;
+  }
+  .site-nav .menu-icon {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 26px;
+    line-height: 0;
+    padding-top: 10px;
+    text-align: center;
+  }
+  .site-nav .menu-icon > svg {
+    fill: #424242;
+  }
+  .site-nav input ~ .trigger {
+    clear: both;
+    display: none;
+  }
+  .site-nav input:checked ~ .trigger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    z-index: 1000;
+  }
+  .site-nav .page-link {
+    display: block;
+    padding: 5px 10px;
+    margin: 0;
+  }
+  .site-nav .page-link:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
