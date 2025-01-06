@@ -58,7 +58,7 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
             <!-- Conversion method parameters input -->
             <label>Vyberte metodu konverze:</label><br>
             <label>
-                <input type="radio" name="choice" value="RDF4J" >
+                <input type="radio" name="choice" value="RDF4J" checked="checked">
                     RDF4J
             </label>
             <label>
@@ -73,7 +73,7 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
             <!-- first normal form parameter input -->
             <label>Jak se chovat k seznamům hodnot v buňkách:</label><br>
             <label>
-                <input type="radio" name="firstNormalForm" value="true" >
+                <input type="radio" name="firstNormalForm" value="true" checked="checked">
                     Buňka obsahuje pouze 1 hodnotu
             </label>
             <label>

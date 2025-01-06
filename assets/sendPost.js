@@ -1,40 +1,33 @@
+// Functions used in HTML files containing the form to submit parameters for RDF to CSV conversion
 
+// The form for submitting parameters for RDF to CSV conversion
 const form = document.querySelector("#rdfandconfiguration");
-
+// Place for information about the fetched response
 const previewLabel = document.querySelector("#previewLabel");
-
 const divForResponse = document.querySelector("#responsePlace");
-
+// Input for file loading
 const fileInput = document.getElementById('file');
+// Input for writing RDF file URL
 const fileURLElement = document.getElementById('fileURL');
-
+// Span containing all the file options
 const spanForFileInput = document.getElementById('spanForFileInput');
-
+// Drop zone for file loading
 const dropZone = document.getElementById('drop-zone');
-
+// Place for error message to be shown
 const errorMessageElement = document.getElementById('errorMessage');
+// Element for showing the status of the web service
 const healthCheckStatusElement = document.getElementById('healthCheckStatus');
-
+// The button hiding more parameters
 const toggleButton = document.getElementById('toggleButton');
 
 
-
+// Send the form and accept response
 document.getElementById('rdfandconfiguration').addEventListener('submit', async function(event) {
   event.preventDefault();
 
   const form = event.target;
   const formData = new FormData(form);
 
-  /*
-  if(!checkAtLeastOneFileOptionIsUsed()){
-    const pageLang = document.documentElement.lang;
-    if(pageLang == "cs"){
-      alert('Vyberte alespoň jeden soubor.');
-    } else {
-      alert('Provide at least one of the file options: Upload a file or provide URL of the file.');
-    }
-  }
-*/
   // Clear any previous error message
   errorMessageElement.style.color = 'red';
   errorMessageElement.style.display = 'none'; // Hide any previous message
@@ -109,7 +102,7 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
 });
 
 
-
+// Check if at least one of the file option is used
 function checkAtLeastOneFileOptionIsUsed(){
     let inputField = fileURLElement.value.trim();
     if(inputField != ""){
@@ -143,6 +136,7 @@ function fetchWithTimeout(url, options, timeout = 5000) {
     });
 }
 
+// Clear the file loading input
 function clearFileInput() {
     document.getElementById('file').value = '';
     // If no file is selected, revert to the original text
@@ -155,6 +149,7 @@ function clearFileInput() {
     
 }
 
+// Manage the file input by language and contents of the input
 fileInput.addEventListener('change', function() {
   // Check if a file has been selected
   if (fileInput.files.length > 0) {
@@ -175,7 +170,7 @@ fileInput.addEventListener('change', function() {
   }
 });
 
-
+// Add listener to clear the error message label when the submit button is clicked
 submitButton = document.getElementById('submitButton');
 submitButton.addEventListener('click', function() {
   errorMessageElement.innerText = ``;
@@ -205,12 +200,14 @@ $(function () {
     dropZone.addClass(mouseOverClass);
 }, true);
 
+// Add dragging file loading listener to drop zone div
 document.getElementById(dropZoneId).addEventListener("dragleave", function (e) {
     e.preventDefault();
     e.stopPropagation();
     dropZone.removeClass(mouseOverClass);
 }, true);
 
+// File drop zone function for loading file
   document.getElementById(dropZoneId).addEventListener("drop", function (e) {
       e.preventDefault(); // Prevent default to stop file from opening
       e.stopPropagation(); // Stop propagation
@@ -278,6 +275,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+// Delete last characters of string input exceeding limit
 function truncateString(str, maxLength) {
   if (str.length > maxLength) {
       return str.slice(0, maxLength) + '...'; // Optional: Add ellipsis to indicate truncation
@@ -285,7 +283,7 @@ function truncateString(str, maxLength) {
   return str;
 }
 
-
+// Countdown for showing how long to wait before trying to send another conversion request
 let countdownInterval = null;
 let isCountingDown = false;
 
@@ -343,7 +341,7 @@ observer.observe(errorMessageElement, {
   subtree: true  // Include changes inside the element
 });
 
-
+// Setting of the toggle button for choosing more parameters
 window.addEventListener('DOMContentLoaded', () => {
   const toggleLabel = document.getElementById('toggleButton');
   const pageLang = document.documentElement.lang;  // Get the page language
@@ -361,6 +359,7 @@ window.addEventListener('DOMContentLoaded', () => {
   showLoadingWheel();
 });
 
+// Function for pinging web service if its available
 function checkServiceHealth() {
   fetch('https://rdf-to-csvw.onrender.com/')
     .then(response => {
@@ -386,6 +385,7 @@ function checkServiceHealth() {
     });
 }
 
+// Show the loading wheel and deactivate submit button if the web service is not ready
 function showLoadingWheel() {
   document.getElementById('greenArrow').style.display = 'none';
   document.getElementById('loadingWheel').style.display = 'block';
@@ -412,6 +412,7 @@ function showLoadingWheel() {
     submitButton.disabled = true; // Enable the button
   }
 
+  // Show the parameters hidden behind the More parameters button
 function toggleContent() {
   var x = document.getElementById("toggleContent");
   if (x.style.display === "none") {
@@ -421,6 +422,7 @@ function toggleContent() {
   }
 }
 
+// Prevent default for button present in form other than submit button
 toggleButton.addEventListener("click", function(event) {
   event.preventDefault(); // Prevent the form from submitting
   console.log("Button clicked without submitting the form!");
