@@ -6,16 +6,19 @@ language: cs
 handle: /converter
 sitemap: false
 ---
+<!-- Czech version of the converter page -->
 Jak použít RDFtoCSV konvertor:
 - 1) Nahrajte RDF soubor z lokálního uložiště nebo zapiště jeho URL.
 - 2) Vyberte, kolik chcete vytvořit tabulek v CSV formátu.
 - 3) Klikněte na "Více parametrů...", pokud chcete konverzi ještě dále pozměnit.
 - 4) Klikněte na tlačítko "Konvertovat a uložit výsledný .zip".
 Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou dobu trvat. Pro menší soubory jde přibližně o 20 sekund, pro velké soubory se může jednat až o několik minut.
-
+<!-- Form for submitting parameters for conversion -->
 <form id="rdfandconfiguration" action="https://rdf-to-csvw.onrender.com/rdftocsvw" method="post" enctype="multipart/form-data">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Div to choose a file or to input file URL -->
     <div id="choose-file-or-url">
+        <!-- Choose a file div -->
         <div id="drop-zone">
             Přesuňte soubor sem...<br>
             <div id="holderForFileInputAndBin">
@@ -29,12 +32,14 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
             </div>
         </div>
         <div class="vertical-line"></div>
+        <!-- Input a file URL div -->
         <div class="top-and-bottom-margin" id="rdf-url-div">
             <label for="fileURL">...nebo zapište URL RDF souboru <a href="#comment-1"><sup class="comment-marker" data-index="1">[1]</sup></a></label>
             <input type="text" id="fileURL" name="fileURL" required> 
         </div>
     </div>
     <br>
+    <!-- How many tables to create parameters -->
     <div class="top-and-bottom-margin">
         <label>Kolik chcete vytvořit CSV tabulek:</label>
         <label>
@@ -47,8 +52,10 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
         </label>
             <br>
     </div>        <br>
+    <!-- Button for uncovering more parameters options -->
             <button id="toggleButton" onclick="toggleContent()">Více parametrů...</button>
         <div id="toggleContent">
+            <!-- Conversion method parameters input -->
             <label>Vyberte metodu konverze:</label><br>
             <label>
                 <input type="radio" name="choice" value="RDF4J" >
@@ -63,6 +70,7 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
                     Streaming
             </label>
             <br>
+            <!-- first normal form parameter input -->
             <label>Jak se chovat k seznamům hodnot v buňkách:</label><br>
             <label>
                 <input type="radio" name="firstNormalForm" value="true" >
@@ -75,13 +83,16 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
             <br>
         </div>
     <br><br>
+    <!-- Web service status indicator changing pictures and text depending on the responsiveness of connected web service -->
     <div id="statusIndicator">
         <img id="loadingWheel" src="../loading.gif" alt="Loading" style="display: none;">
         <img id="greenArrow" src="../check.jpg" alt="OK" style="display: none;">
         <span id="healthCheckStatus">Webová služba se načítá...</span>
     </div>
+    <!-- Form Submit Button, changes style according to service status indicator -->
     <input type="submit" value="Konvertovat a uložit výsledný .zip" id="submitButton"  class="top-and-bottom-margin">
 </form>
+<!-- Div to inform users to wait for the web service response -->
 <div>
     <div id="countdown" style="display: none;">30</div>
     <div id="patienceText" style="display: none;">Webová služba běží na verzi zdarma - počkejte 60 sekund a pokud se Vám nestáhl výsledný .zip archiv, klikněte znovu na tlačítko "Konvertovat".</div>
@@ -89,11 +100,9 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
 <div id="responsePlace">
 <label id="previewLabel"></label>
 </div>
-
-
-
+<!-- Div for web service  responses error messages -->
 <div id="errorMessage" style="color: red; display: none;"></div>
-
+<!-- Div for comments about the form -->
 <div id="comments">
     <h3>Poznámky</h3>
     <div class="comment" id="comment-1">
@@ -105,33 +114,3 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
 </div>
 
 <script type="text/javascript" src="{% if jekyll.environment == 'production' %}{{site.production.url}}{{site.production.baseurl}}{% else %}{{site.development.url}}{{site.development.baseurl}}{% endif %}/{{ 'assets/sendPost.js' | relative_url }}"></script>
-<!-- 
-<h1>Calculate SHA-256 Checksum</h1>
-<input type="file" id="fileInput" />
-<p>Checksum: <span id="checksumOutput"></span></p>
-
-<script>
-// Function to convert ArrayBuffer to Hexadecimal String
-function arrayBufferToHex(buffer) {
-    return [...new Uint8Array(buffer)]
-    .map(b => b.toString(16).padStart(2, '0'))
-    .join('');
-}
-
-// Function to calculate SHA-256 checksum of the file
-async function calculateChecksum(file) {
-    const arrayBuffer = await file.arrayBuffer();  // Read file as ArrayBuffer
-    const hashBuffer = await crypto.subtle.digest('SHA-256', arrayBuffer);  // Hash it
-    const hexHash = arrayBufferToHex(hashBuffer);  // Convert ArrayBuffer to hex string
-    return hexHash;
-}
-
-document.getElementById('fileInput').addEventListener('change', async (event) => {
-    const file = event.target.files[0];
-    if (file) {
-        const checksum = await calculateChecksum(file);
-        document.getElementById('checksumOutput').innerText = checksum;  // Display checksum
-    }
-});
-</script>
--->
