@@ -46,10 +46,10 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
                 Více tabulek <a href="#comment-2"><sup class="comment-marker" data-index="2">[2]</sup></a>
         </label>
             <br>
-    </div>
-    <button id="toggleButton"  class="top-and-bottom-margin">Více parametrů...</button>
+    </div>        <br>
+            <button id="toggleButton" onclick="toggleContent()">Více parametrů...</button>
         <div id="toggleContent">
-            <label>Vyberte metodu konverze:</label>
+            <label>Vyberte metodu konverze:</label><br>
             <label>
                 <input type="radio" name="choice" value="RDF4J" >
                     RDF4J
@@ -63,10 +63,10 @@ Je hotovo! Prosím, vezměte na vědomí, že konverze formátu může nějakou 
                     Streaming
             </label>
             <br>
-            <label>Jak se chovat k seznamům hodnot v buňkách:</label>
+            <label>Jak se chovat k seznamům hodnot v buňkách:</label><br>
             <label>
                 <input type="radio" name="firstNormalForm" value="true" >
-                    Hodnoty v buňkách jsou atomické
+                    Buňka obsahuje pouze 1 hodnotu
             </label>
             <label>
                 <input type="radio" name="firstNormalForm" value="false">

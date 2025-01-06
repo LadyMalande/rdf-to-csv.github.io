@@ -49,7 +49,7 @@ You are set! Please be informed that the conversion might take some time. Smalle
         <br>
             <button id="toggleButton" onclick="toggleContent()">More parameters...</button>
         <div id="toggleContent">
-            <label>Choose a conversion method:</label>
+            <label>Choose a conversion method:</label><br>
             <label>
                 <input type="radio" name="choice" value="RDF4J" >
                     RDF4J
@@ -63,7 +63,7 @@ You are set! Please be informed that the conversion might take some time. Smalle
                     Streaming
             </label>
             <br>
-            <label>How to treat lists of values in cells:</label>
+            <label>How to treat lists of values in cells:</label><br>
             <label>
                 <input type="radio" name="firstNormalForm" value="true" >
                     Each cell contains only 1 value
