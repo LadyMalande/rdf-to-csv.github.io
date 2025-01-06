@@ -345,7 +345,7 @@ observer.observe(errorMessageElement, {
 
 
 window.addEventListener('DOMContentLoaded', () => {
-  const toggleLabel = document.getElementById('my-toggle-label');
+  const toggleLabel = document.getElementById('toggleButton');
   const pageLang = document.documentElement.lang;  // Get the page language
 
   if (pageLang === "cs") {
