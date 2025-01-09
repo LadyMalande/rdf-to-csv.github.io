@@ -30,7 +30,7 @@ Github Pages for thesis about RDF to CSV converter.
 
 
 <h3 align="center">RDFtoCSV Converter</h3>
-  <a href="https://ladymalande.github.io/rdf-to-csv.github.io/converter">
+  <a href="https://ladymalande.github.io/rdf-to-csv.github.io/converter"  align="center">
     <img src="assets/img/icon_big.png" alt="Icon" >
   </a>
   <p align="center"> 
@@ -89,10 +89,10 @@ To try out live web application, go to: [RDFtoCSV Web Application](https://ladym
 <div id=“built-with”></div>
 * GitHub Pages
 * GitHub Actions
-* [![Next][Jekyll]]
-* [![Next][HTML]]
-* [![Next][JavaScript]]
-* [![Next][CSS]]
+* [![Next][Jekyll]][]
+* [![Next][HTML]][]
+* [![Next][JavaScript]][]
+* [![Next][CSS]][]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
