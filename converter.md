@@ -6,9 +6,6 @@ language: en
 handle: /converter
 sitemap: false
 ---
-
-<!-- English version of the converter page -->
-
 How to use the RDFtoCSV Converter:
 
 1. Upload the RDF file from your local storage OR provide a URL.
@@ -16,7 +13,8 @@ How to use the RDFtoCSV Converter:
 3. Click on "More parameters..." button if you want to customize the conversion more.
 4. Click "Convert & Download" button.
      You are set! Please be informed that the conversion might take some time. Smaller files are returned in approximately 20 seconds, larger ones can take up to a few minutes.
-     
+
+<!-- English version of the converter page --> 
 <!-- Form for submitting parameters for conversion -->
 <form id="rdfandconfiguration" action="https://rdf-to-csvw.onrender.com/rdftocsvw" method="post">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
