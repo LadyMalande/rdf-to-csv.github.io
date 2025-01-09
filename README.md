@@ -143,31 +143,33 @@ Compatible RDF formats:
 * .ttl (Turtle)
 
   <a href="https://ladymalande.github.io/rdf-to-csv.github.io/converter">
-    <img src="assets/img/webapp-numbers.png" alt="Numbered picture" >
+    <img src="assets/img/webapp-numbers.png" alt="Numbered picture" width="70%">
   </a>
+
+### Convert RDF to CSV on the Web
 
 Open the web application either after building it locally as instructed in Installation, or navigate to: [RDFtoCSV Web Application](https://ladymalande.github.io/rdf-to-csv.github.io/converter) - Live Web page powered by GitHub Pages.
 
-1. Choose an RDF file or RDF URL. (Number 1 points to place where you can select a file to load, number 2 points to the text input where you can write the RDF URL)
-2. Choose how many tables you would like to convert your data into. (Number 3) If the data is not suitable to be converted into multiple tables, you will get only one table from the conversion.
-3. You can choose more parameters for the conversion if you click on the "More parameters..." button. (Number 4) 
-   1. If you choose Streaming or BigFileStreaming, you need to provide RDF file in N-Triples format (.nt). The conversion will take much longer than the default method for conversion (RDF4J). Choosing either of those is considered for experimental purposes only.
+1. Choose an **RDF file** or **RDF URL**. (Number 1 points to place where you can select a file to load, number 2 points to the text input where you can write the RDF URL)
+2. Choose **how many tables** you would like to convert your data into. (Number 3) If the data is not suitable to be converted into multiple tables, you will get only one table from the conversion.
+3. You can choose **more parameters** for the conversion if you click on the "More parameters..." button. (Number 4) 
+   1. If you choose Streaming or BigFileStreaming, you need to provide RDF file in N-Triples format (.nt). The conversion will take much longer than the default method for conversion (**RDF4J**). Choosing either of those is considered for experimental purposes only.
    
     <a href="https://ladymalande.github.io/rdf-to-csv.github.io/converter">
-    <img src="assets/img/diplomka_vice_parametru_web_aplikace.png" alt="More parameters" >
+    <img src="assets/img/diplomka_vice_parametru_web_aplikace.png" alt="More parameters" width="60%" >
     </a>
 
-4. If the icon is green (Number 4), you can start the conversion by clicking on the "CONVERT & DOWNLOAD" button (Number 5)
-5. Wait for the converted file to be sent back. If there is an error during the conversion, try uploading a different file or retry later.
+4. If the icon is **green** (Number 4), you can start the conversion by clicking on the **"CONVERT & DOWNLOAD"** button (Number 5)
+5. **Wait** for the converted file to be sent back. If there is an error during the conversion, try uploading a different file or retry later.
    
    <a href="https://ladymalande.github.io/rdf-to-csv.github.io/converter">
     <img src="assets/img/countdown.png" alt="Countdown" >
     </a>
 
-6. The browser should download the data automatically or you should be prompted to choose a location where to store the file.
+6. The browser should **download the data** automatically or you should be prompted to choose a location where to store the file.
    
    <a href="https://ladymalande.github.io/rdf-to-csv.github.io/converter">
-    <img src="assets/img/SuccessDownload.png" alt="Successful download" >
+    <img src="assets/img/SuccessDownload.png" alt="Successful download" width="50%">
     </a>
 
 
@@ -176,7 +178,7 @@ Smaller RDF files (<10 MB) should take up to 1 minute to be converted if the con
 This is an example of web service not being ready to serve your request:
 
    <a href="https://ladymalande.github.io/rdf-to-csv.github.io/converter">
-    <img src="assets/img/webServiceLoading.png" alt="Loading status" >
+    <img src="assets/img/webServiceLoading.png" alt="Loading status" width="40%">
     </a>
 
 <!-- CONTACT -->
