@@ -69,7 +69,7 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
       console.log("fileName " + fileName);
       anchorTag.download = fileName + ".zip";
     }
-    anchorTag.download = 'result.zip'; // Change this if necessary
+    //anchorTag.download = 'result.zip'; // Change this if necessary
     document.body.appendChild(anchorTag);
     anchorTag.click();
     document.body.removeChild(anchorTag);
