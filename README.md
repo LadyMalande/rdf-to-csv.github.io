@@ -26,7 +26,7 @@ Github Pages for thesis about RDF to CSV converter.
 
 <!-- PROJECT LOGO -->
 <br />
-<div>
+<div align="center">
 
 
 <h3 align="center">RDFtoCSV Converter</h3>
@@ -135,12 +135,12 @@ Local installation of the frontend
   </a>
 
 Compatible RDF formats: 
-• .jsonld (JSON-LD)
-• .nq (N-Quads)
-• .nt (N-Triples)
-• .rdf (RDF/XML)
-• .trig (TriG)
-• .ttl (Turtle)
+* .jsonld (JSON-LD)
+* .nq (N-Quads)
+* .nt (N-Triples)
+* .rdf (RDF/XML)
+* .trig (TriG)
+* .ttl (Turtle)
 
   <a href="https://ladymalande.github.io/rdf-to-csv.github.io/converter">
     <img src="assets/img/webapp-numbers.png" alt="Numbered picture" >
@@ -152,15 +152,20 @@ Open the web application either after building it locally as instructed in Insta
 2. Choose how many tables you would like to convert your data into. (Number 3) If the data is not suitable to be converted into multiple tables, you will get only one table from the conversion.
 3. You can choose more parameters for the conversion if you click on the "More parameters..." button. (Number 4) 
    1. If you choose Streaming or BigFileStreaming, you need to provide RDF file in N-Triples format (.nt). The conversion will take much longer than the default method for conversion (RDF4J). Choosing either of those is considered for experimental purposes only.
+   
     <a href="https://ladymalande.github.io/rdf-to-csv.github.io/converter">
     <img src="assets/img/diplomka_vice_parametru_web_aplikace.png" alt="More parameters" >
     </a>
+
 4. If the icon is green (Number 4), you can start the conversion by clicking on the "CONVERT & DOWNLOAD" button (Number 5)
 5. Wait for the converted file to be sent back. If there is an error during the conversion, try uploading a different file or retry later.
+   
    <a href="https://ladymalande.github.io/rdf-to-csv.github.io/converter">
     <img src="assets/img/countdown.png" alt="Countdown" >
     </a>
+
 6. The browser should download the data automatically or you should be prompted to choose a location where to store the file.
+   
    <a href="https://ladymalande.github.io/rdf-to-csv.github.io/converter">
     <img src="assets/img/SuccessDownload.png" alt="Successful download" >
     </a>
@@ -169,9 +174,11 @@ Open the web application either after building it locally as instructed in Insta
 Smaller RDF files (<10 MB) should take up to 1 minute to be converted if the conversion method is set to "RDF4J". 
 
 This is an example of web service not being ready to serve your request:
+
    <a href="https://ladymalande.github.io/rdf-to-csv.github.io/converter">
     <img src="assets/img/webServiceLoading.png" alt="Loading status" >
     </a>
+
 <!-- CONTACT -->
 ## Contact
 
@@ -191,8 +198,11 @@ Project Link for RDFtoCSV library depended on in this project: [https://github.c
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/tereza-miklosova/
 [JavaScript]: https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000
+[JavaScript-url]: https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000
 [HTML]: https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white
+[HTML-url]: https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white
 [CSS]: https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=fff
+[CSS-url]: https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=fff
 [Jekyll]: https://img.shields.io/badge/Jekyll-C00?logo=jekyll&logoColor=fff
 [Jekyll-url]: https://jekyllrb.com/
 
