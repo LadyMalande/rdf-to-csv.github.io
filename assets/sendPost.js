@@ -62,14 +62,14 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
     let inputField = fileURLElement.value.trim();
     if (inputField != "") {
       console.log("fileURLElement.textContent " + fileURLElement.textContent);
-      anchorTag.download = fileURLElement.textContent + '.zip';
+      anchorTag.download = fileURLElement.textContent + 'resultingCSVW.zip';
     } else {
       const fileName = fileInput.files[0].name;
       console.log("fileURLElement.textContent " + fileURLElement.textContent);
       console.log("fileName " + fileName);
       anchorTag.download = fileName + ".zip";
     }
-    //anchorTag.download = 'result.zip'; // Change this if necessary
+    //anchorTag.download = 'resultingCSVW.zip'; 
     document.body.appendChild(anchorTag);
     anchorTag.click();
     document.body.removeChild(anchorTag);
