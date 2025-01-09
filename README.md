@@ -31,7 +31,7 @@ Github Pages for thesis about RDF to CSV converter.
 
 <h3 align="center">RDFtoCSV Converter</h3>
   <a href="https://ladymalande.github.io/rdf-to-csv.github.io/converter"  align="center">
-    <img src="assets/img/icon_big.png" alt="Icon" >
+    <img src="assets/img/icon_big.png" alt="Icon"  align="center">
   </a>
   <p align="center"> 
     RDF to CSVW data converter web service
@@ -87,9 +87,10 @@ To try out live web application, go to: [RDFtoCSV Web Application](https://ladym
 
 ### Built With
 <div id=“built-with”></div>
+
 * GitHub Pages
 * GitHub Actions
-* [![Next][Jekyll]][]
+* [![Next][Jekyll]][Jekyll-url]
 * [![Next][HTML]][]
 * [![Next][JavaScript]][]
 * [![Next][CSS]][]
@@ -186,11 +187,13 @@ Project Link for RDFtoCSV library depended on in this project: [https://github.c
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/tereza-miklosova/
 [JavaScript]: https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000
 [HTML]: https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white
 [CSS]: https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=fff
 [Jekyll]: https://img.shields.io/badge/Jekyll-C00?logo=jekyll&logoColor=fff
+[Jekyll-url]: https://jekyllrb.com/
 
 This md template has been copied from [https://github.com/othneildrew/Best-README-Template]
