@@ -1,40 +1,33 @@
+// Functions used in HTML files containing the form to submit parameters for RDF to CSV conversion
 
+// The form for submitting parameters for RDF to CSV conversion
 const form = document.querySelector("#rdfandconfiguration");
-
-const toggleButton = document.querySelector("#toggleButton");
-
+// Place for information about the fetched response
 const previewLabel = document.querySelector("#previewLabel");
-
 const divForResponse = document.querySelector("#responsePlace");
-
+// Input for file loading
 const fileInput = document.getElementById('file');
+// Input for writing RDF file URL
 const fileURLElement = document.getElementById('fileURL');
-
+// Span containing all the file options
 const spanForFileInput = document.getElementById('spanForFileInput');
-
+// Drop zone for file loading
 const dropZone = document.getElementById('drop-zone');
-
+// Place for error message to be shown
 const errorMessageElement = document.getElementById('errorMessage');
+// Element for showing the status of the web service
 const healthCheckStatusElement = document.getElementById('healthCheckStatus');
+// The button hiding more parameters
+const toggleButton = document.getElementById('toggleButton');
 
 
-
-document.getElementById('rdfandconfiguration').addEventListener('submit', async function(event) {
+// Send the form and accept response
+document.getElementById('rdfandconfiguration').addEventListener('submit', async function (event) {
   event.preventDefault();
 
   const form = event.target;
   const formData = new FormData(form);
 
-  /*
-  if(!checkAtLeastOneFileOptionIsUsed()){
-    const pageLang = document.documentElement.lang;
-    if(pageLang == "cs"){
-      alert('Vyberte alespoň jeden soubor.');
-    } else {
-      alert('Provide at least one of the file options: Upload a file or provide URL of the file.');
-    }
-  }
-*/
   // Clear any previous error message
   errorMessageElement.style.color = 'red';
   errorMessageElement.style.display = 'none'; // Hide any previous message
@@ -43,152 +36,148 @@ document.getElementById('rdfandconfiguration').addEventListener('submit', async 
   try {
 
 
-      const response = await fetch("https://rdf-to-csvw.onrender.com/rdftocsvw", {
-          method: "POST",
-          body: formData // Let the browser set the content-type
-      });
+    const response = await fetch("https://rdf-to-csvw.onrender.com/rdftocsvw", {
+      method: "POST",
+      body: formData // Let the browser set the content-type
+    });
 
-      if (response.status == null) {
-        throw new Error(`Error: CORS`);
-      } else if (response.status === 409) {
-        // Handle file locking error
-        alert('The file is currently in use. Please try again later.');
-      } else if(!response.ok){
-        // If the response is not ok, throw an error
-        throw new Error(`Error: ${response.status} - ${response.statusText}`);
-      }
+    if (response.status == null) {
+      throw new Error(`Error: CORS`);
+    } else if (response.status === 409) {
+      // Handle file locking error
+      alert('The file is currently in use. Please try again later.');
+    } else if (!response.ok) {
+      // If the response is not ok, throw an error
+      throw new Error(`Error: ${response.status} - ${response.statusText}`);
+    }
 
-      const data = await response.blob();
-      const file = new Blob([data], { type: 'application/zip' });
+    const data = await response.blob();
+    const file = new Blob([data], { type: 'application/zip' });
 
-      const fileURL = URL.createObjectURL(file);
+    const fileURL = URL.createObjectURL(file);
 
-      const anchorTag = document.createElement('a');
-      anchorTag.href = fileURL;
-      anchorTag.target = '_blank';
-      let inputField = fileURLElement.value.trim();
-      if(inputField != ""){
-        console.log("fileURLElement.textContent " + fileURLElement.textContent);
-        anchorTag.download = fileURLElement.textContent + '.zip';
-      } else{
-        const fileName = fileInput.files[0].name;
-        console.log("fileURLElement.textContent " + fileURLElement.textContent);
-        console.log("fileName " + fileName);
-        anchorTag.download = fileName + ".zip";
-      }
-      anchorTag.download = 'result.zip'; // Change this if necessary
-      document.body.appendChild(anchorTag);
-      anchorTag.click();
-      document.body.removeChild(anchorTag);
+    const anchorTag = document.createElement('a');
+    anchorTag.href = fileURL;
+    anchorTag.target = '_blank';
+    let inputField = fileURLElement.value.trim();
+    if (inputField != "") {
+      console.log("fileURLElement.textContent " + fileURLElement.textContent);
+      anchorTag.download = fileURLElement.textContent + 'resultingCSVW.zip';
+    } else {
+      const fileName = fileInput.files[0].name;
+      console.log("fileURLElement.textContent " + fileURLElement.textContent);
+      console.log("fileName " + fileName);
+      anchorTag.download = fileName + ".zip";
+    }
+    //anchorTag.download = 'resultingCSVW.zip'; 
+    document.body.appendChild(anchorTag);
+    anchorTag.click();
+    document.body.removeChild(anchorTag);
 
-      errorMessageElement.style.display = 'block';
-      const pageLang = document.documentElement.lang;
-      if(pageLang == "cs"){
-        errorMessageElement.style.color = 'green';
-        errorMessageElement.innerText = `Konvertovaný soubor úspěšně dorazil.`;
-      } else {
-        errorMessageElement.style.color = 'green';
-        errorMessageElement.innerText = `The converted file has been successfully delivered.`;
-      }
+    errorMessageElement.style.display = 'block';
+    const pageLang = document.documentElement.lang;
+    if (pageLang == "cs") {
+      errorMessageElement.style.color = 'green';
+      errorMessageElement.innerText = `Konvertovaný soubor úspěšně dorazil.`;
+    } else {
+      errorMessageElement.style.color = 'green';
+      errorMessageElement.innerText = `The converted file has been successfully delivered.`;
+    }
 
 
 
   } catch (e) {
-            // If an error occurs, display the error message
-            errorMessageElement.style.display = 'block';
-            const pageLang = document.documentElement.lang;
-            if(pageLang == "cs"){
-              errorMessageElement.innerText = `Nastal problém s vaším požadavkem: ${e.message}`;
-            } else {
-              errorMessageElement.innerText = `There was a problem with your request: ${e.message}`;
-            }
-            
-            console.error(e);
-          
+    // If an error occurs, display the error message
+    errorMessageElement.style.display = 'block';
+    const pageLang = document.documentElement.lang;
+    if (pageLang == "cs") {
+      errorMessageElement.innerText = `Nastal problém s vaším požadavkem: ${e.message}`;
+    } else {
+      errorMessageElement.innerText = `There was a problem with your request: ${e.message}`;
+    }
+
+    console.error(e);
+
   }
 });
 
 
+// Check if at least one of the file option is used
+function checkAtLeastOneFileOptionIsUsed() {
+  let inputField = fileURLElement.value.trim();
+  if (inputField != "") {
+    return true;
+  }
+  if (fileInput.files.length > 0) {
+    return true;
+  }
+  return false;
 
-function checkAtLeastOneFileOptionIsUsed(){
-    let inputField = fileURLElement.value.trim();
-    if(inputField != ""){
-      return true;
-    }
-    if(fileInput.files.length > 0){
-      return true;
-    }
-    return false;
-    
 }
 
 
 function fetchWithTimeout(url, options, timeout = 5000) {
-    return new Promise((resolve, reject) => {
-        // Set up the timeout
-        const timer = setTimeout(() => {
-            reject(new Error("Request timed out"));
-        }, timeout);
+  return new Promise((resolve, reject) => {
+    // Set up the timeout
+    const timer = setTimeout(() => {
+      reject(new Error("Request timed out"));
+    }, timeout);
 
-        // Perform the fetch
-        fetch(url, options)
-            .then(response => {
-                clearTimeout(timer); // Clear the timeout if response is received
-                resolve(response);   // Resolve with the response
-            })
-            .catch(err => {
-                clearTimeout(timer); // Clear the timeout on error
-                reject(err);         // Reject with the error
-            });
-    });
+    // Perform the fetch
+    fetch(url, options)
+      .then(response => {
+        clearTimeout(timer); // Clear the timeout if response is received
+        resolve(response);   // Resolve with the response
+      })
+      .catch(err => {
+        clearTimeout(timer); // Clear the timeout on error
+        reject(err);         // Reject with the error
+      });
+  });
 }
 
+// Clear the file loading input
 function clearFileInput() {
-    document.getElementById('file').value = '';
+  document.getElementById('file').value = '';
+  // If no file is selected, revert to the original text
+  const pageLang = document.documentElement.lang;
+  if (pageLang == "cs") {
+    spanForFileInput.textContent = "...nebo vyberte soubor";
+  } else {
+    spanForFileInput.textContent = "...or select a file";
+  }
+
+}
+
+// Manage the file input by language and contents of the input
+fileInput.addEventListener('change', function () {
+  // Check if a file has been selected
+  if (fileInput.files.length > 0) {
+    // Get the name of the file
+    const fileName = fileInput.files[0].name;
+    // Change the span text to the file name
+    const truncatedFileName = truncateString(fileName, 17);
+    spanForFileInput.textContent = (truncateString.length == fileName) ? fileName : truncatedFileName + "...";
+  } else {
     // If no file is selected, revert to the original text
     const pageLang = document.documentElement.lang;
-    if(pageLang == "cs"){
+    if (pageLang == "cs") {
       spanForFileInput.textContent = "...nebo vyberte soubor";
     } else {
       spanForFileInput.textContent = "...or select a file";
     }
-    
-}
 
-fileInput.addEventListener('change', function() {
-  // Check if a file has been selected
-  if (fileInput.files.length > 0) {
-      // Get the name of the file
-      const fileName = fileInput.files[0].name;
-      // Change the span text to the file name
-      const truncatedFileName = truncateString(fileName, 17);
-      spanForFileInput.textContent = (truncateString.length == fileName) ? fileName : truncatedFileName + "...";
-  } else {
-      // If no file is selected, revert to the original text
-      const pageLang = document.documentElement.lang;
-      if(pageLang == "cs"){
-        spanForFileInput.textContent = "...nebo vyberte soubor";
-      } else {
-        spanForFileInput.textContent = "...or select a file";
-      }
-      
   }
 });
 
-
+// Add listener to clear the error message label when the submit button is clicked
 submitButton = document.getElementById('submitButton');
-submitButton.addEventListener('click', function() {
+submitButton.addEventListener('click', function () {
   errorMessageElement.innerText = ``;
 });
 
-
-toggleButton.addEventListener('click', function(event) {
-  event.preventDefault(); // Prevents form submission
-  console.log('Button clicked without form submission');
-});
-
 // Add event listener to the clear button
-document.getElementById('clearButton').addEventListener('click', function(event) {
+document.getElementById('clearButton').addEventListener('click', function (event) {
   event.preventDefault(); // Prevents form submission
   clearFileInput();
   console.log('Button clicked without form submission');
@@ -200,33 +189,35 @@ $(function () {
   //var buttonId = "clickHere";
   var buttonId = "spanForFileInput";
   var mouseOverClass = "mouse-over";
-  var fileInputId = "file"; 
+  var fileInputId = "file";
 
   var dropZone = $("#" + dropZoneId);
-  
+
   // Prevent default behaviors for dragover and drop
   document.getElementById(dropZoneId).addEventListener("dragover", function (e) {
     e.preventDefault(); // Prevent default to stop file from opening
     e.stopPropagation(); // Stop propagation
     dropZone.addClass(mouseOverClass);
-}, true);
+  }, true);
 
-document.getElementById(dropZoneId).addEventListener("dragleave", function (e) {
+  // Add dragging file loading listener to drop zone div
+  document.getElementById(dropZoneId).addEventListener("dragleave", function (e) {
     e.preventDefault();
     e.stopPropagation();
     dropZone.removeClass(mouseOverClass);
-}, true);
+  }, true);
 
+  // File drop zone function for loading file
   document.getElementById(dropZoneId).addEventListener("drop", function (e) {
-      e.preventDefault(); // Prevent default to stop file from opening
-      e.stopPropagation(); // Stop propagation
-      dropZone.removeClass(mouseOverClass);
+    e.preventDefault(); // Prevent default to stop file from opening
+    e.stopPropagation(); // Stop propagation
+    dropZone.removeClass(mouseOverClass);
 
-      // Get the dropped files
-      const files = e.dataTransfer.files;
-      
-      if (files.length > 0) {
-        console.log("Files dropped:", files);
+    // Get the dropped files
+    const files = e.dataTransfer.files;
+
+    if (files.length > 0) {
+      console.log("Files dropped:", files);
       // Assign dropped file to the file input element
       fileInput.files = files;  // Access the DOM element using [0] to set files
 
@@ -238,25 +229,25 @@ document.getElementById(dropZoneId).addEventListener("dragleave", function (e) {
 
       // Display file name to the user
       if (files.length > 0) {
-          //document.getElementById("fileName").textContent = files[0].name;
-          console.log("File dropped: " + files[0].name);
+        //document.getElementById("fileName").textContent = files[0].name;
+        console.log("File dropped: " + files[0].name);
       }
-      } else {
-        console.error("No files were dropped.");
-  }
+    } else {
+      console.error("No files were dropped.");
+    }
   }, true);
 
-  document.getElementById(buttonId).addEventListener("click", function (e){
+  document.getElementById(buttonId).addEventListener("click", function (e) {
     console.log("Drag listener called and before if path");
-    if($("#" + fileInputId).val().length != 0){
+    if ($("#" + fileInputId).val().length != 0) {
       console.log("Drag listener called and in if path");
-    } 
+    }
   }, true);
 });
 
 
 // Require at least one of the two required inputs
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const inputs = Array.from(
     document.querySelectorAll('input[name=file], input[name=fileURL]')
   );
@@ -271,31 +262,32 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Require at least one of the two required inputs
-document.addEventListener('DOMContentLoaded', function() {
-  if(fileURLElement.value.trim != ""){
+document.addEventListener('DOMContentLoaded', function () {
+  if (fileURLElement.value.trim != "") {
     fileInput.required = false;
-  } else{
+  } else {
     fileInput.required = true;
   }
-  if(fileInput.files.length > 0){
+  if (fileInput.files.length > 0) {
     fileURLElement.required = false;
-  } else{
+  } else {
     fileURLElement.required = true;
   }
 });
 
+// Delete last characters of string input exceeding limit
 function truncateString(str, maxLength) {
   if (str.length > maxLength) {
-      return str.slice(0, maxLength) + '...'; // Optional: Add ellipsis to indicate truncation
+    return str.slice(0, maxLength) + '...'; // Optional: Add ellipsis to indicate truncation
   }
   return str;
 }
 
-
+// Countdown for showing how long to wait before trying to send another conversion request
 let countdownInterval = null;
 let isCountingDown = false;
 
-document.getElementById('submitButton').addEventListener('click', function(event) {
+document.getElementById('submitButton').addEventListener('click', function (event) {
   //event.preventDefault();  // Prevent form submission for demo purposes
 
   let countdown = document.getElementById('countdown');
@@ -314,15 +306,15 @@ document.getElementById('submitButton').addEventListener('click', function(event
   patienceText.style.display = 'block';
   countdown.textContent = timeLeft;   // Set initial time
 
-  countdownInterval = setInterval(function() {
-      timeLeft--;
-      countdown.textContent = timeLeft;  // Update the countdown
+  countdownInterval = setInterval(function () {
+    timeLeft--;
+    countdown.textContent = timeLeft;  // Update the countdown
 
-      if (timeLeft <= 0) {
-          clearInterval(countdownInterval);  // Stop the countdown at 0
-          countdown.style.display = 'none';  // Hide the countdown
-          patienceText.style.display = 'none';
-      }
+    if (timeLeft <= 0) {
+      clearInterval(countdownInterval);  // Stop the countdown at 0
+      countdown.style.display = 'none';  // Hide the countdown
+      patienceText.style.display = 'none';
+    }
   }, 1000);  // Decrease the countdown every second (1000ms)
   isCountingDown = true;
 });
@@ -349,15 +341,15 @@ observer.observe(errorMessageElement, {
   subtree: true  // Include changes inside the element
 });
 
-
+// Setting of the toggle button for choosing more parameters
 window.addEventListener('DOMContentLoaded', () => {
-  const toggleButton = document.getElementById('toggleButton');
+  const toggleLabel = document.getElementById('toggleButton');
   const pageLang = document.documentElement.lang;  // Get the page language
 
   if (pageLang === "cs") {
-      toggleButton.setAttribute('data-tooltip', 'Zatím nedostupné - vyzkoušejte tuto možnost v příští verzi RDFtoCSV!');
+    toggleLabel.setAttribute('data-tooltip', 'Klikněte pro vybrání dalších parametrů');
   } else {
-      toggleButton.setAttribute('data-tooltip', 'Not yet available - see this feature in next versions of RDFtoCSV!');
+    toggleLabel.setAttribute('data-tooltip', 'Click to choose from other parameters');
   }
 
   // Check the service health every 5 seconds
@@ -367,6 +359,7 @@ window.addEventListener('DOMContentLoaded', () => {
   showLoadingWheel();
 });
 
+// Function for pinging web service if its available
 function checkServiceHealth() {
   fetch('https://rdf-to-csvw.onrender.com/')
     .then(response => {
@@ -375,7 +368,7 @@ function checkServiceHealth() {
         document.getElementById('greenArrow').style.display = 'block';
         document.getElementById('loadingWheel').style.display = 'none';
         const pageLang = document.documentElement.lang;
-        if(pageLang == "cs"){
+        if (pageLang == "cs") {
           healthCheckStatusElement.textContent = "Webová služba je připravená!";
         } else {
           healthCheckStatusElement.textContent = "The Web Service is ready!";
@@ -390,14 +383,14 @@ function checkServiceHealth() {
       // If there is an error or the server does not respond, show the spinning wheel
       showLoadingWheel();
     });
-    triggerBriefingUpdate();
 }
 
+// Show the loading wheel and deactivate submit button if the web service is not ready
 function showLoadingWheel() {
   document.getElementById('greenArrow').style.display = 'none';
   document.getElementById('loadingWheel').style.display = 'block';
   const pageLang = document.documentElement.lang;
-  if(pageLang == "cs"){
+  if (pageLang == "cs") {
     healthCheckStatusElement.textContent = "Webová služba se načítá...";
   } else {
     healthCheckStatusElement.textContent = "The Web Service is loading...";
@@ -405,30 +398,32 @@ function showLoadingWheel() {
   deactivateButton();
 }
 
-  // Function to activate the button
-  function activateButton() {
-    submitButton.classList.remove('submitButtonDisactivated');
-    submitButton.classList.add('submitButton');
-    submitButton.disabled = false; // Enable the button
-  }
-
-  // Function to deactivate the button
-  function deactivateButton() {
-    submitButton.classList.remove('submitButton');
-    submitButton.classList.add('submitButtonDisactivated');
-    submitButton.disabled = true; // Enable the button
-  }
-
-const eventSource = new EventSource('https://rdf-to-csvw.onrender.com/briefing');
-
-eventSource.onmessage = function(event) {
-    console.log("Briefing message received: " + event.data);
-};
-
-function triggerBriefingUpdate() {
-  fetch('https://rdf-to-csvw.onrender.com/triggerBriefing')
-    .then(response => response.text())
-    .then(data => console.log(data))  // Logs "Briefing update sent!"
-    .catch(error => console.error('Error triggering briefing:', error));
+// Function to activate the button
+function activateButton() {
+  submitButton.classList.remove('submitButtonDisactivated');
+  submitButton.classList.add('submitButton');
+  submitButton.disabled = false; // Enable the button
 }
 
+// Function to deactivate the button
+function deactivateButton() {
+  submitButton.classList.remove('submitButton');
+  submitButton.classList.add('submitButtonDisactivated');
+  submitButton.disabled = true; // Enable the button
+}
+
+// Show the parameters hidden behind the More parameters button
+function toggleContent() {
+  var x = document.getElementById("toggleContent");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// Prevent default for button present in form other than submit button
+toggleButton.addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent the form from submitting
+  console.log("Button clicked without submitting the form!");
+});

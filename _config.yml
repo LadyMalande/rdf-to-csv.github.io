@@ -28,8 +28,11 @@ description: >- # this means to ignore newlines until "baseurl:"
 github_username:  ladymalande
 
 domain: ladymalande.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
-url: "http://localhost:4000"  # Local development URL
-baseurl: ""                   # No baseurl in local development
+url: "https://ladymalande.github.io"  # Production development URL
+baseurl: "/rdf-to-csv.github.io"                   # Production base url
+
+# For running the project locally for debugging, make sure the production values get overriden by correct run command:
+# bundle exec jekyll serve --config _config.yml,_config_dev.yml
 
 production:
   url: "https://ladymalande.github.io"
