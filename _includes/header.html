@@ -4,7 +4,18 @@
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <a class="site-title" rel="author" href="
+      {% if jekyll.environment == 'production' and page.language == 'en' %}
+          {{ "/converter" | prepend: site.production.baseurl }}
+        {% elsif jekyll.environment == 'production' and page.language == 'cs' %}
+          {{ "/cs/converter" | prepend: site.production.baseurl }}
+        {% elsif page.language == 'en' %}
+          {{ "/converter" | prepend: site.development.baseurl }}
+        {% else %}
+          {{ "/cs/converter" | prepend: site.development.baseurl }}
+      {% endif %}">
+      {{ site.title | escape }}
+    </a>
 
     {%- if titles_size > 0 -%}
       <nav class="site-nav">
@@ -21,7 +32,7 @@
             {% if p.language == page.language %} 
               {% if p.redirect_to == nil %}
                 <!--<a href="{{ p.url | prepend: site.baseurl }}" class="margin-to-right"> -->
-                  <a href="{% if jekyll.environment == 'production' %}{{ p.url | prepend: site.production.baseurl }}{% else %}{{ p.url | prepend: site.development.baseurl }}{% endif %}" class="margin-to-right"></a>
+                  <a href="{% if jekyll.environment == 'production' %}{{ p.url | prepend: site.production.baseurl }}{% else %}{{ p.url | prepend: site.development.baseurl }}{% endif %}" class="margin-to-right">
                   {{ p.title }}
                 </a>
               {% endif %}
